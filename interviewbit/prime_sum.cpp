@@ -24,6 +24,30 @@ If a < c OR a==c AND b < d.
 
 using namespace std;
 
+bool isPrime(int num) {
+	bool ans = false;
+	if(num<2) return false;
+	int factor = sqrt(num);
+    for(int i=2; i<=factor; i++){
+        if(num%i==0) return false;
+    }
+    return true;
+}
+
+vector<int> primesum2(int A) {
+	vector<int> ans;
+    int u = A/2;
+
+    for(int i=2; i<=u; i++){
+        if(isPrime(2) && isPrime(A-2)) {
+            ans.push_back(i);
+            ans.push_back(A-2);
+            break;
+        }
+    }
+	return ans;
+}
+
 vector<int> primesum(int A) {
     vector<int> ans;
     vector<bool> flag(A+1, false);
@@ -53,7 +77,8 @@ vector<int> primesum(int A) {
 int main(void) {
 	int test = 0;
     cin >> test;
-    vector<int> ans = primesum(test);
+    //vector<int> ans = primesum(test);
+    vector<int> ans = primesum2(test);
     for(auto num:ans) cout << num << " " << endl;
 	return 0;
 }
