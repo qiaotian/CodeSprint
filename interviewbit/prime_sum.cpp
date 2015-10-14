@@ -39,9 +39,9 @@ vector<int> primesum2(int A) {
     int u = A/2;
 
     for(int i=2; i<=u; i++){
-        if(isPrime(2) && isPrime(A-2)) {
+        if(isPrime(i) && isPrime(A-i)) {
             ans.push_back(i);
-            ans.push_back(A-2);
+            ans.push_back(A-i);
             break;
         }
     }
