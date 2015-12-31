@@ -12,9 +12,9 @@ If there are more than one solutions possible, return the lexicographically smal
 If [a, b] is one solution with a <= b,
 and [c,d] is another solution with c <= d, then
 
-[a, b] < [c, d] 
+[a, b] < [c, d]
 
-If a < c OR a==c AND b < d. 
+If a < c OR a==c AND b < d.
 
 */
 
@@ -34,6 +34,9 @@ bool isPrime(int num) {
     return true;
 }
 
+// 考虑到当A很大时，实际结果往往是很小的质数a和一个较大质数b的组合
+// a和b之间存在大量整数，无需判定是否为质数。
+// 因此，计算判定所有元素是否为质数非常耗时和低效。
 vector<int> primesum2(int A) {
 	vector<int> ans;
     int u = A/2;
@@ -48,6 +51,7 @@ vector<int> primesum2(int A) {
 	return ans;
 }
 
+// 判定1~A所有元素的质数与否，比较耗时
 vector<int> primesum(int A) {
     vector<int> ans;
     vector<bool> flag(A+1, false);
@@ -82,7 +86,3 @@ int main(void) {
     for(auto num:ans) cout << num << " " << endl;
 	return 0;
 }
-
-
-
-
