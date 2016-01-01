@@ -24,7 +24,6 @@ If a < c OR a==c AND b < d.
 
 using namespace std;
 
-// 1. solution one
 bool isPrime(int num) {
 	bool ans = false;
 	if(num<2) return false;
@@ -35,9 +34,6 @@ bool isPrime(int num) {
     return true;
 }
 
-// 考虑到当A很大时，实际结果往往是很小的质数a和一个较大质数b的组合
-// a和b之间存在大量整数，无需判定是否为质数。
-// 因此，计算判定所有元素是否为质数非常耗时和低效。
 vector<int> primesum2(int A) {
 	vector<int> ans;
     int u = A/2;
@@ -52,8 +48,6 @@ vector<int> primesum2(int A) {
 	return ans;
 }
 
-// 2. solution two
-// 判定1~A所有元素的质数与否，比较耗时
 vector<int> primesum(int A) {
     vector<int> ans;
     vector<bool> flag(A+1, false);
@@ -79,37 +73,6 @@ vector<int> primesum(int A) {
     }
     return ans;
 }
-
-// 3. solution three(参考答案)
-class Solution {
-    public:
-    vector<int> primesum(int N) {
-
-        // Generate isPrime List less equal than N
-        vector<bool> isPrime(N + 1, true);
-        isPrime[0] = false;
-        isPrime[1] = false;
-
-        // Sieve of Erastothenes
-        for(int i = 2; i <= N; i++) {
-            if (!isPrime[i]) continue;
-            if (i > N / i) break;
-            for (int j = i * i; j <= N; j += i) isPrime[j] = false;
-        }
-
-        for(int i = 2; i <= N; ++i) {
-            if(isPrime[i] && isPrime[N - i]) {
-                vector<int> ans;
-                ans.push_back(i);
-                ans.push_back(N - i);
-                return ans;
-            }
-        }
-
-        vector<int> ans;
-        return ans;
-    }
-};
 
 int main(void) {
 	int test = 0;
