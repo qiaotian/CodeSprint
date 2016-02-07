@@ -15,8 +15,11 @@ s = "2[abc]3[cd]ef", return "abcabccdcdcdef".
 */
 
 
-// Recursion
+// Recursion / Stack
 // Not elegant enough
+// 该方法将字符串s拆解成3个部分：前缀字符串，第一个[xxxx]，以及其后缀字符串三个部分
+// 显然第一个部分不包含[]，第二部分可能包含嵌套，第三部分也由可能包含嵌套。
+// 因此递归使用了两次，分别在第二部分和第三部分各一次。
 class Solution {
 public:
     string decodeString(string s) {
@@ -85,13 +88,14 @@ public:
         
 		// 出栈条件
         while (i < s.length() && s[i] != ']') {
-            if (!isdigit(s[i]))
+            if (!isdigit(s[i])) //处理前缀字符串和后缀字符串
                 res += s[i++];
             else {
+				// 处理数字和[xxxx]
                 int n = 0;
                 while (i < s.length() && isdigit(s[i]))
                     n = n * 10 + s[i++] - '0';
-                    
+
                 i++; // '['
                 string t = decodeString(s, i);
                 i++; // ']'
@@ -111,5 +115,6 @@ public:
 };
 
 
-/// 总结：凡是能够使用递归处理的问题，一定可以使用栈的方法解决
-/// 方法一和方法二就印证了这一点，显然方法一可以再简化一些。
+/// 总结：两种方法都使用了递归处理的问题
+/// 第一种方法将递归的分界设置为：左括号为起始，右括号为终止条件
+/// 第二种方法将将递归的分解设为：数字为起始，右括号为终止条件
