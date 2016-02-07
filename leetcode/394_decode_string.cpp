@@ -16,6 +16,7 @@ s = "2[abc]3[cd]ef", return "abcabccdcdcdef".
 
 
 // Recursion
+// Not elegant enough
 class Solution {
 public:
     string decodeString(string s) {
