@@ -25,6 +25,7 @@ If there are lots of incoming S, say S1, S2, ... , Sk where k >= 1B, and you wan
  *
  */
 
+// two pointers i and j
 class Solution {
 public:
     bool isSubsequence(string s, string t) {
