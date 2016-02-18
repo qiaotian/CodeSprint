@@ -41,57 +41,116 @@ int ladderLength(string start, string end, unordered_set<string> &dict) {
 }
 */
 
-
+// 2nd solution (bad)
 class Solution {
 public:
     int ladderLength(string beginWord, string endWord, unordered_set<string>& wordDict) {
         wordDict.insert(endWord);
         queue<string> toVisit;
-        addNextWords(beginWord, wordDict, toVisit);
         int dist = 2;
-        while (!toVisit.empty()) {
+        addNextWords(beginWord, wordDict, toVisit);
+        while(!toVisit.empty()) {
             int num = toVisit.size();
-            for (int i = 0; i < num; i++) {
-                string word = toVisit.front();
+            for(int i = 0; i < num; i++) {
+                string tmp = toVisit.front();
                 toVisit.pop();
-                if (word == endWord) return dist;
-                addNextWords(word, wordDict, toVisit);
+                if(tmp == endWord) return dist;
+                addNextWords(tmp, wordDict, toVisit);
             }
             dist++;
         }
     }
 private:
+    // fuction: 
+    // 1. add neighbours of word to toVisit and 
+    // 2. romove word from wordDict
     void addNextWords(string word, unordered_set<string>& wordDict, queue<string>& toVisit) {
+        // add neighour node into the toVisit
         wordDict.erase(word);
-        for (int p = 0; p < (int)word.length(); p++) {
-            char letter = word[p];
-            for (int k = 0; k < 26; k++) { 
-                word[p] = 'a' + k;
-                if (wordDict.find(word) != wordDict.end()) {
+        for(int i = 0; i < (int)word.size(); i++) {
+            char oriChar = word[i];
+            // construct a word
+            for(int j = 0; j < 26; j++) {
+                word[i] = 'a' + j;
+                if(wordDict.find(word) != wordDict.end()) {
                     toVisit.push(word);
                     wordDict.erase(word);
                 }
             }
-            word[p] = letter;
+            word[i] = oriChar;
         }
         
         //TLE
-        /*
-        for(auto it = wordDict.begin(); it != wordDict.end();) {
+        //for(auto it = wordDict.begin(); it != wordDict.end();) {
             //string tmp = *it;
             
-            int diffCnt = 0;
-            for(int i = 0; i < word.size(); i++) {
-                if((*it)[i] != word[i]) diffCnt++;
-            }
+        //    int diffCnt = 0;
+        //    for(int i = 0; i < word.size(); i++) {
+        //        if((*it)[i] != word[i]) diffCnt++;
+        //    }
             
-            if(diffCnt == 1) {
-                toVisit.push(*it);
-                it = wordDict.erase(it);
-            } else {
-                it++;
-            }
-        }
-        */
+        //    if(diffCnt == 1) {
+        //        toVisit.push(*it);
+        //        it = wordDict.erase(it);
+        //    } else {
+        //        it++;
+        //    }
+        //}
     }
 };
+
+// 3rd solution
+/*
+class Solution {
+public:
+    int ladderLength(string beginWord, string endWord, unordered_set<string>& wordDict) {
+        unordered_set<string> head, tail, *phead, *ptail;
+        head.insert(beginWord);
+        tail.insert(endWord);
+        int dist = 2;
+        while (!head.empty() && !tail.empty()) {
+            if (head.size() < tail.size()) {
+                phead = &head;
+                ptail = &tail;
+            }
+            else {
+                phead = &tail; 
+                ptail = &head;
+            }
+            unordered_set<string> temp; 
+            for (auto itr = phead -> begin(); itr != phead -> end(); itr++) {
+                string word = *itr;
+                wordDict.erase(word);
+                for (int p = 0; p < (int)word.length(); p++) {
+                    char letter = word[p];
+                    for (int k = 0; k < 26; k++) {
+                        word[p] = 'a' + k;
+                        if (ptail -> find(word) != ptail -> end())
+                            return dist;
+                        if (wordDict.find(word) != wordDict.end()) {
+                            temp.insert(word);
+                            wordDict.erase(word);
+                        }
+                    }
+                    word[p] = letter;
+                }
+            }
+            dist++;
+            swap(*phead, temp);
+        }
+        return 0; 
+    }
+}; 
+*/
+/**
+ * 2nd solution: BFS (bad)
+ *   addNextWords may add duplicated words into toVisit, eg, Start word is connected with
+ * B and C, moreover, B is connected to C. When we visit start word, B and C are pushed 
+ * into queue. Then, we push C again when visiting B, which results in its slowness.
+ * 
+ * 3rd solution: BFS (good)
+ *   use two-end search
+ * 
+ * REFERENCE
+ * https://leetcode.com/discuss/42006/easy-76ms-c-solution-using-bfs
+ * /
