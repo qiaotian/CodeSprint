@@ -1,6 +1,4 @@
-// 1st solution (TLE)
-/*
-class Solution {
+ass Solution {
 public:
     int nthUglyNumber(int n) {
         int i = 1;
@@ -53,4 +51,7 @@ public:
  * 2. Find the min value among 2*pointer2, 3*pointer3 and 5*pointer5. 
  * 3. Then moves the min pointer to next ugly number.
  * 4. Repeat 2~3
+ * 
+ * REFERENCE
+ * https://leetcode.com/discuss/52905/my-16ms-c-dp-solution-with-short-explanation
  * /
