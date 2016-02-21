@@ -2,19 +2,19 @@ class Solution {
 public:
     void gameOfLife(vector<vector<int>>& board) {
         int m = board.size(), n = m ? board[0].size() : 0;
-        for (int i=0; i<m; ++i) {
-            for (int j=0; j<n; ++j) {
+        for (int i = 0; i < m; ++i) {
+            for (int j = 0; j < n; ++j) {
                 int count = 0;
-                for (int ii=max(i-1, 0); ii<min(i+2, m); ++ii) //
-                    for (int jj=max(j-1, 0); jj<min(j+2, n); ++jj) //
+                for (int ii = max(i-1, 0); ii < min(i+2, m); ++ii) //
+                    for (int jj = max(j-1, 0); jj < min(j+2, n); ++jj) //
                         count += board[ii][jj] & 1;
                 if (count == 3 || count - board[i][j] == 3)
-                    board[i][j] |= 2;
+                    board[i][j] |= 2; // 按位或进而将旧状态保留在低位
             }
         }
         for (int i=0; i<m; ++i)
             for (int j=0; j<n; ++j)
-                board[i][j] >>= 1;
+                board[i][j] >>= 1; // 右移一位仅保留最新状态
     }
 };
 
