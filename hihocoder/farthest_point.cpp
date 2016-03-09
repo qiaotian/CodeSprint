@@ -92,7 +92,7 @@ pair<int, int> farthest_point(float x, float y, float r) {
 }*/
 
 
-// 2nd solution: 
+// 2nd solution: 80% correct cases
 
 float distanceAB(pair<int tx, int ty, float x, float y) {
     return sqrt( (tx-x)*(tx-x) + (ty-y)*(ty-y) );
