@@ -121,14 +121,14 @@ pair<int, int> farthest_point(float x, float y, float r) {
         //    }
         //}
         
-        // 1. 针对 (tx, ymin)
+        // 1. 针对 (tx, ymin) upper limitation
         float dist = distanceAB(tx, ymin, x, y);
         if(dist - cur_farthest_dist > -1*eps) {
             cur_farthest_dist = dist;
             cur_farthest_point = {tx, ymin};
         }
             
-        // 2. 针对 (tx, ymax)
+        // 2. 针对 (tx, ymax) lower limitation
         dist = distanceAB(tx, ymax, x, y);
         if(dist - cur_farthest_dist > -1*eps) {
             cur_farthest_dist = dist;
