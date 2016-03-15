@@ -94,7 +94,7 @@ pair<int, int> farthest_point(float x, float y, float r) {
 
 // 2nd solution: 80% correct cases
 
-float distanceAB(pair<int tx, int ty, float x, float y) {
+float distanceAB(int tx, int ty, float x, float y) {
     return sqrt( (tx-x)*(tx-x) + (ty-y)*(ty-y) );
 }
 
@@ -108,7 +108,7 @@ pair<int, int> farthest_point(float x, float y, float r) {
 
 	int xmax = floor(x+r);
 	int xmin = ceil(x-r);
-	for(int tx = xmin; tx<=xmax; tx++) {
+	for(int tx = xmax; tx>=xmin; tx++) {
         float d = sqrt(r*r - (tx-x)*(tx-x));
         int ymax = floor(y+d);
         int ymin = ceil(y-d);
@@ -121,18 +121,18 @@ pair<int, int> farthest_point(float x, float y, float r) {
         //    }
         //}
         
-        // 1. 针对 (tx, ymin) upper limitation
-        float dist = distanceAB(tx, ymin, x, y);
+        // 1. 针对 (tx, ymax) upper limitation
+        float dist = distanceAB(tx, ymax, x, y);
+        if(dist - cur_farthest_dist > eps) {
+            cur_farthest_dist = dist;
+            cur_farthest_point = {tx, ymax};
+        }
+            
+        // 2. 针对 (tx, ymin) lower limitation
+        dist = distanceAB(tx, ymin, x, y);
         if(dist - cur_farthest_dist > -1*eps) {
             cur_farthest_dist = dist;
             cur_farthest_point = {tx, ymin};
-        }
-            
-        // 2. 针对 (tx, ymax) lower limitation
-        dist = distanceAB(tx, ymax, x, y);
-        if(dist - cur_farthest_dist > -1*eps) {
-            cur_farthest_dist = dist;
-            cur_farthest_point = {tx, ymax};
         }
 	}
     return cur_farthest_point;
