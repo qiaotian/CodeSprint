@@ -53,24 +53,24 @@ int main(int argc, const char * argv[]) {
     //string outpath = "/Users/qiaotian/Downloads/A-small-practice.out.txt";
     string inpath = argv[1];
     string outpath = argv[2];
-    
+
     ifstream infile(inpath);
     if(!infile) {
         cout << "could not open infile" << endl;
-        exit(EXIT_FAILURE);
+        return EXIT_FAILURE;
     }
     ofstream outfile(outpath);
     if (!outfile) {
         cout << "could not open outfile" << endl;
-        exit(EXIT_FAILURE);
+        return EXIT_FAILURE;
     }
-    
+
     int num_cases = 0, sum = 0, count = 0;
     int i = 0;
     vector<pair<int, int>> prices; // index and price
     vector<int> selections(2, 0);
     int price = 0;
-    
+
     infile >> num_cases;
     while (i < num_cases) {
         infile >> sum;
@@ -80,16 +80,14 @@ int main(int argc, const char * argv[]) {
             infile >> price;
             prices.push_back(make_pair(j, price));
         }
-        
+
         sort(prices.begin(), prices.end(), compare);
         util(prices, sum, selections);
-        
+
         outfile << "Case #" << i+1 << ": " << selections[0] << " " << selections[1] << endl;
-        
+
         i++;
     }
-    
+
     return 0;
 }
-
-
