@@ -109,7 +109,8 @@ pair<int, int> farthest_point(float x, float y, float r) {
 	int xmax = floor(x+r);
 	int xmin = ceil(x-r);
 	for(int tx = xmax; tx>=xmin; tx--) {
-        float d = sqrt(r*r - (tx-x)*(tx-x));
+        float d = sqrt((float)r*r - (tx-x)*(tx-x));
+        //cout << d << endl;
         int ymax = floor(y+d);
         int ymin = ceil(y-d);
         //for(int ty = ymin; ty<=ymax; ty++) {
