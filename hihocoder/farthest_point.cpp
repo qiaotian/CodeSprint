@@ -130,7 +130,7 @@ pair<int, int> farthest_point(float x, float y, float r) {
             
         // 2. 针对 (tx, ymin) lower limitation
         dist = distanceAB(tx, ymin, x, y);
-        if(dist - cur_farthest_dist > -1*eps) {
+        if(dist - cur_farthest_dist > eps) {
             cur_farthest_dist = dist;
             cur_farthest_point = {tx, ymin};
         }
