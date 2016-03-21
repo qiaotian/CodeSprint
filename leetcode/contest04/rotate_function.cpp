@@ -59,7 +59,7 @@ public:
             sum += A[i];
         }
         int maxResult = startResult;
-        
+
         for(int i = len-1;i>=0;i--){
             startResult += sum - len*A[i];
             maxResult = max(maxResult,startResult);
