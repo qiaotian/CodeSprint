@@ -1,6 +1,7 @@
 class Solution {
     void dfs(string& s, int start, vector<string>& ip, vector<string>& res) {
         if(ip.size()==4 && start==s.size()) {
+            //注意以上条件中不要写成start==s.size()-1
             res.push_back(ip[0]+'.'+ip[1]+'.'+ip[2]+'.'+ip[3]);
             return;
         }
