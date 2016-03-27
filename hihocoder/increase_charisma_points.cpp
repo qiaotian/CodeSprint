@@ -40,13 +40,13 @@ Sample Output
 #include <iostream>
 #include <unordered_map>
 
+using namespace std;
+
 int increase_charisma_points(vector<vector<int>>&costs, int M) {
     int ans = INT32_MIN;
 
     return ans;
 }
-
-using namespace std;
 
 int main(void) {
     int N, M;
