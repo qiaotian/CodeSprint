@@ -36,6 +36,8 @@ Sample Output
 
 */
 
+// Time: O(N*N*M)
+
 #include <vector>
 #include <iostream>
 #include <unordered_map>
@@ -44,6 +46,32 @@ using namespace std;
 
 int increase_charisma_points(vector<vector<int>>&costs, int M) {
     int ans = INT32_MIN;
+    int N = costs.size();
+    vector<vector<int>> dp(N, vector<int>(M+1, INT32_MAX));
+    for(int i=0; i<N; i++) dp[i][0] = 0;
+
+    // 优化：统计计算过程中已经使用超过M个action points节点的个数，如果
+    // 数目达到N个，那么说明所有节点都已经超过M action points，直接跳出
+    // 返回ans
+    // 更进一步优化是当数目达到N-1个时就跳出，因为N-1超出M action points,
+    // 那么下一步一定会全部超过M，因此可以提前返回ans
+    unordered_set<int> finished;
+    
+    // 计算从j节点出发挣i个charisma points，事少需要多少action points
+    for(int i=1; i<=M; i++) {
+        for(int j=0; j<N; j++) {
+            //if(dp[j].back()>M) continue; 
+            // 对于第j个节点
+            for(int k=0; k<N; k++) {
+                // 第k个节点到第j个节点
+                if(k==j) continue;
+                dp[j][i] = min(dp[k][i-1]+costs[k][j], dp[j][i]);
+                if(dp[j][i]<=M) ans = max(ans, dp[j][k]);
+                else finished.insert(j);
+                if(finished.size()==N-1) return ans;
+            }
+        }
+    }
 
     return ans;
 }
