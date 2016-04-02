@@ -99,15 +99,17 @@ public:
 private:
     NestedInteger deserialize(istringstream &in) {
         int number;
-        if (in >> number)
-            return NestedInteger(number);
+		// 如果第一个字符是'['，那么 in>>number 执行失败, failbit被设置
+        if (in >> number) return NestedInteger(number);
+		// 取消failbit标志位设置（clear() is used to unset the failbit after unexpected input）
         in.clear();
+		// get() is used to extract the first character
         in.get();
         NestedInteger list;
+		// peek() is used to read the first character without extraction, different with get()
         while (in.peek() != ']') {
             list.add(deserialize(in));
-            if (in.peek() == ',')
-                in.get();
+            if (in.peek() == ',') in.get();
         }
         in.get();
         return list;
