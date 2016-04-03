@@ -111,6 +111,7 @@ private:
             list.add(deserialize(in));
             if (in.peek() == ',') in.get();
         }
+		// skip the ']'
         in.get();
         return list;
     }
