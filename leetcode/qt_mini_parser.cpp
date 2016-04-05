@@ -76,7 +76,7 @@ public:
         }
 
         string str = s.substr(1, s.size()-2);
-    
+
         int pre = 0;
         int cur = 0;
 
