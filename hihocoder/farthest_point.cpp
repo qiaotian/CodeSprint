@@ -37,8 +37,8 @@ float dist(pair<int, int>& start, pair<float, float>& center) {
 
 pair<int, int> farthest_point(float x, float y, float r) {
     pair<int, int> ans = {(int)x, (int)y}; //
-    pair<float, float> center = {x, y};    // 
-    
+    pair<float, float> center = {x, y};    //
+
     int new_x = (int)(x+(x>=0?0.5:-0.5));
     int new_y = (int)(y+(y>=0?0.5:-0.5));
 
@@ -71,8 +71,3 @@ int main(void) {
     cout << ans.first << " " << ans.second << endl;
     return 0;
 }
-
-
-
-
-
