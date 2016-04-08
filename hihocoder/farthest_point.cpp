@@ -26,6 +26,7 @@ Sample Output
 
 #include <iostream>
 #include <cmath> // pow会用到
+#include <unordered_map>
 
 using namespace std;
 
@@ -36,8 +37,6 @@ float dist(pair<int, int>& start, pair<float, float>& center) {
     float y = start.second;
     return sqrt(pow(x-center.first, 2)+pow(y-center.second, 2));
 }
-
-unordered_map<pair<int, int>, bool, cmp> visited;
 
 struct cmp{
     bool operator()(pair<int, int>& a, pair<int, int>& b) {
@@ -50,6 +49,8 @@ struct cmp{
         return dist1 < dist2;
     }
 };
+
+unordered_map<pair<int, int>, bool, cmp> visited;
 /*
 pair<int, int> farthest_point(float x, float y, float r) {
     pair<int, int> ans = {(int)x, (int)y}; //
