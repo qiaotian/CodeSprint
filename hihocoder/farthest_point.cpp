@@ -29,16 +29,32 @@ Sample Output
 
 using namespace std;
 
+pair<int, int> center = {0, 0};
+
 float dist(pair<int, int>& start, pair<float, float>& center) {
     float x = start.first;
     float y = start.second;
     return sqrt(pow(x-center.first, 2)+pow(y-center.second, 2));
 }
 
+unordered_map<pair<int, int>, bool, cmp> visited;
+
+struct cmp{
+    bool operator()(pair<int, int>& a, pair<int, int>& b) {
+        float dist1 = dist(a, center);
+        float dist2 = dist(b, center);
+
+        if(abs(dist1-dist2)<(1e-10)) {
+            return a.first < b.first;
+        }
+        return dist1 < dist2;
+    }
+};
+/*
 pair<int, int> farthest_point(float x, float y, float r) {
     pair<int, int> ans = {(int)x, (int)y}; //
-    pair<float, float> center = {x, y};    //
-
+    pair<float, float> center = {x, y};    // 
+    
     int new_x = (int)(x+(x>=0?0.5:-0.5));
     int new_y = (int)(y+(y>=0?0.5:-0.5));
 
@@ -63,6 +79,14 @@ pair<int, int> farthest_point(float x, float y, float r) {
     }
     return ans;
 }
+*/
+
+pair<int, int> farthest_point(float x, float y, float r) {
+    float farthest_dist = INT_MIN;
+    pair<int, int> ans;
+    return ans;
+}
+
 
 int main(void) {
     float x, y, r;
@@ -71,3 +95,8 @@ int main(void) {
     cout << ans.first << " " << ans.second << endl;
     return 0;
 }
+
+
+
+
+
