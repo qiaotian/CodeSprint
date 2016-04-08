@@ -6,10 +6,7 @@
 * @Last modified time: 2016-07-03T23:52:59+08:00
 */
 
-
-
-_______________________________________________________________________________
-
+/*
 
 An abbreviation of a word follows the form <first letter><number><last letter>. Below are some examples of word abbreviations:
 
@@ -35,8 +32,8 @@ isUnique("cart") -> true
 isUnique("cane") -> false
 isUnique("make") -> true
 
+*/
 
-_______________________________________________________________________________
 /*class ValidWordAbbr {
 private:
     unordered_set<string> dict;
