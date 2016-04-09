@@ -32,11 +32,9 @@ Sample Output
 
 using namespace std;
 
-pair<float, float> center = {0.0, 0.0};
-
-float dist(pair<int, int>& start, pair<float, float>& center) {
-    float x = start.first;
-    float y = start.second;
+float dist(pair<int, int>& cur, pair<float, float>& center) {
+    float x = cur.first;
+    float y = cur.second;
     return sqrt(pow(x-center.first, 2)+pow(y-center.second, 2));
 }
 
@@ -76,9 +74,8 @@ vector<int> dir = {-1, 0, 1, 0, -1};
 pair<int, int> farthest_point(float x, float y, float r) {
     float farthest_dist = INT_MIN;
     pair<int, int> ans;
-    //pair<float, float> center = {x, y};
-    center.first = x;
-    center.second = y;
+    pair<float, float> center = {x, y};
+
     queue<pair<int, int>> q;
     unordered_set<long long> visited;
     pair<int, int> start = {(int)(x+r), (int)y};
