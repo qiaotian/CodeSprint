@@ -32,7 +32,7 @@ Sample Output
 
 using namespace std;
 
-pair<int, int> center = {0, 0};
+pair<float, float> center = {0.0, 0.0};
 
 float dist(pair<int, int>& start, pair<float, float>& center) {
     float x = start.first;
