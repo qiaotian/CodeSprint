@@ -26,8 +26,9 @@ Sample Output
 
 #include <iostream>
 #include <cmath> // pow会用到
-#include <set>
+#include <unordered_set>
 #include <vector>
+#include <queue>
 
 using namespace std;
 
@@ -39,7 +40,6 @@ float dist(pair<int, int>& start, pair<float, float>& center) {
     return sqrt(pow(x-center.first, 2)+pow(y-center.second, 2));
 }
 
-unordered_set<long long> visited; //
 /*
 pair<int, int> farthest_point(float x, float y, float r) {
     pair<int, int> ans = {(int)x, (int)y}; //
@@ -76,17 +76,20 @@ vector<int> dir = {-1, 0, 1, 0, -1};
 pair<int, int> farthest_point(float x, float y, float r) {
     float farthest_dist = INT_MIN;
     pair<int, int> ans;
-    pair<float, float> center = {x, y};
+    //pair<float, float> center = {x, y};
+    center.first = x;
+    center.second = y;
     queue<pair<int, int>> q;
+    unordered_set<long long> visited;
     pair<int, int> start = {(int)(x+r), (int)y};
     q.push(start);
     long long pos = start.first*100000 + start.second;
     visited.insert(pos);
     while(!q.empty()) {
-        long long cur = q.front();
+        pair<int, int> cur = q.front();
         q.pop();
-        int x = cur/100000;
-        int y = cur%100000;
+        int x = cur.first;
+        int y = cur.second;
         for(int i=0; i<4; i++) {
             int nhx = x+dir[i];
             int nhy = y+dir[i+1];
