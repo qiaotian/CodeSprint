@@ -32,7 +32,7 @@ Sample Output
 
 using namespace std;
 
-float dist(pair<int, int>& cur, pair<float, float>& center) {
+float dist(pair<int, int> cur, pair<float, float> center) {
     float x = cur.first;
     float y = cur.second;
     return sqrt(pow(x-center.first, 2)+pow(y-center.second, 2));
@@ -104,7 +104,10 @@ pair<int, int> farthest_point(float x, float y, float r) {
         int x = num/100000;
         int y = num%100000;
         float distance = dist(make_pair(x, y), center);
-        if(distance > farthest_dist) {
+        if(abs(distance-farthest_dist)<1E-10 && x>ans.first) {
+            ans = {x, y};
+        }
+        if(distance > farthest_dist && abs(distance-farthest_dist)>(1E-10)) {
             ans = {x, y};
             farthest_dist = distance;
         }
