@@ -26,7 +26,8 @@ Sample Output
 
 #include <iostream>
 #include <cmath> // pow会用到
-#include <unordered_map>
+#include <set>
+#include <vector>
 
 using namespace std;
 
@@ -38,19 +39,7 @@ float dist(pair<int, int>& start, pair<float, float>& center) {
     return sqrt(pow(x-center.first, 2)+pow(y-center.second, 2));
 }
 
-struct cmp{
-    bool operator()(pair<int, int>& a, pair<int, int>& b) {
-        float dist1 = dist(a, center);
-        float dist2 = dist(b, center);
-
-        if(abs(dist1-dist2)<(1e-10)) {
-            return a.first < b.first;
-        }
-        return dist1 < dist2;
-    }
-};
-
-unordered_map<pair<int, int>, bool, cmp> visited;
+unordered_set<long long> visited; //
 /*
 pair<int, int> farthest_point(float x, float y, float r) {
     pair<int, int> ans = {(int)x, (int)y}; //
@@ -82,9 +71,44 @@ pair<int, int> farthest_point(float x, float y, float r) {
 }
 */
 
+vector<int> dir = {-1, 0, 1, 0, -1};
+
 pair<int, int> farthest_point(float x, float y, float r) {
     float farthest_dist = INT_MIN;
     pair<int, int> ans;
+    pair<float, float> center = {x, y};
+    queue<pair<int, int>> q;
+    pair<int, int> start = {(int)(x+r), (int)y};
+    q.push(start);
+    long long pos = start.first*100000 + start.second;
+    visited.insert(pos);
+    while(!q.empty()) {
+        long long cur = q.front();
+        q.pop();
+        int x = cur/100000;
+        int y = cur%100000;
+        for(int i=0; i<4; i++) {
+            int nhx = x+dir[i];
+            int nhy = y+dir[i+1];
+            float distance = dist(make_pair(nhx, nhy), center);
+            // 只考虑与center距离介于[r-1, r]的所有整数位置
+            if(distance>r || distance<r-1) continue;
+            if(visited.find(nhx*100000+nhy)!=visited.end()) continue;
+            else {
+                visited.insert(nhx*100000+nhy);
+                q.push(make_pair(nhx, nhy));
+            }
+        }
+    }
+    for(auto num:visited) {
+        int x = num/100000;
+        int y = num%100000;
+        float distance = dist(make_pair(x, y), center);
+        if(distance > farthest_dist) {
+            ans = {x, y};
+            farthest_dist = distance;
+        }
+    }
     return ans;
 }
 
