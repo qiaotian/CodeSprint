@@ -65,7 +65,7 @@ public:
         int idx = rand()%vec.size();
         return vec[idx]->val;
     }
-};
+}; 
 
 /**
  * Your Solution object will be instantiated and called as such:
