@@ -59,7 +59,7 @@ public:
             tmp = tmp->next;
         }
     }
-    
+
     /** Returns a random node's value. */
     int getRandom() {
         int idx = rand()%vec.size();
