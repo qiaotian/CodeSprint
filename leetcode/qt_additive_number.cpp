@@ -3,9 +3,9 @@ private:
     bool helper(int start, int len1, int len2, string& num) {
         int n = (int)num.size();
         if(2 * max(len1, len2) > n) return false;
-        
+
         while(start + len1 + len2 <= n) {
-        
+
             string str1 = num.substr(start, len1);
             string str2 = num.substr(start + len1, len2);
             string sum;
