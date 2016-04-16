@@ -5,7 +5,6 @@ private:
         if(2 * max(len1, len2) > n) return false;
 
         while(start + len1 + len2 <= n) {
-
             string str1 = num.substr(start, len1);
             string str2 = num.substr(start + len1, len2);
             string sum;
