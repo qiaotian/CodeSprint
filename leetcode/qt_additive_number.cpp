@@ -8,7 +8,7 @@ private:
             string str1 = num.substr(start, len1);
             string str2 = num.substr(start + len1, len2);
             string sum;
-            
+
             int index = 0;
             int carry = 0;
         
