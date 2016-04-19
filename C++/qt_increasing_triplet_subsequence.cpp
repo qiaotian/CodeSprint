@@ -34,16 +34,16 @@ public:
 
 /**
  * WARNING:
- * Since this problem just requires a three elements subsequence, which is different from 
+ * Since this problem just requires a three elements subsequence, which is different from
  * the problem "Longest Increasing Subsequence".
- * 
+ *
  * ALGO:
  * 1. 1st solution is inspired by the longest increasing subsequence, whose time comlexity is O(N^2).
- * 2. 2st solution is linear time complexity. In this method, we try our best to minimize the 'low' and 'mid', 
- *    as we can find a high value more easily. Only if we find the 'high', then 'low < mid < high' is valid, 
+ * 2. 2st solution is linear time complexity. In this method, we try our best to minimize the 'low' and 'mid',
+ *    as we can find a high value more easily. Only if we find the 'high', then 'low < mid < high' is valid,
  *    therefore we can return true.
- * 
+ *
  * REFERENCE:
  * https://leetcode.com/discuss/86593/clean-and-short-with-comments-c
- * 
+ *
  * /
