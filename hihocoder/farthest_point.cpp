@@ -72,7 +72,7 @@ pair<int, int> farthest_point(float x, float y, float r) {
 vector<int> dir = {-1, 0, 1, 0, -1};
 
 pair<int, int> farthest_point(float x, float y, float r) {
-    float farthest_dist = INT_MIN;
+    float farthest_dist = 0;
     pair<int, int> ans;
     pair<float, float> center = {x, y};
 
