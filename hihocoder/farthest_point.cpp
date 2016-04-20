@@ -25,7 +25,7 @@ Sample Output
 */
 
 #include <iostream>
-#include <cmath> // pow会用到
+#include <cmath> // pow
 #include <unordered_map>
 #include <vector>
 #include <queue>
@@ -38,47 +38,18 @@ float dist(pair<int, int> cur, pair<float, float> center) {
     return sqrt(pow(x-center.first, 2)+pow(y-center.second, 2));
 }
 
-/*
 pair<int, int> farthest_point(float x, float y, float r) {
-    pair<int, int> ans = {(int)x, (int)y}; //
-    pair<float, float> center = {x, y};    // 
-    
-    int new_x = (int)(x+(x>=0?0.5:-0.5));
-    int new_y = (int)(y+(y>=0?0.5:-0.5));
-
-    //cout << new_x << " " << new_y << endl;
-
-    pair<int, int> dir = {0, 0};        // 最远点所在大致方位（正方向）
-    dir.first = new_x<x?-1:1;
-    dir.second = new_y<y?-1:1;
-    //cout << dir.first << " " << dir.second << endl;
-
-    pair<int, int> run = {new_x+dir.first*r, new_y};
-    //cout << run.first << " " << run.second << endl;
-    while(1) {
-        float tmp = dist(run, center);
-        if(tmp > r) run.first-=dir.first;
-        else {
-            if(tmp > dist(ans, center)) ans = run;
-            run.second+=dir.second;
-        }
-        if(run.first == new_x) break;
-        //cout << run.first << run.second << endl;
-    }
-    return ans;
-}
-*/
-
-vector<int> dir = {-1, 0, 1, 0, -1};
-
-pair<int, int> farthest_point(float x, float y, float r) {
-    float farthest_dist = 0;
+    float farthest_dist = 0.0;
     pair<int, int> ans;
-    pair<float, float> center = {x, y};
+    pair<float, float> center = {x, y};  //
+
+    vector<int> dir = {-1, 0, 1, 0, -1}; // 上下左右四个方向
 
     queue<pair<int, int>> q;
-    unordered_map<long long, pair<int, int>> visited;
+    unordered_map<long long, pair<int, int>> visited; // 单纯从longlong不能还原出(x,y)坐标，只能用作key
+
     pair<int, int> start = {(int)(x+r), (int)y};
+
     q.push(start);
     long long pos = start.first*100000 + start.second;
     visited.insert({pos, start});
@@ -105,14 +76,17 @@ pair<int, int> farthest_point(float x, float y, float r) {
         int y = mem.second.second;
         //cout << x << " "  << y << endl;
         float distance = dist(make_pair(x, y), center);
-        if(abs(distance-farthest_dist)<1E-10 && x>ans.first) {
-            ans = {x, y};
-        }
-        if(distance > farthest_dist && abs(distance-farthest_dist)>(1E-10)) {
-            ans = {x, y};
-            farthest_dist = distance;
+        if(abs(distance-farthest_dist)<1E-10) {
+            // 距离相等
+            if(x>ans.first || (x==ans.first && y>ans.second)) ans = {x, y};
+        } else {
+            if(distance > farthest_dist) {
+                ans = {x, y};
+                farthest_dist = distance;
+            }
         }
     }
+
     return ans;
 }
 
@@ -126,6 +100,33 @@ int main(void) {
 }
 
 
+/*
+pair<int, int> farthest_point(float x, float y, float r) {
+    pair<int, int> ans = {(int)x, (int)y}; //
+    pair<float, float> center = {x, y};    //
 
+    int new_x = (int)(x+(x>=0?0.5:-0.5));
+    int new_y = (int)(y+(y>=0?0.5:-0.5));
 
+    //cout << new_x << " " << new_y << endl;
 
+    pair<int, int> dir = {0, 0};        // 最远点所在大致方位（正方向）
+    dir.first = new_x<x?-1:1;
+    dir.second = new_y<y?-1:1;
+    //cout << dir.first << " " << dir.second << endl;
+
+    pair<int, int> run = {new_x+dir.first*r, new_y};
+    //cout << run.first << " " << run.second << endl;
+    while(1) {
+        float tmp = dist(run, center);
+        if(tmp > r) run.first-=dir.first;
+        else {
+            if(tmp > dist(ans, center)) ans = run;
+            run.second+=dir.second;
+        }
+        if(run.first == new_x) break;
+        //cout << run.first << run.second << endl;
+    }
+    return ans;
+}
+*/
