@@ -28,7 +28,7 @@ private:
                 }
                 index++;
             }
-        
+
             if(carry) sum = (char)(carry+'0')+sum;
             if(start + len1 + len2 + sum.size() > num.size()) return false;
             if(sum == num.substr(start+len1+len2, sum.size())) {
