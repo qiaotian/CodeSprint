@@ -36,4 +36,33 @@ Sample Output
 
 */
 
+#include <vector>
+#include <iostream>
+#include <unordered_map>
+
+int increase_charisma_points(vector<vector<int>>&costs, int M) {
+    int ans = INT32_MIN;
+
+    return ans;
+}
+
+using namespace std;
+
+int main(void) {
+    int N, M;
+    cin >> N >> M;
+
+    vector<vector<int>> costs(N, vector<int>(N, 0));
+    for(int i=0; i<N; i++) {
+        for(int j=0; j<N; j++) {
+            cin >> costs[i][j];
+        }
+    }
+    
+    int ans = increase_charisma_points(costs, M);
+    cout << ans <<endl;
+
+    return 0;
+}
+
 
