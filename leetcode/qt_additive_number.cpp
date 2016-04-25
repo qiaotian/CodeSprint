@@ -41,7 +41,7 @@ private:
             }
         }
         return true;
-    }    
+    }
 public:
     bool isAdditiveNumber(string num) {
         if(num.size() < 3) return false;
