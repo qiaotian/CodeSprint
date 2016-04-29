@@ -45,7 +45,7 @@ private:
 public:
     bool isAdditiveNumber(string num) {
         if(num.size() < 3) return false;
-        
+
         int halflen = (int)num.size()/2;
         for(int len1 = 1; len1 <= halflen; len1++) {
             for(int len2 = 1; len2 <= halflen; len2++) {
