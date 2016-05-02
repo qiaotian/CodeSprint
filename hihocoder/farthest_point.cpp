@@ -44,7 +44,7 @@ pair<int, int> farthest_point(float x, float y, float r) {
 
     //cout << new_x << " " << new_y << endl;
 
-    pair<int, int> dir = {0, 0};        // 最远点所在大致方位
+    pair<int, int> dir = {0, 0};        // 最远点所在大致方位（正方向）
     dir.first = new_x<x?-1:1;
     dir.second = new_y<y?-1:1;
     //cout << dir.first << " " << dir.second << endl;
