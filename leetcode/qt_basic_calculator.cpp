@@ -3,7 +3,7 @@ public:
     int calculate(string s) {
         stack<int> nums; // 数字
         stack<char> opts; // 括号和计算符号
-        
+ 
         // 1. preprocess
         int number = 0;
         for(char c : s) {
