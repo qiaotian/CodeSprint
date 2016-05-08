@@ -30,29 +30,36 @@ Sample Output
 using namespace std;
 
 float dist(pair<int, int>& start, pair<float, float>& center) {
-    return sqrt(pow(start.first-center.first, 2)+pow(start.second-center.second, 2));
+    float x = start.first;
+    float y = start.second;
+    return sqrt(pow(x-center.first, 2)+pow(y-center.second, 2));
 }
 
 pair<int, int> farthest_point(float x, float y, float r) {
     pair<int, int> ans = {(int)x, (int)y}; //
-    pair<float, float> center = {x, y}; // 
+    pair<float, float> center = {x, y};    // 
     
     int new_x = (int)(x+0.5);
     int new_y = (int)(y+0.5);
 
+    cout << new_x << " " << new_y << endl;
+
     pair<int, int> dir = {0, 0};        // 最远点所在大致方位
     dir.first = new_x<x?-1:1;
     dir.second = new_y<y?-1:1;
+    cout << dir.first << " " << dir.second << endl;
 
     pair<int, int> run = {new_x+dir.first*r, new_y};
-    cout << run.first << " " << endl << endl;
-    while(run.first != new_x) {
+    cout << run.first << " " << run.second << endl;
+    while(1) {
         float tmp = dist(run, center);
-        if(dist(run, center)>r) run.first-=dir.first;
+        if(tmp > r) run.first-=dir.first;
         else {
             if(tmp > dist(ans, center)) ans = run;
             run.second+=dir.second;
         }
+        if(run.first == new_x) break;
+        cout << run.first << run.second << endl;
     }
     return ans;
 }
