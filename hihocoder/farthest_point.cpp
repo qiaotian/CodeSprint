@@ -50,7 +50,7 @@ pair<int, int> farthest_point(float x, float y, float r) {
     //cout << dir.first << " " << dir.second << endl;
 
     pair<int, int> run = {new_x+dir.first*r, new_y};
-    //cout << run.first << " " << run.second << endl;
+    cout << run.first << " " << run.second << endl;
     while(1) {
         float tmp = dist(run, center);
         if(tmp > r) run.first-=dir.first;
