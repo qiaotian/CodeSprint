@@ -42,15 +42,15 @@ pair<int, int> farthest_point(float x, float y, float r) {
     int new_x = (int)(x+0.5);
     int new_y = (int)(y+0.5);
 
-    cout << new_x << " " << new_y << endl;
+    //cout << new_x << " " << new_y << endl;
 
     pair<int, int> dir = {0, 0};        // 最远点所在大致方位
     dir.first = new_x<x?-1:1;
     dir.second = new_y<y?-1:1;
-    cout << dir.first << " " << dir.second << endl;
+    //cout << dir.first << " " << dir.second << endl;
 
     pair<int, int> run = {new_x+dir.first*r, new_y};
-    cout << run.first << " " << run.second << endl;
+    //cout << run.first << " " << run.second << endl;
     while(1) {
         float tmp = dist(run, center);
         if(tmp > r) run.first-=dir.first;
@@ -59,7 +59,7 @@ pair<int, int> farthest_point(float x, float y, float r) {
             run.second+=dir.second;
         }
         if(run.first == new_x) break;
-        cout << run.first << run.second << endl;
+        //cout << run.first << run.second << endl;
     }
     return ans;
 }
