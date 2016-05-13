@@ -39,8 +39,8 @@ pair<int, int> farthest_point(float x, float y, float r) {
     pair<int, int> ans = {(int)x, (int)y}; //
     pair<float, float> center = {x, y};    // 
     
-    int new_x = (int)(x+0.5);
-    int new_y = (int)(y+0.5);
+    int new_x = (int)(x+(x>=0?0.5:-0.5));
+    int new_y = (int)(y+(y>=0?0.5:-0.5));
 
     //cout << new_x << " " << new_y << endl;
 
