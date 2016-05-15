@@ -8,8 +8,7 @@
 */
 
 
-
-_______________________________________________________________________________
+/*
 
 Given an array of n integers nums and a target, find the number of index triplets i, j, k with 0 <= i < j < k < n that satisfy the condition nums[i] + nums[j] + nums[k] < target.
 
@@ -20,7 +19,7 @@ Return 2. Because there are two triplets which sums are less than 2:
 Follow up:
 Could you solve it in O(n2) runtime?
 
-_______________________________________________________________________________
+*/
 
 class Solution {
 public:
