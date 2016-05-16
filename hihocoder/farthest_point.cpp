@@ -29,19 +29,18 @@ float dist(pair<int, int>& start, pair<float, float>& center) {
 }
 
 pair<int, int> farthest_point(float x, float y, float r) {
-    pair<int, int> ans= {0, 0};
-    pair<float, float> center = {x, y};
-    pair<int, int> ans = {0, 0};
+    pair<int, int> ans= {0, 0};         // 
+    pair<float, float> center = {x, y}; // 
     
-    float new_x = (float)(int)(x+0.5);
-    float new_y = (float)(int)(y+0.5);
+    int new_x = (int)(x+0.5);
+    int new_y = (int)(y+0.5);
 
-    pair<int, int> dir = {0, 0};//最远点所在方位
+    pair<int, int> dir = {0, 0};        // 最远点所在大致方位
     dir.first = new_x<x?-1:1;
     dir.second = new_y<y?-1:1;
 
     pair<int, int> run = {new_x+dir.first*r, new_y};
-    while(rum.first > new_x) {
+    while(run.first > new_x) {
         float tmp = dist(run, center);
         if(dist(run, center)>r) run.first-=dir.first;
         else {
