@@ -40,7 +40,7 @@ pair<int, int> farthest_point(float x, float y, float r) {
     dir.second = new_y<y?-1:1;
 
     pair<int, int> run = {new_x+dir.first*r, new_y};
-    while(run.first > new_x) {
+    while(run.first >= new_x) {
         float tmp = dist(run, center);
         if(dist(run, center)>r) run.first-=dir.first;
         else {
@@ -48,8 +48,6 @@ pair<int, int> farthest_point(float x, float y, float r) {
             run.second+=dir.second;
         }
     }
-
-
     return ans;
 }
 
