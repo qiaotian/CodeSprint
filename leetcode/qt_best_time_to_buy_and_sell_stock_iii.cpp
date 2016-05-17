@@ -22,7 +22,7 @@ public:
  * Wrong idea:
  * find out four integers a, b, c and d (a < b < c < d) to 
  * maxmize prices[d] - prices[c] + prices[b] - prices[a]
- * 
+ *
  * Right idea:
  * https://leetcode.com/discuss/48151/my-c-solution-o-n-time-o-1-space-8ms
  * /
