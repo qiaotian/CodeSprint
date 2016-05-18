@@ -4,7 +4,7 @@ private:
     vector<vector<char>> hash;
 public:
     Solution() : hash(10, vector<char>(0)) {}
-
+    // This is a shit!
     void initHash() {
         hash[2].push_back('a');
         hash[2].push_back('b');
