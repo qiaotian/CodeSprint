@@ -33,7 +33,7 @@ public:
         hash[9].push_back('y');
         hash[9].push_back('z');
     }
-    void helper(string& digits, int pos, vector<string>& ans, string tmp) {
+    void dfs(string& digits, int pos, vector<string>& ans, string tmp) {
         if(pos>=digits.size()) {
             ans.push_back(tmp);
             return;
@@ -48,7 +48,7 @@ public:
         if(digits.empty()) return ans;
 
         initHash();
-        helper(digits, 0, ans, "");
+        dfs(digits, 0, ans, "");
         return ans;
     }
 };
