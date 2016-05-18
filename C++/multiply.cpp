@@ -3,15 +3,16 @@
 
 class BigInt {
     public:
+        // 字符串作为参数初始化BigInt实例
         BigInt(string s) {
-            transform(s.rbegin(), s.rend(), back_inserter(n), 
+            transform(s.rbegin(), s.rend(), back_inserter(n),
                     [](const char c) { return c - '0';});
         }
 
         operator string() {
             string s;
-            transform(find_if(this->n.rbegin(), prev(this->n.rend()), 
-                        [](const int i) { return i != 0; }), this->n.rend(), back_inserter(s), 
+            transform(find_if(this->n.rbegin(), prev(this->n.rend()),
+                        [](const int i) { return i != 0; }), this->n.rend(), back_inserter(s),
                     [](const int i) { return i + '0'; });
 
             return s;
