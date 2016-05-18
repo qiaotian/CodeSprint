@@ -1,5 +1,6 @@
 class Solution {
 private:
+    // vector<vector<char>> hash(10, vector<char>(0)) hash; cannot allocate memory out function in Class directly, we need use construct function to fix this.
     vector<vector<char>> hash;
 public:
     Solution() : hash(10, vector<char>(0)) {}
