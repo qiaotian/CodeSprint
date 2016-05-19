@@ -20,7 +20,7 @@ public:
  * 动态规划的过程中，往往需要记录不止一个状态，
  * 不仅迭代之间有依赖关系，一次迭代内的状态之间也可能会有依赖关系
  * Wrong idea:
- * find out four integers a, b, c and d (a < b < c < d) to 
+ * find out four integers a, b, c and d (a < b < c < d) to
  * maxmize prices[d] - prices[c] + prices[b] - prices[a]
  *
  * Right idea:
