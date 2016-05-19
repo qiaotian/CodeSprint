@@ -24,6 +24,10 @@ Sample Output
 
 */
 
+#include <iostream>
+
+using namespace std;
+
 float dist(pair<int, int>& start, pair<float, float>& center) {
     return sqrt(pow(start.first-center.first, 2)+pow(start.second-center.second, 2));
 }
@@ -49,6 +53,14 @@ pair<int, int> farthest_point(float x, float y, float r) {
         }
     }
     return ans;
+}
+
+int main(void) {
+    float x, y, r;
+    cin >> x >> y >> r;
+    pair<int, int> ans = farthest_point(x, y, r);
+    cout << ans.first << " " << ans.second << endl;
+    return 0;
 }
 
 
