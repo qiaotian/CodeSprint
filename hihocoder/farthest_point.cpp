@@ -25,7 +25,7 @@ Sample Output
 */
 
 #include <iostream>
-#include <cmath>
+#include <cmath> // pow会用到
 
 using namespace std;
 
@@ -34,7 +34,6 @@ float dist(pair<int, int>& start, pair<float, float>& center) {
 }
 
 pair<int, int> farthest_point(float x, float y, float r) {
-    pair<int, int> ans= {0, 0};         // 
     pair<float, float> center = {x, y}; // 
     
     int new_x = (int)(x+0.5);
@@ -45,7 +44,8 @@ pair<int, int> farthest_point(float x, float y, float r) {
     dir.second = new_y<y?-1:1;
 
     pair<int, int> run = {new_x+dir.first*r, new_y};
-    while(run.first >= new_x) {
+    pair<int, int> ans = run;
+    while(run.first != new_x) {
         float tmp = dist(run, center);
         if(dist(run, center)>r) run.first-=dir.first;
         else {
