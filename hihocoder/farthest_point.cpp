@@ -25,6 +25,7 @@ Sample Output
 */
 
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
