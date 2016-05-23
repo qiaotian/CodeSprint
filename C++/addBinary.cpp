@@ -20,6 +20,7 @@ class Solution {
                 if(bi != b.rend())
                     ++bi;
             }
+            // don't forget to deal with the final carry
             if(carry)
                 ans.push_back('1');
 
