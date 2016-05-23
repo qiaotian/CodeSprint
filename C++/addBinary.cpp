@@ -1,5 +1,6 @@
 // Time Complexity: O(n)
 // Space Complexity: O(1)
+// string 也可以像vector一样push_back、pop_back()
 
 class Solution {
     public:
