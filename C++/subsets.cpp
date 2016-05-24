@@ -12,7 +12,7 @@ class Solution {
             sort(S.begin(), S.end());
 
             for(int i = 0; i < setSize; ++i) {
-                for(int j = 0; j < size; j++) {
+                for(int j = 0; j < size; ++j) {
                     if(i & (1 << j))
                         v.push_back(S[j]);
                 }
