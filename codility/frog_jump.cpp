@@ -8,5 +8,7 @@
 int solution(int X, int Y, int D) {
     // write your code in C99 (gcc 4.8.2)
     if (X>Y || D<=0) return -1; // error
-    return (int)ceil((Y-X)/(float)D);
+    //return (int)ceil((Y-X)/(float)D);
+    if(!(Y-X)%D) return (Y-X)/X;
+    else return (Y-X)/X + 1; 
 }
