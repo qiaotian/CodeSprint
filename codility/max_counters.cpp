@@ -22,7 +22,7 @@ vector<int> solution(int n, vector<int>& ops) {
     for(auto op:ops) {
         if(op>n) last_max = cur_max;
         ans[op-1] = max(ans[op-1]+1, last_max+1);
-        if(ans[op-1]>cur_max) cur_max = ans[op-1];
+        cur_max = max(ans[op-1], cur_max);
     }
     for(auto num:ans) {
         num = max(num, last_max);
