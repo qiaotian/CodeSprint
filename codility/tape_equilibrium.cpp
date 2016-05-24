@@ -15,7 +15,7 @@ public:
         long long sum = 0;
         for(auto num:nums) sum+=num;
         long long left = 0;
-        int minidx = 0; // 在第0个元素之前
+        int minidx = 0; // 分割线在第0个元素之前
         long long delta = abs(sum);
         for(int i = 1; i<nums.size(); i++) {
             left += nums[i];
