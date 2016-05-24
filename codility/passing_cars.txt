@@ -19,7 +19,7 @@ We have five pairs of passing cars: (0, 1), (0, 3), (0, 4), (2, 3), (2, 4).
 
 Write a function:
 
-int solution(int A[], int N);
+int solution(vector<int> &A);
 
 that, given a non-empty zero-indexed array A of N integers, returns the number of pairs of passing cars.
 
