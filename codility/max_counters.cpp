@@ -24,7 +24,11 @@ vector<int> solution(int n, vector<int>& ops) {
         ans[op-1] = max(ans[op-1]+1, last_max+1);
         cur_max = max(ans[op-1], cur_max);
     }
-    for(auto num:ans) {
+    // warning
+    //for(auto num:ans) {
+    //    num = max(num, last_max);
+    //}
+    for(auto& num:ans) {
         num = max(num, last_max);
     }
     return ans;
