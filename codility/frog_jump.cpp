@@ -7,5 +7,6 @@
 
 int solution(int X, int Y, int D) {
     // write your code in C99 (gcc 4.8.2)
-    return (int)ceil(abs(Y-X)/(float)D);
+    if (X>Y || D<=0) return -1; // error
+    return (int)ceil((Y-X)/(float)D);
 }
