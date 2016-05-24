@@ -1,6 +1,6 @@
 // Time:  O(n)
 // Space: O(1)
-
+// move all zeros backward
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
