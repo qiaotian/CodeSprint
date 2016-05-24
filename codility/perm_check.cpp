@@ -6,7 +6,7 @@
 clsss Solution {
 public:
     bool solution(vector<int>& nums) {
-        vector<bool> flags(nums.size()+1, false); //均为出现过
+        vector<bool> flags(nums.size()+1, false); //均未出现过
         for(auto num:nums) {
             // 越界或者重复都不是permutation
             if(num>nums.size() || num<1 || flags[num]) return false; //
