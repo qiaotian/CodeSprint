@@ -1,3 +1,4 @@
+// ! overflow
 class Solution {
 public:
     int solution(vector<int> nums) {
@@ -10,3 +11,16 @@ public:
         return (int)(target-sum);
     }
 };
+
+//
+class Solution {
+public:
+    int solution(vector<int> nums) {
+        int ans = 0;
+        for(int i=0; i<nums.size(); i++) {
+            ans ^= nums[i];
+            ans ^= i+1;
+        }
+        return ans^(nums.size()+1);
+    }
+}
