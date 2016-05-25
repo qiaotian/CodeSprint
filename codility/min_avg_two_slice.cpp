@@ -5,7 +5,6 @@
 // 注意：1. 比较的时候注意不能使用'<='，要用’<’；
 //      2. 做整数除法的时候会产生精度损失，切记；
 
-
 int solution(vector<int> &A) {
     //vector<int> sum(A.size(), 0);
     //for(int i=0; i<A.size(); i++) {
