@@ -11,15 +11,16 @@ int solution(vector<int> &A) {
     //    sum[i] = A[i]+(i==0?0:sum[i-1]);
     //}
     int index = 0;
-    int min_avg = INT32_MAX;
+    //int min_avg = INT32_MAX;
+    float min_avg = INT32_MAX;
     for(int i=0; i<A.size()-1; i++) {
-        if((A[i]+A[i+1])/2 < min_avg) {
+        if((A[i]+A[i+1])/2.0 < min_avg) {
             index = i;
-            min_avg = (A[i]+A[i+1])/2;
+            min_avg = (A[i]+A[i+1])/2.0;
         }
-        if (i<A.size()-2 && (A[i]+A[i+1]+A[i+2])/3<min_avg) {
+        if (i<A.size()-2 && (A[i]+A[i+1]+A[i+2])/3.0<min_avg) {
             index = i;
-            min_avg = (A[i]+A[i+1]+A[i+2])/3;
+            min_avg = (A[i]+A[i+1]+A[i+2])/3.0;
         }
     }
     return index;
