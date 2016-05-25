@@ -10,4 +10,4 @@ int solution(int A, int B, int K) {
     return (floor(1.0*B/K)+1)-(ceil(1.0*A/K));
 }
 
-// 提一个测试用例错一个
+// 还是要注意整数除法出现精度损失的问题
