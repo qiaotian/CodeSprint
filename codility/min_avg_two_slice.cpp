@@ -1,5 +1,6 @@
 // 难点：如何用O(N)复杂度解决该文题
-// 思路：Every slice must be of size two or three. Slices of bigger sizes are created from such smaller slices. Therefore should any bigger slice have an optimal value, all sub-slices must be the same, for this case to hold true. Should this not be true, one of the sub-slices must be the optimal slice. The others being bigger. Therefore we check all possible slices of size 2/3 and return the smallest one. The first such slice is the correct one.
+// 思路：最终结果长度一定为2或者是3 ***
+// Slices of bigger sizes are created from such smaller slices. Therefore should any bigger slice have an optimal value, all sub-slices must be the same, for this case to hold true. Should this not be true, one of the sub-slices must be the optimal slice. The others being bigger.
 // 做法：检查所有长度为2或者3的slice，找到最小值
 // 注意：1. 比较的时候注意不能使用'<='，要用’<’；
 //      2. 做整数除法的时候会产生精度损失，切记；
