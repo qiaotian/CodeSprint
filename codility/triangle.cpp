@@ -7,3 +7,14 @@ int solution(vector<int> &A) {
     }
     return 0;
 }
+
+// 错误点：两个整数相加，出现溢出
+// 代码中需要定义一个长整型的临时变量，保存整形相加的结果
+int solution(vector<int>& A) {
+    sort(A.begin(), A.end());
+    for(int i=2; i<A.size(); i++) {
+        long long tmp = A[i-2]+A[i-1];
+        if(tmp>A[i]) return 1;
+    }
+    return 0;
+}
