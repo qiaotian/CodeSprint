@@ -39,14 +39,13 @@ public:
 
         // Solution Two (fastest with 12ms)
         if(--n < 2) return 0;
-        int m = (n+1)/2;
-        int ans = m; // 初始化数目为m
+        int ans = (n+1)/2; // 初始化数目为中位数
         int k, u = (sqrt(n)-1)/2;
-        bool notPrime[m] = {0};
+        bool notPrime[(n+1)/2] = {0};
 
         for(int i=1; i<=u; i++)
             if(!notPrime[i])
-                for(k=(i+1)*2*i; k<m; k+=i*2+1)
+                for(k=(i+1)*2*i; k<(n+1)/2; k+=i*2+1):
                     if (!notPrime[k]) {
                         notPrime[k] = true;
                         ans--; //排除一个合数，ans自减
