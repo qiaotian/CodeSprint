@@ -34,8 +34,5 @@ public:
  * 3. 在单调递增区间内再次用二分搜索查找target
  *
  * 注意：
- * 1. 在第一步中，使用二分查找的上界条件是high=mid而非high=mid-1，这样做是因为mid总是趋向于偏向low这一边，
- *    因此，当nums[mid] > nums[high]时，第一个元素一定在mid的右侧; 而当nums[mid] <= nums[high]时，mid
- *    出于第一个元素和high之间的某处，并有可能在第一个元素处，所以保险起见，high = mid; 最终目标是要让low和
- *    high同时指向第一个元素然后退出。
+ * 1. 在第一步中，使用二分查找的上界条件是high=mid而非high=mid-1，这样做是因为mid总是趋向于偏向low这一边，因此，当nums[mid] > nums[high]时，第一个元素一定在mid的右侧; 而当nums[mid] <= nums[high]时，mid出于第一个元素和high之间的某处，并有可能在第一个元素处，所以保险起见，high = mid; 最终目标是要让low和high同时指向第一个元素然后退出。
  */
