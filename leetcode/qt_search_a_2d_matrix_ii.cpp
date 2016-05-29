@@ -5,6 +5,8 @@ Write an efficient algorithm that searches for a value in an m x n matrix. This 
 2. Integers in each column are sorted in ascending from top to bottom.
 */
 
+// Solution: This algorithm works by elimination. Every move to the left(--col) eliminates all the elements below the current cell in that column. Likewise, every move down elimnates all the elements to the left of the cell in that row.
+
 // hard (196ms, beats 94%) O(M+N)
 class Solution {
 public:
