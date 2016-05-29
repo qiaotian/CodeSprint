@@ -32,6 +32,14 @@ int search_in_sorted_array_interspersed_empty_strings(vector<string> strings, st
 // 通过让right指向非空字符串，那么mid从左往右查找时一定可以找到非空字符串，可以避免mid左右往复搜索非空字符串。
 
 int int search_in_sorted_array_interspersed_empty_strings(vector<string> strings, string target) {
+    if(strings.size()==0 || target.empty()) return -1;
+    if(target=="") {
+        for(int i=0; i<strings.size(); i++) {
+            if(strings[i]=="") return i;
+        }
+        return -1;
+    }
+
     int ll = 0;
     int rr = strings.size();
     while(ll <= rr) {
