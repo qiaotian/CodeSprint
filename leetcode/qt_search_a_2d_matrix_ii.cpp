@@ -5,7 +5,7 @@ Write an efficient algorithm that searches for a value in an m x n matrix. This 
 2. Integers in each column are sorted in ascending from top to bottom.
 */
 
-// hard (196ms, beats 94%)
+// hard (196ms, beats 94%) O(M+N)
 class Solution {
 public:
     bool searchMatrix(vector<vector<int>>& matrix, int target) {
