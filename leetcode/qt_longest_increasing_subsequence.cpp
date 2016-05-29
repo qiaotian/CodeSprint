@@ -37,11 +37,11 @@ class Solution {
 public:
     int lengthOfLIS(vector<int>& nums) {
         if (nums.empty()) return 0;
-        vector<int> ends{nums[0]};
+        vector<int> ends{nums[0]}; //ends始终递增有序
         for (int num : nums) {
             if (num > ends.back()) ends.push_back(num);
             else {
-                // 手动实现lower_bound
+                // similiar to lower_bound
                 int l = 0, r = ends.size() - 1;
                 while (l < r) {
                     // int m = l + (r - l) / 2; or
