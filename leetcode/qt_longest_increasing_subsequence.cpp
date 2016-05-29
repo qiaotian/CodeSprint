@@ -44,7 +44,8 @@ public:
                 // 手动实现lower_bound
                 int l = 0, r = ends.size() - 1;
                 while (l < r) {
-                    int m = l + (r - l) / 2;
+                    // int m = l + (r - l) / 2; or
+                    int m = (l+r)/2;
                     if (ends[m] < num) l = m + 1;
                     else r = m;
                 }
