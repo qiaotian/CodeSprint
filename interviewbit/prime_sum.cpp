@@ -20,8 +20,11 @@ If a < c OR a==c AND b < d.
 
 #include <iostream>
 #include <vector>
+#include <cmath>
 
-vector<int> Solution::primesum(int A) {
+using namespace std;
+
+vector<int> primesum(int A) {
     vector<int> ans;
     vector<bool> flag(A+1, false);
     flag[2] = true;
@@ -42,15 +45,15 @@ vector<int> Solution::primesum(int A) {
             ans.push_back(i);
             ans.push_back(A-i);
             break;
-        } 
+        }
     }
-    
     return ans;
 }
 
 int main(void) {
-    Solution *sln = new Sulution();
-	vector<int> ans = sln(4);
+	int test = 0;
+    cin >> test;
+    vector<int> ans = primesum(test);
     for(auto num:ans) cout << num << " " << endl;
 	return 0;
 }
