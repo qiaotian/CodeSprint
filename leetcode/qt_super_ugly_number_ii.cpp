@@ -17,7 +17,7 @@ An ugly number must be multiplied by either 2, 3, or 5 from a smaller ugly numbe
 class Solution {
 public:
     int nthUglyNumber(int n) {
-        vector<int> res(1, 1);
+        vector<int> res(1, 1); // the first valid ugly number is 1
         int i3 = 0, i5 = 0, i7 = 0;
         while (res.size() < k) {
             int m3 = res[i3] * 3, m5 = res[i5] * 5, m7 = res[i7] * 7;
