@@ -24,6 +24,7 @@ public:
 class Solution {
 public:
     int lengthOfLIS(vector<int>& nums) {
+        // the length of ans stores the max length of incresing subsequence
         vector<int> ans;
         for (int a : nums)
             if (ans.size() == 0 || a > ans.back()) ans.push_back(a);
