@@ -3,7 +3,7 @@
 * @Date:   2016-06-05T22:40:02+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-06-05T23:22:02+08:00
+* @Last modified time: 2016-06-05T23:24:26+08:00
 * @License: DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 */
 
@@ -51,6 +51,7 @@ public:
         for(int i=0; i<4; i++) {
             solution_mask |= 1<<(1+solution[i]-'A');
         }
+        //
         for(int i=0; i<4; i++) {
             if(guess[i]==solution[i]){
                 res.hit++;
