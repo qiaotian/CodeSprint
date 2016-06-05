@@ -1,4 +1,15 @@
-ass Solution {
+/**
+* @Author: Tian Qiao <qiaotian>
+* @Date:   2016-02-28T01:10:56+08:00
+* @Email:  qiaotian@me.com
+* @Last modified by:   qiaotian
+* @Last modified time: 2016-06-06T00:20:06+08:00
+* @License: DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+*/
+
+
+/*
+class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
         int res = nums[0];
@@ -25,9 +36,9 @@ public:
 };
 
 /**
- * 1st solution 
+ * 1st solution
  * Space: O(N)
- * 
+ *
  * 2nd solution
  * Space: O(1)
  * /
