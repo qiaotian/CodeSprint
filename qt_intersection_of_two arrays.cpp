@@ -3,7 +3,7 @@
 * @Date:   2016-06-09T14:22:16+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   root
-* @Last modified time: 2016-06-09T14:52:44+08:00
+* @Last modified time: 2016-06-09T14:53:51+08:00
 * @License: DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 */
 
@@ -25,6 +25,7 @@ What if elements of nums2 are stored on disk, and the memory is limited such tha
 class Solution {
 public:
     vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
+        // set the first parameter as the bigger container while the second as smaller one
         if(nums1.size() < nums2.size()) return intersect(nums2, nums1);
 
         vector<int> ans;
