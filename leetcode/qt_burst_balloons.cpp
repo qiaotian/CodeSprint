@@ -3,7 +3,7 @@
 * @Date:   2016-06-09T16:23:25+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   root
-* @Last modified time: 2016-06-09T17:33:54+08:00
+* @Last modified time: 2016-06-09T17:34:39+08:00
 * @License: DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 */
 
@@ -46,7 +46,7 @@ public:
     }
 };
 
-// Time Complexity: O(N^3)
+// Time Complexity: O(N^3, beats 97%)
 class Solution {
 public:
     int maxCoins(vector<int> &nums) {
