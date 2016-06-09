@@ -3,7 +3,7 @@
 * @Date:   2016-06-09T16:23:25+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   root
-* @Last modified time: 2016-06-09T16:27:27+08:00
+* @Last modified time: 2016-06-09T17:16:14+08:00
 * @License: DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 */
 
@@ -46,11 +46,25 @@ public:
     }
 };
 
-// Time Complexity: O(N^2)
+// Time Complexity: O(N^3)
 class Solution {
 public:
-    int maxCoins(vector<int>& nums) {
-        
+    int maxCoins(vector<int> &nums) {
+        int _nums[nums.size() + 2];
+        int n = 1;
+        for (int x : nums) if (x > 0) _nums[n++] = x;
+        _nums[0] = _nums[n++] = 1;
+
+        int dp[n][n] = {};
+        for (int k = 2; k < n; ++k) {
+            // k is the distance between left and right
+            for (int left = 0; left < n - k; ++left) {
+                int right = left + k;
+                for (int i = left + 1; i < right; ++i)
+                    dp[left][right] = max(dp[left][right], _nums[left]*_nums[i]*_nums[right] + dp[left][i]+dp[i][right]);
+            }
+        }
+        return dp[0][n - 1];
     }
+    // 16 ms
 };
-~
