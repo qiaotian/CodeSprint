@@ -3,7 +3,7 @@
 * @Date:   2016-06-09T16:23:25+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   root
-* @Last modified time: 2016-06-09T17:16:14+08:00
+* @Last modified time: 2016-06-09T17:22:08+08:00
 * @License: DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 */
 
@@ -58,6 +58,7 @@ public:
         int dp[n][n] = {};
         for (int k = 2; k < n; ++k) {
             // k is the distance between left and right
+            // there is at least one element between left and right
             for (int left = 0; left < n - k; ++left) {
                 int right = left + k;
                 for (int i = left + 1; i < right; ++i)
@@ -68,3 +69,5 @@ public:
     }
     // 16 ms
 };
+
+// Reference: https://leetcode.com/discuss/72216/share-some-analysis-and-explanations
