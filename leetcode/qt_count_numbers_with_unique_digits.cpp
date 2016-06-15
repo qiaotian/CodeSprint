@@ -3,7 +3,7 @@
 * @Date:   2016-06-15T20:21:59+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-06-15T20:22:46+08:00
+* @Last modified time: 2016-06-15T20:26:57+08:00
 * @License: Free License
 */
 
@@ -34,3 +34,10 @@ public:
 // the total number equals numbers have 1 digit +
 // numbers have two digits + ... + numbers have n
 // digits
+
+// number of digits         unique numbers
+// 1                        10
+// 2                        9*9
+// 3                        9*9*8
+// 4                        9*9*8*7
+// ...                      9*9*8*7*6...
