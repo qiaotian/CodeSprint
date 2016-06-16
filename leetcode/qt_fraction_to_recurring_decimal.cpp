@@ -3,7 +3,7 @@
 * @Date:   2016-06-16T18:17:43+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-06-16T20:21:51+08:00
+* @Last modified time: 2016-06-16T20:25:49+08:00
 * @License: Free License
 */
 
@@ -59,12 +59,13 @@ public:
         if(hash[remainder]) break;
         hash[remainder] = true;
     }
-    return remainder==0?(ans+=decimal):(ans+='('+decimal+')');
+    return remainder==0?(ans+=decimal):(ans+='('+decimal+')');// something wrong here
     }
 };
 
 // If denominator is -2147483648, overflow will occurs when convert it to positive integer.
 // Therefore, long type should be used.
+// The '(' may not be at the first place after '.'
 
 */
 class Solution{
