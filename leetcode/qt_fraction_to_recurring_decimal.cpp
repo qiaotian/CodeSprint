@@ -3,7 +3,7 @@
 * @Date:   2016-06-16T18:17:43+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-06-16T20:20:36+08:00
+* @Last modified time: 2016-06-16T20:21:51+08:00
 * @License: Free License
 */
 
@@ -22,7 +22,7 @@ Hint:
 No scary math, just apply elementary math knowledge. Still remember how to perform a long division?
 */
 
-/*
+/* TLE
 class Solution {
 public:
     string fractionToDecimal(int numerator, int denominator) {
