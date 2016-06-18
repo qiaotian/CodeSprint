@@ -18,7 +18,42 @@ If a < c OR a==c AND b < d.
 
 */
 
+#include <iostream>
+#include <vector>
 
+vector<int> Solution::primesum(int A) {
+    vector<int> ans;
+    vector<bool> flag(A+1, false);
+    flag[2] = true;
+    flag[3] = true;
+    for(int i=4; i<A+1; i++) {
+        int tmp = sqrt(i);
+        int j=2;
+        for( ; j<=tmp; j++) {
+            if(i%j==0) break;
+            else {
+                if(j==tmp) flag[i] = true;
+            }
+        }
+        //if(j==tmp && i%j!=0) flag[i] = true;
+    }
+    for(int i=2; i<=(A+1)/2; i++) {
+        if(flag[i] && flag[A-i]) {
+            ans.push_back(i);
+            ans.push_back(A-i);
+            break;
+        } 
+    }
+    
+    return ans;
+}
+
+int main(void) {
+    Solution *sln = new Sulution();
+	vector<int> ans = sln(4);
+    for(auto num:ans) cout << num << " " << endl;
+	return 0;
+}
 
 
 
