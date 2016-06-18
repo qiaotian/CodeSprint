@@ -39,7 +39,9 @@ public:
 
         // Solution Two (fastest with 12ms)
         if(--n < 2) return 0;
-        int m = (n+1)/2, count = m, k, u = (sqrt(n)-1)/2;
+        int m = (n+1)/2;
+        int ans = m; // 初始化数目为m
+        int k, u = (sqrt(n)-1)/2;
         bool notPrime[m] = {0};
 
         for(int i=1; i<=u; i++)
@@ -47,9 +49,9 @@ public:
                 for(k=(i+1)*2*i; k<m; k+=i*2+1)
                     if (!notPrime[k]) {
                         notPrime[k] = true;
-                        count--;
+                        ans--; //排除一个合数，ans自减
                     }
-        return count;
+        return ans;
         // Solution Three (less space with 16ms)
         /*
         if(--n < 2) return 0;
