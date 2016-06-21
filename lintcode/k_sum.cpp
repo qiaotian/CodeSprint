@@ -3,7 +3,7 @@
 * @Date:   2016-06-21T01:32:31+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-06-21T09:49:25+08:00
+* @Last modified time: 2016-06-21T18:16:25+08:00
 * @License: Free License
 */
 
@@ -45,5 +45,37 @@ public:
         // wirte your code here
         sort(A.begin(), A.end());
         return util(A, k, target, 0);
+    }
+};
+
+class Solution {
+public:
+    /**
+     * @param A: an integer array.
+     * @param k: a positive integer (k <= length(A))
+     * @param target: a integer
+     * @return an integer
+     */
+    int kSum(vector<int> A, int k, int target) {
+        // wirte your code here
+        if(target<0) return 0;
+
+        //int dp[A.size()+1][k+1][target+1] = ;
+        vector<vector<vector<int>>> dp(A.size()+1,vector<vector<int>>(k+1, vector<int>(target+1, 0)));
+
+        for(int i=0; i<=A.size(); i++) {
+            for(int j=0; j<=k; j++) {
+                for(int m=0; m<=target; m++) {
+                    if(j==0 && m==0) dp[i][j][m] = 1;
+                    else if(!(i==0 || j==0 || k==0)) {
+                        dp[i][j][m] = dp[i-1][j][m];
+                        if(m-A[i-1]>=0)
+                            dp[i][j][m] += dp[i-1][j-1][m-A[i-1]];
+                    }
+                }
+            }
+        }
+
+        return dp[A.size()][k][target];
     }
 };
