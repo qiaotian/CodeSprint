@@ -3,11 +3,11 @@
 * @Date:   2016-03-06T19:00:06+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-06-21T18:16:20+08:00
+* @Last modified time: 2016-06-21T18:29:57+08:00
 * @License: Free License
 */
 
-
+// @注意： i次购买j是甩卖的最大获益并非一定要用i次购买j次售卖，i、j只是上限次数
 
 class Solution {
 public:
