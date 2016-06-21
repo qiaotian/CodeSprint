@@ -3,7 +3,7 @@
 * @Date:   2016-06-21T15:24:03+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-06-21T16:38:31+08:00
+* @Last modified time: 2016-06-21T17:15:38+08:00
 * @License: Free License
 */
 
@@ -53,6 +53,12 @@ public:
 };
 
 // O(N^2)
+/**
+
+      ||                        ||
+   || ||                        ||  || ||
+|| || || should be divided into ||, || || and || || ||.
+*/
 class Solution {
 public:
     int largestRectangleArea(vector<int> &height) {
@@ -78,6 +84,7 @@ public:
                 s.pop(); // pop the top
 
                 // Calculate the area with hist[tp] stack as smallest bar
+                // s is empty means the all elements before the ith are bigger or equal to the ith element
                 cur_area = hist[tp] * (s.empty() ? i : i - s.top() - 1);
 
                 // update max area, if needed
