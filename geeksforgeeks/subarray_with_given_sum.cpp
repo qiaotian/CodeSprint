@@ -3,7 +3,7 @@
 * @Date:   2016-06-21T19:57:36+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-06-21T19:59:12+08:00
+* @Last modified time: 2016-06-21T20:05:05+08:00
 * @License: Free License
 */
 
@@ -46,7 +46,6 @@ In second test case, sum of elements from 1st position to 5th position is 15
 
 **For More Examples Use Expected Output**
 */
-
 
 #include <iostream>
 #include <vector>

@@ -3,7 +3,7 @@
 * @Date:   2016-06-22T22:00:09+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-06-23T00:58:33+08:00
+* @Last modified time: 2016-06-23T01:01:36+08:00
 * @License: Free License
 */
 
@@ -73,5 +73,35 @@ public:
         if(ans == INT32_MIN) return gap;
 
         return ans;
+    }
+};
+
+// jianchao.li.fighter's solution
+class Solution {
+public:
+    int maximumGap(vector<int>& nums) {
+        int n = nums.size();
+        if (n < 2) return 0;
+        auto lu = minmax_element(nums.begin(), nums.end()); // good choice
+        int l = *lu.first, u = *lu.second;
+        int gap = max((u - l) / (n - 1), 1);
+        int m = (u - l) / gap + 1;
+        vector<vector<int>> buckets(m, {INT_MAX, INT_MIN}); // 根据min和max来判定是否为空
+        for (int num : nums) {
+            int k = (num - l) / gap;
+            if (num < buckets[k][0]) buckets[k][0] = num;
+            if (num > buckets[k][1]) buckets[k][1] = num;
+        }
+        int i = 0, j;
+        gap = buckets[0][1] - buckets[0][0];
+        while (i < m) {
+            j = i + 1;
+            while (j < m && buckets[j][0] == INT_MAX && buckets[j][1] == INT_MIN)
+                j++;
+            if (j == m) break;
+            gap = max(gap, buckets[j][0] - buckets[i][1]);
+            i = j;
+        }
+        return gap;
     }
 };
