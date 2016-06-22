@@ -3,7 +3,7 @@
 * @Date:   2016-03-06T19:00:06+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-06-21T18:29:57+08:00
+* @Last modified time: 2016-06-21T19:31:33+08:00
 * @License: Free License
 */
 
@@ -93,6 +93,5 @@ public:
 /**
  * 当k过大时，即k的数目已经超过实际最大交易数，
  * 那么这种情况应当做单独考虑
- *
  * 否则会超时，并出错
  * /
