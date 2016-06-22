@@ -3,10 +3,11 @@
 * @Date:   2016-06-22T20:17:26+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-06-22T20:17:53+08:00
+* @Last modified time: 2016-06-22T20:32:01+08:00
 * @License: Free License
 */
 
+/*
 
 Given n pieces of wood with length L[i] (integer array). Cut them into small pieces to guarantee you could have equal or more than k pieces with the same length. What is the longest length you can get from the n pieces of wood? Given L & k, return the maximum length of the small pieces.
 
@@ -16,6 +17,7 @@ For L=[232, 124, 456], k=7, return 114.
 @Challenge
 O(n log Len), where Len is the longest length of the wood.
 
+*/
 
 class Solution {
 public:
