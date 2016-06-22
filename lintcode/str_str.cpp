@@ -3,11 +3,9 @@
 * @Date:   2016-06-19T23:54:19+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-06-20T15:44:02+08:00
+* @Last modified time: 2016-06-22T16:01:14+08:00
 * @License: Free License
 */
-
-
 
 /**
 For a given source string and a target string, you should output the first index(from 0) of target string in source string.
@@ -37,7 +35,7 @@ public:
         // write your code here
         int len_s = strlen(source);
         int len_t = strlen(target);
-        
+
         return -1;
     }
 };
