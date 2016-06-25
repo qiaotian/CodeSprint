@@ -3,7 +3,7 @@
 * @Date:   2016-06-25T10:03:13+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   root
-* @Last modified time: 2016-06-25T11:39:59+08:00
+* @Last modified time: 2016-06-25T11:41:19+08:00
 * @License: Free License
 */
 
@@ -41,21 +41,21 @@ public:
                     flags[i] = true;
                 }
             } else {
-            if(ratings[i]<=ratings[i+1] && ratings[i]<=ratings[i-1]) {
-                flags[i] = true;
-            }
-            if(ratings[i]>ratings[i-1] && ratings[i] <=ratings[i+1] && flags[i-1]) {
-                count[i] = count[i-1]+1;
-                flags[i] = true;
-            }
-            if(ratings[i]>ratings[i+1] && ratings[i] <=ratings[i-1] && flags[i+1]) {
-                count[i] = count[i+1]+1;
-                flags[i] = true;
-            }
-            if(ratings[i]>ratings[i+1] && ratings[i] >ratings[i-1] && flags[i+1] && flags[i-1]) {
-                count[i] = max(count[i-1], count[i+1])+1;
-                flags[i] = true;
-            }
+                if(ratings[i]<=ratings[i+1] && ratings[i]<=ratings[i-1]) {
+                    flags[i] = true;
+                }
+                if(ratings[i]>ratings[i-1] && ratings[i] <=ratings[i+1] && flags[i-1]) {
+                    count[i] = count[i-1]+1;
+                    flags[i] = true;
+                }
+                if(ratings[i]>ratings[i+1] && ratings[i] <=ratings[i-1] && flags[i+1]) {
+                    count[i] = count[i+1]+1;
+                    flags[i] = true;
+                }
+                if(ratings[i]>ratings[i+1] && ratings[i] >ratings[i-1] && flags[i+1] && flags[i-1]) {
+                    count[i] = max(count[i-1], count[i+1])+1;
+                    flags[i] = true;
+                }
             }
         }
 
@@ -76,21 +76,21 @@ public:
                     flags[i] = true;
                 }
             } else {
-            if(ratings[i]<=ratings[i+1] && ratings[i]<=ratings[i-1]) {
-                flags[i] = true;
-            }
-            if(ratings[i]>ratings[i-1] && ratings[i] <=ratings[i+1] && flags[i-1]) {
-                count[i] = count[i-1]+1;
-                flags[i] = true;
-            }
-            if(ratings[i]>ratings[i+1] && ratings[i] <=ratings[i-1] && flags[i+1]) {
-                count[i] = count[i+1]+1;
-                flags[i] = true;
-            }
-            if(ratings[i]>ratings[i+1] && ratings[i] >ratings[i-1] && flags[i+1] && flags[i-1]) {
-                count[i] = max(count[i-1], count[i+1])+1;
-                flags[i] = true;
-            }
+                if(ratings[i]<=ratings[i+1] && ratings[i]<=ratings[i-1]) {
+                    flags[i] = true;
+                }
+                if(ratings[i]>ratings[i-1] && ratings[i] <=ratings[i+1] && flags[i-1]) {
+                    count[i] = count[i-1]+1;
+                    flags[i] = true;
+                }
+                if(ratings[i]>ratings[i+1] && ratings[i] <=ratings[i-1] && flags[i+1]) {
+                    count[i] = count[i+1]+1;
+                    flags[i] = true;
+                }
+                if(ratings[i]>ratings[i+1] && ratings[i] >ratings[i-1] && flags[i+1] && flags[i-1]) {
+                    count[i] = max(count[i-1], count[i+1])+1;
+                    flags[i] = true;
+                }
             }
         }
 
