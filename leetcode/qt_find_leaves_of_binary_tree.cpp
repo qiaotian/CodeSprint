@@ -3,7 +3,7 @@
 * @Date:   2016-07-01T11:14:53+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-07-01T13:24:54+08:00
+* @Last modified time: 2016-07-01T13:34:12+08:00
 * @License: Free License
 */
 
@@ -85,5 +85,25 @@ public:
         ans.resize(depth+1); // 改变ans的长度，注意depth的值
         traverse(root, ans);
         return ans;
+    }
+};
+
+
+// sxycwzwzq's solution
+// https://leetcode.com/discuss/110535/c-short-easy-understanding-dfs-solution
+class Solution {
+private:
+    int dfs(TreeNode* root, vector<vector<int>>& res){
+        if(!root) return 0;
+        int level = max(dfs(root->left, res), dfs(root->right, res)) + 1;
+        if(level > (int)res.size()) res.push_back(vector<int>());
+        res[level - 1].push_back(root->val);
+        return level;
+    }
+public:
+    vector<vector<int>> findLeaves(TreeNode* root) {
+        vector<vector<int>> res;
+        dfs(root, res);
+        return res;
     }
 };
