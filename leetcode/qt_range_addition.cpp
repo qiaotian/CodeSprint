@@ -3,7 +3,7 @@
 * @Date:   2016-06-29T23:47:32+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-06-30T00:47:27+08:00
+* @Last modified time: 2016-07-01T08:25:39+08:00
 * @License: Free License
 */
 
@@ -37,7 +37,7 @@ After applying operation [0, 2, -2]:
 [-2, 0, 3, 5, 3 ]
 */
 
-The traditional method is TLE
+//The traditional method is TLE(给区间赋值复杂度太高，给边界赋值复杂度可以接受)
 
 class Solution {
 public:
