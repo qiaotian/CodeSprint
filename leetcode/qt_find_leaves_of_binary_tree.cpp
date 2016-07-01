@@ -3,7 +3,7 @@
 * @Date:   2016-07-01T11:14:53+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-07-01T13:34:12+08:00
+* @Last modified time: 2016-07-01T14:37:57+08:00
 * @License: Free License
 */
 
@@ -95,9 +95,12 @@ class Solution {
 private:
     int dfs(TreeNode* root, vector<vector<int>>& res){
         if(!root) return 0;
+        // 就算下一层节点距离叶节点的最远距离，从而确定当前层的层号
         int level = max(dfs(root->left, res), dfs(root->right, res)) + 1;
+        // 如果是新的一层，需要实例新的容器，再将当前节点压栈，否则直接压栈
         if(level > (int)res.size()) res.push_back(vector<int>());
         res[level - 1].push_back(root->val);
+        // 返回当前层号
         return level;
     }
 public:
