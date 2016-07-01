@@ -3,7 +3,7 @@
 * @Date:   2016-07-01T11:14:53+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-07-01T13:23:16+08:00
+* @Last modified time: 2016-07-01T13:24:54+08:00
 * @License: Free License
 */
 
@@ -48,6 +48,7 @@ public:
     unordered_map<TreeNode*, int> hash; // map the node to its max distance to leaves
     int depth = 0; // max distance from root to nodes
 
+    // mark every element with its depth and store them into dictionary
     void layering(TreeNode* root) {
         if(!root) return;
 
@@ -68,12 +69,14 @@ public:
 
         depth = hash[root];
     }
+    // traverse all elements and put them into ans according to their depth
     void traverse(TreeNode* root, vector<vector<int>>& A) {
         if(!root) return;
         A[hash[root]].push_back(root->val);
         traverse(root->left, A);
         traverse(root->right, A);
     }
+
     vector<vector<int>> findLeaves(TreeNode* root) {
         vector<vector<int>> ans;
         if(!root) return ans;
