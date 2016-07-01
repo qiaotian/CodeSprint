@@ -3,12 +3,13 @@
 * @Date:   2016-07-01T11:14:53+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-07-01T14:37:57+08:00
+* @Last modified time: 2016-07-01T14:39:48+08:00
 * @License: Free License
+* @Diffculity: Medium
 */
 
 
-/********
+/** Problem
 Given a binary tree, collect a tree's nodes as if you were doing this: Collect and remove all leaves, repeat until the tree is empty.
 
 Example:
@@ -33,6 +34,8 @@ Explanation:
           []
 Returns [4, 5, 3], [2], [1].
 */
+
+
 
 /**
  * Definition for a binary tree node.
