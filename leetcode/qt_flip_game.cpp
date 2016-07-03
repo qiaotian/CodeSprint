@@ -3,7 +3,7 @@
 * @Date:   2016-07-03T11:20:22+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-07-03T11:27:31+08:00
+* @Last modified time: 2016-07-03T11:32:06+08:00
 * @License: Free License
 * @Inc: Google
 * @Easy
@@ -18,7 +18,6 @@ For example, given s = "++++", after one move, it may become one of the followin
   "++--"
 ]
 If there is no valid move, return an empty list [].
-
 ________________________________________________________________________________
 
 class Solution {
@@ -38,3 +37,5 @@ public:
         return ans;
     }
 };
+// 注意：s.size()返回的是无符号整形，不是int型，因此，如果s为空，那么s.size()-1会溢出，同时
+// 生成了大整数，导致"i<s.size()-1"无限制地执行下去，造成超声、下表越界或者其它错误
