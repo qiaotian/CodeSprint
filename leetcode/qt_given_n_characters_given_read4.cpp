@@ -3,7 +3,7 @@
 * @Date:   2016-07-03T19:32:22+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   Tian Qiao
-* @Last modified time: 2016-07-03T19:42:55+08:00
+* @Last modified time: 2016-07-03T19:55:46+08:00
 * @Inc: Facebook
 * @Difficulty: Easy
 */
@@ -31,12 +31,14 @@ public:
      * @return    The number of characters read
      */
     int read(char *buf, int n) {
-        int ans = 0;
-        int x = 1; //只要初始化为非0值即可
-        while(x && ans<=n) {
-            int x = read4(buf);
-            ans += x;
+        int res = 0;
+        while (n > 0) {
+            int tmp = min(read4(buf), n);
+            res += tmp;
+            buf += tmp; //将缓冲区指针指向未读字符
+            if (tmp < 4) break;
+            n -= 4;
         }
-        return min(ans, n);
+        return res;
     }
 };
