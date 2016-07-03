@@ -3,7 +3,7 @@
 * @Date:   2016-06-29T15:27:41+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-06-29T16:05:57+08:00
+* @Last modified time: 2016-07-03T11:17:16+08:00
 * @License: Free License
 */
 
@@ -24,7 +24,12 @@ Result: [1,2,4,8]
 class Solution {
 public:
     bool isDvisibleSubset(vector<int>& nums, int start, int end) {
-        
+        int maxValue = nums[start];
+        for(int i=start; i<end; i++) {
+            if(nums[i]%maxValue==0 || nums[i]) {
+                maxValue = max(maxValue, nums[i]);
+            }
+        }
     }
     vector<int> largestDivisibleSubset(vector<int>& nums) {
 

@@ -3,7 +3,7 @@
 * @Date:   2016-07-01T08:42:04+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-07-01T10:38:00+08:00
+* @Last modified time: 2016-07-03T11:17:13+08:00
 * @License: Free License
 */
 
@@ -59,5 +59,5 @@ public:
 
 // 注意：
 // 定义新节点的时候
-// “ListNode *tmp = &ListNode(0);”会出错
+// “ListNode *tmp = &ListNode(0);”会出错"taking the address of a temporary object of type xcode"
 // ”ListNode tmp(0); ListNode* h = &tmp; blabla; return h;”也会出错

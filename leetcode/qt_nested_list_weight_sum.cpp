@@ -3,7 +3,7 @@
 * @Date:   2016-07-01T14:41:30+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-07-01T18:30:13+08:00
+* @Last modified time: 2016-07-03T11:17:11+08:00
 * @License: Free License
 * @Difficulty: Easy
 */
@@ -21,16 +21,30 @@ Given the list [1,[4,[6]]], return 27. (one 1 at depth 1, one 4 at depth 2, and 
 */
 
 
+/**
+ * // This is the interface that allows for creating nested lists.
+ * // You should not implement it, or speculate about its implementation
+ * class NestedInteger {
+ *   public:
+ *     // Return true if this NestedInteger holds a single integer, rather than a nested list.
+ *     bool isInteger() const;
+ *
+ *     // Return the single integer that this NestedInteger holds, if it holds a single integer
+ *     // The result is undefined if this NestedInteger holds a nested list
+ *     int getInteger() const;
+ *
+ *     // Return the nested list that this NestedInteger holds, if it holds a nested list
+ *     // The result is undefined if this NestedInteger holds a single integer
+ *     const vector<NestedInteger> &getList() const;
+ * };
+ */
 class Solution {
 public:
-    int util(vector<NestedInteger>& nestedList, int layer) {
+    int depthSum(vector<NestedInteger>& nestedList) {
         int sum = 0;
         for(auto i:nestedList) {
-            sum += i.isInteger()?layer*i.getInteger():util(i.getList(), layer+1);
+            sum+=i.isInteger()?i.getInteger():depthSum(i.getList());
         }
         return sum;
-    }
-    int depthSum(vector<NestedInteger>& nestedList) {
-        return util(nestedList, 1);
     }
 };
