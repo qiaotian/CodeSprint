@@ -3,7 +3,7 @@
 * @Date:   2016-07-03T19:32:22+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   Tian Qiao
-* @Last modified time: 2016-07-03T19:55:46+08:00
+* @Last modified time: 2016-07-03T19:58:23+08:00
 * @Inc: Facebook
 * @Difficulty: Easy
 */
@@ -42,3 +42,4 @@ public:
         return res;
     }
 };
+// PS: buf指向字符数组的某个位置，并不一定是数组的开头。该题目希望给定任意一个位置，从该位置开始读取最多n个字符，将buf指针指向未读字符的开始。并返回已读字符数目。
