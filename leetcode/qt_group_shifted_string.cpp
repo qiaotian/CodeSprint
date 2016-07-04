@@ -3,7 +3,7 @@
 * @Date:   2016-07-03T20:20:30+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   Tian Qiao
-* @Last modified time: 2016-07-03T20:22:43+08:00
+* @Last modified time: 2016-07-04T01:09:29+08:00
 * @Inc: Goolge, Uber
 * @Difficulty: Easy (Medium)
 */
@@ -28,7 +28,6 @@ A solution is:
 */
 
 ________________________________________________________________________________
-
 // https://discuss.leetcode.com/topic/20823/4ms-easy-c-solution-with-explanations
 
 The key to this problem is how to identify strings that are in the same shifting sequence. There are different ways to encode this.
@@ -39,6 +38,7 @@ Then we build an unordered_map, using the above shifting feature string as key a
 A final note, since the problem statement has given that "az" and "ba" belong to the same shifting sequence. So if s[i] - s[i - 1] is negative, we need to add 26 to it to make it positive and give the correct result. BTW, taking the suggestion of @StefanPochmann, we change the difference from numbers to lower-case alphabets using 'a' + diff.
 ________________________________________________________________________________
 
+// https://discuss.leetcode.com/topic/20823/4ms-easy-c-solution-with-explanations
 class Solution {
 public:
     vector<vector<string>> groupStrings(vector<string>& strings) {
