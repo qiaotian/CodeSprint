@@ -3,7 +3,7 @@
 * @Date:   2016-07-05T14:17:59+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   Tian Qiao
-* @Last modified time: 2016-07-05T14:20:48+08:00
+* @Last modified time: 2016-07-05T14:32:38+08:00
 * @Inc: Google
 * @Difficulty: Medium
 */
@@ -56,18 +56,22 @@ public:
 };*/
 
 class Solution {
-    set<pair<int, int>> pointMap; //使用set，不要使用unordered_set，自定义cmp函数复杂，易出错
+    set<pair<int, int>> s; //使用set，不要使用unordered_set，自定义cmp函数复杂，易出错
 public:
     bool isReflected(vector<pair<int, int>>& points) {
         if(points.empty()) return true;
-        int center = 0, n = (int)points.size();
+        int n = (int)points.size();
+
+        int minX = INT32_MAX, maxX = INT32_MIN;
         for(int i = 0; i < n; ++i) {
-            pointMap.insert(points[i]); //去重
-            center += points[i].first;
+            s.insert(points[i]); //去重
+            minX = min(minX, points[i].first);
+            maxX = max(maxX, points[i].first);
         }
-        center /= n;
+
+        int center = minX+maxX; //中心一定是横坐标的最小值与最大值的中心
         for(int i = 0; i < n; ++i) {
-            if(pointMap.find({(center << 1) - points[i].first, points[i].second}) == pointMap.end()) {
+            if(s.find({center - points[i].first, points[i].second}) == s.end()) {
                 return false;
             }
         }
