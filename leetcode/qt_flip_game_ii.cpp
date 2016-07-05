@@ -3,7 +3,7 @@
 * @Date:   2016-07-04T18:44:03+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   Tian Qiao
-* @Last modified time: 2016-07-04T18:58:10+08:00
+* @Last modified time: 2016-07-05T08:13:33+08:00
 * @Inc: Google
 * @Difficulty: Medium
 * @Tag: Backtracking
@@ -26,13 +26,18 @@ _____________________________________________________________________________*/
 class Solution {
 public:
     bool canWin(string s) {
-        int ans = false; // 输
-        string buf;
-        for(int i=0; i<s.size(); i++) {
-            if(s[i]=='+') buf+='+';
-            else {
-                if(buf.size()%4==1) ans^=1;
+        if(s.size() == 0) return false;
+        bool isMoved = false;
+        for(size_t i = 0; i < s.size() - 1; ++i) {
+            if(s[i] == '+' && s[i + 1] == '+') {
+                isMoved = true;
+                s[i] = '-';
+                s[i + 1] = '-';
+                if(!canWin(s)) return true;
+                s[i] = '+';
+                s[i + 1] = '+';
             }
         }
+        if(!isMoved) return false;
     }
 };
