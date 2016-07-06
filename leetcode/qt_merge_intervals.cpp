@@ -2,8 +2,8 @@
 * @Author: Tian Qiao
 * @Date:   2016-07-04T09:07:16+08:00
 * @Email:  qiaotian@me.com
-* @Last modified by:   Tian Qiao
-* @Last modified time: 2016-07-04T09:10:29+08:00
+* @Last modified by:   qiaotian
+* @Last modified time: 2016-07-06T20:23:18+08:00
 * @Inc: Google, LinkedIn, FB, Microsoft
 * @Difficulty: Hard
 */
@@ -40,7 +40,7 @@ public:
         int n=intervals.size();
         for(int i=1; i<n; i++) {
             if(overlap(benchmark, intervals[i]))  {
-                benchmark.start = min(benchmark.start, intervals[i].start);
+                //benchmark.start = min(benchmark.start, intervals[i].start);
                 benchmark.end = max(benchmark.end, intervals[i].end);
             } else {
                 ans.push_back(benchmark);
