@@ -3,7 +3,7 @@
 * @Date:   2016-07-06T10:41:20+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-07-06T21:15:39+08:00
+* @Last modified time: 2016-07-06T21:16:46+08:00
 * @Inc: LinkedIn, Microsoft
 * @Difficulty: Medium
 */
