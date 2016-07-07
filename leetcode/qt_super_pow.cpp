@@ -3,7 +3,7 @@
 * @Date:   2016-07-07T21:27:02+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-07-07T23:46:26+08:00
+* @Last modified time: 2016-07-07T23:53:23+08:00
 */
 
 
@@ -77,22 +77,22 @@ public:
     }
 };*/
 
-// 上述时间复杂度为Nlog2N, 本方法复杂度为NlgN
+// 上述时间复杂度为Nlog2N, 本方法复杂度为NlogK
 class Solution {
 public:
- long long myPow(long long num, int k) {
-   if (k == 0) return 1;
-   if (k == 1) return (num % 1337);
+    long long myPow(long long num, int k) {
+        if (k == 0) return 1;
+        if (k == 1) return (num % 1337);
 
-   return (myPow(num % 1337, k / 2) % 1337) * (myPow(num % 1337, k - k / 2) % 1337) % 1337;
- }
+        return (myPow(num % 1337, k / 2) % 1337) * (myPow(num % 1337, k - k / 2) % 1337) % 1337;
+}
 
- int superPow(int a, vector<int>& b) {
-   int n = b.size();
-   long long ret = 1;
-   for (int i = 0; i < n; i++) {
-     ret = (long long)(myPow(ret, 10) * (long long)myPow(a, b[i])) % 1337;
-   }
-   return ret;
- }
+    int superPow(int a, vector<int>& b) {
+        int n = b.size();
+        long long ret = 1;
+        for (int i = 0; i < n; i++) {
+            ret = (long long)(myPow(ret, 10) * (long long)myPow(a, b[i])) % 1337;
+        }
+        return ret;
+    }
 };
