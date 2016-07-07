@@ -3,7 +3,7 @@
 * @Date:   2016-07-07T23:58:49+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-07-08T00:30:53+08:00
+* @Last modified time: 2016-07-08T00:31:41+08:00
 * @Inc: LinkedIn, Uber
 */
 
@@ -78,8 +78,7 @@ public:
 class Solution {
 public:
     void getResult(vector<vector<int>> &result,vector<int> &cur,int n){
-        int i=cur.empty()?2:cur.back();
-        for(;i<=n/i;++i){
+        for(int i=cur.empty()?2:cur.back();i<=n/i;++i){
             if(n%i==0){
                 cur.push_back(i);
                 cur.push_back(n/i);
