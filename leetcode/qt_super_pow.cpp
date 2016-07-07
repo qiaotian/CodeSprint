@@ -3,7 +3,7 @@
 * @Date:   2016-07-07T21:27:02+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-07-07T23:53:23+08:00
+* @Last modified time: 2016-07-07T23:53:42+08:00
 */
 
 
@@ -85,7 +85,7 @@ public:
         if (k == 1) return (num % 1337);
 
         return (myPow(num % 1337, k / 2) % 1337) * (myPow(num % 1337, k - k / 2) % 1337) % 1337;
-}
+    }
 
     int superPow(int a, vector<int>& b) {
         int n = b.size();
