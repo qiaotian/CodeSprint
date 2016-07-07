@@ -3,7 +3,7 @@
 * @Date:   2016-07-07T23:58:49+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-07-08T00:29:49+08:00
+* @Last modified time: 2016-07-08T00:30:53+08:00
 * @Inc: LinkedIn, Uber
 */
 
@@ -74,7 +74,7 @@ public:
     }
 };
 
-// beats 90%
+// beats 90% 没有求因子和快排过程
 class Solution {
 public:
     void getResult(vector<vector<int>> &result,vector<int> &cur,int n){
