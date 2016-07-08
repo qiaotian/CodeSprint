@@ -3,7 +3,7 @@
 * @Date:   2016-07-08T13:24:26+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-07-08T13:43:52+08:00
+* @Last modified time: 2016-07-08T13:50:50+08:00
 */
 
 
@@ -68,3 +68,6 @@ public:
         return dist;
     }
 };
+
+// 该题与shortest_word_distance_ii的不同之处在于允许word1和word2的去重问题，这样就不需要
+// 使用hash。如果将上述方法移植到ii中，会因为重复元素过多而导致TLE，因此ii和iii要区分对待。
