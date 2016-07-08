@@ -3,7 +3,7 @@
 * @Date:   2016-07-09T00:03:18+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-07-09T02:36:03+08:00
+* @Last modified time: 2016-07-09T02:41:49+08:00
 */
 
 
@@ -37,6 +37,7 @@ Given m = 1, n = 1, return 9.
 
 
 
+// beat 30%, bad
 class Solution {
 public:
     int ans = 0;
