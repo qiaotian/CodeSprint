@@ -3,7 +3,7 @@
 * @Date:   2016-07-08T13:52:12+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-07-08T15:29:01+08:00
+* @Last modified time: 2016-07-08T15:31:53+08:00
 */
 
 
@@ -75,3 +75,6 @@ public:
         head = increase;
     }
 };
+
+// (耗时30mins) 将指针作为参数传入，如果在函数中修改该指针，一旦离开函数作用域，指针修改失效。
+// 因此，规范操作仍然是将修改指针返回，或者使用指针的引用。
