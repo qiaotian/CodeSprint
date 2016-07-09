@@ -3,7 +3,7 @@
 * @Date:   2016-07-09T15:17:42+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-07-09T15:41:48+08:00
+* @Last modified time: 2016-07-09T20:26:03+08:00
 */
 
 
@@ -55,13 +55,12 @@ public:
         return -1;
     }
     int largestBSTSubtree(TreeNode* root) {
-        int re = bstTree(root);
-        if(re<0) {
-            int a = bstTree(root->left);
-            int b = bstTree(root->right);
-            if(a>0 || b>0) return max(a,b);
-            return max(largestBSTSubtree(root->left), largestBSTSubtree(root->right));
-        }
-        return re;
+        int ans = 0;
+        if(!root) return 0;
+        if(!root->left && !root->right) return 1;
+
+        helper(root);
+
+        return ans;
     }
 };
