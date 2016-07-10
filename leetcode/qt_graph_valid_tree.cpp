@@ -3,7 +3,7 @@
 * @Date:   2016-07-10T02:12:35+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-07-10T02:21:38+08:00
+* @Last modified time: 2016-07-10T05:14:07+08:00
 * @Inc: Google, FB
 * @Difficulty: Hard
 */
@@ -25,10 +25,20 @@ Hint:
 class Solution {
 public:
     bool validTree(int n, vector<pair<int, int>>& edges) {
-        vector<int> union(n, 0);
-        iota(union.begin(), union.end(), 0);
+        // Tree:
+        // 1. No circles
+        // 2. Not forest
+        vector<int> group(n, 0);
+        iota(group.begin(), group.end(), 0);
         for(auto i:edges) {
-            
+            int u = i.first;
+            int v = i.second;
+            while(u!=group[u]) u = group[u];
+            while(v!=group[v]) v = group[v];
+            if(v==u) return false;
+            group[u] = v;
+            n--;
         }
+        return n==1; // 森林只有一颗树
     }
 };

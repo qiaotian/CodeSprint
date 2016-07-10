@@ -3,7 +3,7 @@
 * @Date:   2016-07-10T00:33:55+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   qiaotian
-* @Last modified time: 2016-07-10T01:30:00+08:00
+* @Last modified time: 2016-07-10T11:42:39+08:00
 * @Inc: LinkedIn, FB
 */
 
@@ -26,12 +26,9 @@ class Solution {
 public:
     int findCelebrity(int n) {
         if(n==0 || n==1) return -1;
-
         int count = n; // 初始化待定人员数目
         vector<int> flag;
-
         for(int i=0; i<n; i++) flag.push_back(i);
-
         while(count>1) {
             int tmp = count;
             for(int i=0; i<tmp/2; i++) {
@@ -44,7 +41,6 @@ public:
             }
             if(tmp%2) flag[tmp/2] = flag[tmp-1];
         }
-
         for(int i=0; i<n; i++) {
             if(i==flag[0]) continue;
             if(!knows(i, flag[0]) || knows(flag[0], i)) return -1;
@@ -57,6 +53,7 @@ public:
 // shorter
 // Forward declaration of the knows API.
 bool knows(int a, int b);
+
 class Solution {
 public:
     int findCelebrity(int n) {
