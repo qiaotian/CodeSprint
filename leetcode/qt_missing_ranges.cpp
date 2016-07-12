@@ -3,7 +3,7 @@
 * @Date:   2016-07-12T15:39:08+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   root
-* @Last modified time: 2016-07-12T16:44:09+08:00
+* @Last modified time: 2016-07-12T17:04:40+08:00
 * @Inc: Goolge
 * @Difficulty: Medium
 */
@@ -13,6 +13,8 @@ Given a sorted integer array where the range of elements are [lower, upper] incl
 
 For example, given [0, 1, 3, 50, 75], lower = 0 and upper = 99, return ["2", "4->49", "51->74", "76->99"].
 */
+
+// 由于审题错误，误以为数组元素和[lower, upper]范围无关，走了一些弯路，在更为宽松的条件下仍然给出了解法一。该算法不仅能够应付本题。而且，当[lower, upper]与数组无关时，也能给出正确解。我认为，原题难度只能称得上easy【杂记】
 
 class Solution {
 public:
@@ -68,5 +70,27 @@ public:
 */
 
         // fine the missing part right to nums
+    }
+};
+
+
+// https://discuss.leetcode.com/category/171/missing-ranges
+// 更为简单，一次遍历即可，和方案1的速度几乎没有差别
+// 注意：第一种解法适用于任意[lower, upper]的情况，也就是说array中的元素可以超出定义域，使用范围更为广泛。而下面这种解法只适用于数组元素来自定义域的情况，该解法太过简单。
+class Solution {
+public:
+    string get_range(int start, int end) {
+        return start==end?to_string(start):to_string(start)+"->"+to_string(end);
+    }
+    vector<string> findMissingRanges(vector<int>& nums, int lower, int upper) {
+        vector<string> result;
+        int pre = lower-1;
+        for(int i = 0; i <= nums.size(); i++) {
+           int cur = (i==nums.size()? upper+1:nums[i]);
+           if(cur-pre>=2)
+            result.push_back(get_range(pre+1,cur-1));
+            pre = cur;
+        }
+        return result;
     }
 };
