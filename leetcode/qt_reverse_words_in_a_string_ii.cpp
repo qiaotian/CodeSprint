@@ -3,7 +3,7 @@
 * @Date:   2016-07-13T01:32:55+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   root
-* @Last modified time: 2016-07-13T02:11:49+08:00
+* @Last modified time: 2016-07-13T02:12:04+08:00
 * @Inc: Apple, Amazon, Uber
 * @Difficulty: Medium
 */
@@ -21,7 +21,7 @@ return "blue is sky the".
 Could you do it in-place without allocating extra space?
 */
 
-/*
+/* Wrong
 class Solution {
 public:
     void reverseWords(string &s) {
