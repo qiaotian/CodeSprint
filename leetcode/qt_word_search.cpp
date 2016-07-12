@@ -3,7 +3,7 @@
 * @Date:   2016-07-13T00:37:43+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   root
-* @Last modified time: 2016-07-13T01:26:51+08:00
+* @Last modified time: 2016-07-13T01:31:29+08:00
 */
 
 
@@ -37,19 +37,13 @@ public:
              string word, int i, int j, int idx) {
         if(board[i][j] == word[idx] && !flag[i][j]) {
             if(idx==word.size()-1) return true;
-
             flag[i][j] = true;
-            /*
             for(auto direction:directions) {
                 int r = direction.first+i;
                 int c = direction.second+j;
                 if(r<0||r>=board.size()||c<0||c>=board[0].size()) continue;//越界处理
                 if(dfs(board, flag, word, r, c, idx+1)) return true;
-            }*/
-            if(dfs(board, flag, word, r+1, c, idx+1)||\
-               dfs(board, flag, word, r-1, c, idx+1)||\
-               dfs(board, flag, word, r, c+1, idx+1)||\
-               dfs(board, flag, word, r, c-1, idx+1)||\)
+            }
             flag[i][j] = false;
         }
         return false;
