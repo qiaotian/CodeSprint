@@ -3,7 +3,7 @@
 * @Date:   2016-07-12T18:48:51+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   root
-* @Last modified time: 2016-07-12T20:09:46+08:00
+* @Last modified time: 2016-07-12T20:16:53+08:00
 * @Inc: Bloomberg
 * @Difficulty: Medium
 */
@@ -35,8 +35,11 @@ public:
         TreeNode *root = new TreeNode(preorder[pl]);
         if(pl==pr || il==ir) return root;
 
-        int len = 0; //左子树长度
-        while(inorder[len+il]!=preorder[pl]) len++;
+        // method 1
+        //int len = 0; //左子树长度
+        //while(inorder[len+il]!=preorder[pl]) len++;
+        // method 2
+        int len = find(inorder.begin() + ii,inorder.begin() + jj, preorder[pl]) - inorder.begin() -il;
 
         // # 1
         root->left = len<=0?NULL:helper(preorder, inorder, pl+1, pl+len, il, il+len-1);
