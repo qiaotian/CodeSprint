@@ -1,3 +1,24 @@
+/**
+* @Author: Tian Qiao <root>
+* @Date:   2016-07-10T19:18:27+08:00
+* @Email:  qiaotian@me.com
+* @Last modified by:   root
+* @Last modified time: 2016-07-12T23:52:10+08:00
+*/
+
+/*
+Given n, how many structurally unique BST's (binary search trees) that store values 1...n?
+
+For example,
+Given n = 3, there are a total of 5 unique BST's.
+
+   1         3     3      2      1
+    \       /     /      / \      \
+     3     2     1      1   3      2
+    /     /       \                 \
+   2     1         2                 3
+*/
+
 // 1st solution (12ms, beats 1%)
 /*
 class Solution {
@@ -12,7 +33,7 @@ private:
             sum += 2 * max(1, helper(start, i-1)) * max(1, helper(i+1, end));
         }
         // use the middle number as the root
-        if((end-start+1)%2) 
+        if((end-start+1)%2)
             sum += max(1, helper(start, (end+start)/2-1)) * max(1, helper((end+start)/2+1, end));
         return sum;
     }
@@ -26,7 +47,7 @@ public:
 /**
  * Taking 1~n as root respectively:
  *      1 as root: # of trees = F(0) * F(n-1)  // F(0) == 1
- *      2 as root: # of trees = F(1) * F(n-2) 
+ *      2 as root: # of trees = F(1) * F(n-2)
  *      3 as root: # of trees = F(2) * F(n-3)
  *      ...
  *      n-1 as root: # of trees = F(n-2) * F(1)
@@ -54,18 +75,18 @@ public:
 
 /**
  * 1st solution
- * 
+ *
  * 1, 2, 3, 4, ..., n
  * 分别以某一数字i为根节点，那么数组被分成两个部分left和right
  * 那么以i为根节点的所有BST数目为BST(left)*BST(right)
  * 因为BST(left)或BST(right)有可能为零，所以要取max(1, BST(left))*max(1, BST(right))
- * 
+ *
  * 仅仅这样，当n>=19会TLE，需要减少计算量
  * 我们发现，left*right = right * left的数目
  * 因此，我们只需要计算以1到中点产生的所有BST，然后乘2即可。
  * 注意，当n为奇数时，中间节点单独计算。
- * 
+ *
  * 2nd solution
- * 
- * 
+ *
+ *
  * /
