@@ -3,7 +3,7 @@
 * @Date:   2016-07-12T20:39:42+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   root
-* @Last modified time: 2016-07-12T21:07:30+08:00
+* @Last modified time: 2016-07-12T23:48:54+08:00
 * @Inc: Google
 * @Difficulty: Medium
 */
@@ -27,6 +27,7 @@ Here are some examples. Inputs are in the left-hand column and its corresponding
 // Swap the partition number and changing number.
 // Rerverse all the digit on the right of partition index.
 
+c/*
 class Solution {
 public:
     void nextPermutation(vector<int>& nums) {
@@ -44,7 +45,10 @@ public:
         if(partitionIdx==INT32_MAX) {
             //如果没找到，说明当前数字已经是最大序数，
             //按照题意，需要将nums置为最小序数
-            sort(nums.begin(), nums.end());
+            //sort(nums.begin(), nums.end());
+            for(int i=0; i<n/2; i++) {
+                swap(nums[i], nums[n-1-i]);
+            }
             return;
         }
 
@@ -62,3 +66,28 @@ public:
         }
     }
 };
+*/
+
+// 解法一样，貌似reverse函数更快一些
+class Solution {
+public:
+    void nextPermutation(vector<int>& nums) {
+    	int k = -1;
+    	for (int i = nums.size() - 2; i >= 0; i--) {
+    		if (nums[i] < nums[i + 1]) {k = i; break;}
+    	}
+    	if (k == -1) {
+    	    reverse(nums.begin(), nums.end());
+    	    return;
+    	}
+    	int l = -1;
+    	for (int i = nums.size() - 1; i > k; i--) {
+    		if (nums[i] > nums[k]) {
+    			l = i;
+    			break;
+    		}
+    	}
+    	swap(nums[k], nums[l]);
+    	reverse(nums.begin() + k + 1, nums.end());
+    }
+}; 
