@@ -3,7 +3,7 @@
 * @Date:   2016-07-12T14:25:25+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   root
-* @Last modified time: 2016-07-12T15:36:33+08:00
+* @Last modified time: 2016-07-12T15:38:13+08:00
 * @Inc: Microsoft
 * @Difficulty: Medium
 */
@@ -50,7 +50,7 @@ public:
     }
 };
 
-// 优化
+// 优化（巧妙解决了Solution1中的循环因素）
 /*This problem is a little tricky at first glance. However, if you have finished the House Robber problem, this problem can simply be decomposed into two House Robber problems.
 Suppose there are n houses, since house 0 and n - 1 are now neighbors, we cannot rob them together and thus the solution is now the maximum of
 
