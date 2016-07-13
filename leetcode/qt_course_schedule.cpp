@@ -3,7 +3,7 @@
 * @Date:   2016-07-13T10:14:33+08:00
 * @Email:  qiaotian@me.com
 * @Last modified by:   root
-* @Last modified time: 2016-07-13T10:59:13+08:00
+* @Last modified time: 2016-07-13T11:25:37+08:00
 * @Inc: Apple, Yelp
 * @Difficulty: Medium
 */
@@ -30,6 +30,7 @@ Hints:
 3. Topological sort could also be done via BFS.
 */
 
+// My Solution
 class Solution {
 public:
     bool findCircle(int start ,unordered_map<int, vector<int>>& dependencies, vector<bool>& nonCycl, vector<bool>& visited) {
@@ -58,5 +59,68 @@ public:
             if(findCircle(i, dependencies, nonCycl, visited)) return false;//存在环，不能完成课程
         }
         return true;
+    }
+};
+
+
+// https://discuss.leetcode.com/topic/17273/18-22-lines-c-bfs-dfs-solutions/2
+// DFS(需要定义两个标记量，visisted和onpath)
+class Solution {
+public:
+    bool canFinish(int numCourses, vector<pair<int, int>>& prerequisites) {
+        vector<unordered_set<int>> graph = make_graph(numCourses, prerequisites);
+        vector<bool> onpath(numCourses, false), visited(numCourses, false);
+        for (int i = 0; i < numCourses; i++)
+            if (!visited[i] && dfs_cycle(graph, i, onpath, visited))
+                return false;
+        return true;
+    }
+private:
+    vector<unordered_set<int>> make_graph(int numCourses, vector<pair<int, int>>& prerequisites) {
+        vector<unordered_set<int>> graph(numCourses);
+        for (auto pre : prerequisites)
+            graph[pre.second].insert(pre.first);
+        return graph;
+    }
+    bool dfs_cycle(vector<unordered_set<int>>& graph, int node, vector<bool>& onpath, vector<bool>& visited) {
+        if (visited[node]) return false;
+        onpath[node] = visited[node] = true;
+        for (int neigh : graph[node])
+            if (onpath[neigh] || dfs_cycle(graph, neigh, onpath, visited))
+                return true;
+        return onpath[node] = false;
+    }
+};
+
+// BFS
+class Solution {
+public:
+    bool canFinish(int numCourses, vector<pair<int, int>>& prerequisites) {
+        vector<unordered_set<int>> graph = make_graph(numCourses, prerequisites);
+        vector<int> degrees = compute_indegree(graph);
+        for (int i = 0; i < numCourses; i++) {
+            int j = 0;
+            for (; j < numCourses; j++)
+                if (!degrees[j]) break;
+            if (j == numCourses) return false;
+            degrees[j] = -1;
+            for (int neigh : graph[j])
+                degrees[neigh]--;
+        }
+        return true;
+    }
+private:
+    vector<unordered_set<int>> make_graph(int numCourses, vector<pair<int, int>>& prerequisites) {
+        vector<unordered_set<int>> graph(numCourses);
+        for (auto pre : prerequisites)
+            graph[pre.second].insert(pre.first);
+        return graph;
+    }
+    vector<int> compute_indegree(vector<unordered_set<int>>& graph) {
+        vector<int> degrees(graph.size(), 0);
+        for (auto neighbors : graph)
+            for (int neigh : neighbors)
+                degrees[neigh]++;
+        return degrees;
     }
 };
