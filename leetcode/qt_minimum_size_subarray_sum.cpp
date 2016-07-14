@@ -81,7 +81,7 @@ public:
             sum += nums[i];
             while (sum >= s) {
                 minlen = min(minlen, i - start + 1);
-                sum -= nums[start++];
+                sum -= nums[start++]; 
             }
         }
         return minlen == INT_MAX ? 0 : minlen;
