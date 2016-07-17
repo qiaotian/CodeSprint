@@ -82,27 +82,29 @@ public:
 
 // 44ms beats 57%
 // https://discuss.leetcode.com/topic/21103/simple-and-clean-solution-c/2
-/*class Solution {
+class Solution {
+    // 检查val是否可以放在[i,j]的位置上
     bool check(vector<vector<char>> &board, int i, int j, char val) {
         int row = i - i%3, column = j - j%3;
         for(int x=0; x<9; x++) if(board[x][j] == val) return false;
         for(int y=0; y<9; y++) if(board[i][y] == val) return false;
         for(int x=0; x<3; x++)
-        for(int y=0; y<3; y++)
-            if(board[row+x][column+y] == val) return false;
+            for(int y=0; y<3; y++)
+                if(board[row+x][column+y] == val) return false;
         return true;
     }
+    // 从[i,j]位置解数独
     bool solveSudoku(vector<vector<char>> &board, int i, int j) {
-        if(i==9) return true;
-        if(j==9) return solveSudoku(board, i+1, 0);
-        if(board[i][j] != '.') return solveSudoku(board, i, j+1);
+        if(i==9) return true; // 所有9行已经解完，返回true
+        if(j==9) return solveSudoku(board, i+1, 0); // 第i行已经解完，返回true
+        if(board[i][j] != '.') return solveSudoku(board, i, j+1); // 如果该位置是数字，跳过当前
 
+        // 如果当前棋盘位置存放'.'，则尝试1到9所有可能，直至求得解
         for(char c='1'; c<='9'; c++) {
-            if(check(board, i, j, c))
-            {
-                board[i][j] = c;
+            if(check(board, i, j, c)) {
+                board[i][j] = c; // set to number
                 if(solveSudoku(board, i, j+1)) return true;
-                board[i][j] = '.';
+                board[i][j] = '.'; // reset to '.'
             }
         }
         return false;
@@ -111,7 +113,7 @@ public:
     void solveSudoku(vector<vector<char>>& board) {
         solveSudoku(board, 0, 0);
     }
-};*/
+};
 
 // 更快的 0ms OMG
 class Solution {
