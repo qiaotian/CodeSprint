@@ -81,6 +81,7 @@ public:
 };*/
 
 // 44ms beats 57%
+// easy to understand
 // https://discuss.leetcode.com/topic/21103/simple-and-clean-solution-c/2
 class Solution {
     // 检查val是否可以放在[i,j]的位置上
@@ -116,6 +117,7 @@ public:
 };
 
 // 更快的 0ms OMG
+// fast enough
 class Solution {
 	struct cell // encapsulates a single cell on a Sudoku board
 	{
