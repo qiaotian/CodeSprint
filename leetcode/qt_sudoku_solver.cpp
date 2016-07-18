@@ -136,10 +136,8 @@ class Solution {
 	{
 		// updating state of the cell
 		cell& c = cells[i][j];
-		if (c.value == v)
-			return true;
-		if (c.constraints[v])
-			return false;
+		if (c.value == v) return true;
+		if (c.constraints[v]) return false;
 		c.constraints = bitset<10>(0x3FE); // all 1s
 		c.constraints.reset(v);
 		c.numPossibilities = 1;
@@ -148,16 +146,13 @@ class Solution {
 		// propagating constraints
 		for (int k = 0; k<9; k++) {
 			// to the row:
-			if (i != k && !updateConstraints(k, j, v))
-				return false;
+			if (i != k && !updateConstraints(k, j, v)) return false;
 			// to the column:
-			if (j != k && !updateConstraints(i, k, v))
-				return false;
+			if (j != k && !updateConstraints(i, k, v)) return false;
 			// to the 3x3 square:
 			int ix = (i / 3) * 3 + k / 3;
 			int jx = (j / 3) * 3 + k % 3;
-			if (ix != i && jx != j && !updateConstraints(ix, jx, v))
-				return false;
+			if (ix != i && jx != j && !updateConstraints(ix, jx, v)) return false;
 		}
 		return true;
 	}
@@ -166,15 +161,10 @@ class Solution {
 	bool updateConstraints(int i, int j, int excludedValue)
 	{
 		cell& c = cells[i][j];
-		if (c.constraints[excludedValue]) {
-			return true;
-		}
-		if (c.value == excludedValue) {
-			return false;
-		}
+		if (c.constraints[excludedValue]) return true;
+		if (c.value == excludedValue) return false;
 		c.constraints.set(excludedValue);
-		if (--c.numPossibilities > 1)
-			return true;
+		if (--c.numPossibilities > 1) return true;
 		for (int v = 1; v <= 9; v++) {
 			if (!c.constraints[v]) {
 				return set(i, j, v);
