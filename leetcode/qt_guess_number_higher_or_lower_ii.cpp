@@ -52,5 +52,3 @@ public:
         return pay(dp, 1, n);
     }
 };
-
-// dp[1][i]是目标值出现在i位置处的maxmin花费，那么将dp[1][i]求和除以n就是期望损失
