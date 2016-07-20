@@ -16,7 +16,7 @@ You may assume that all inputs are consist of lowercase letters a-z.
 */
 
 // 使用unordered_map存储子节点
-// beats 10%
+// beats 10% bad
 class TrieNode {
 public:
     // Initialize your data structure here.
