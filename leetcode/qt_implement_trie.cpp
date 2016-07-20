@@ -89,7 +89,7 @@ private:
 };
 
 
-// 使用数组存储子节点
+// 使用指针数组存储子节点
 // beats 96%
 class TrieNode {
 public:
