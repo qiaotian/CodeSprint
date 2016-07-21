@@ -46,49 +46,14 @@ Challenge:
 Can you do it in time complexity O(k log mn), where k is the length of the positions?
 */
 
-
-class Solution {
-public:
-    const vector<pair<int, int>> directions = {{0,1},{1,0},{0,-1},{-1,0}};
-    int root(int i) {
-        while(i!=id[i]) i = id[id[i]]; //path compression
-        return i;
-    }
-    bool find(int p, int q) {
-        return root[p]==root[q];
-    }
-    void union(int p, int q) {
-        int i = root[p];
-        int j = root[q];
-        id[i] = j; // p的parent设置为q
-    }
-    vector<int> numIslands2(int m, int n, vector<pair<int, int>>& positions) {
-        int count = 0;
-        vector<int> ans;
-        vector<vector<int>> roi(m, vector<int>(n,0));
-
-        vector<int> id(m*n, 0);
-        for(int i=0; i<arr.size(); i++) arr[i] = i;
-
-        for(auto pos:positions) {
-            sea[pos.first][pos.second] = 1;
-            for(auto d:directions) {
-                int r = pos.first+d.first;
-                int c = pos.second+d.second;
-                if(roi[r][c]==0) continue;
-                if(!find(r*n+c, pos.first*n+pos.second)) union(r*n+c, pos.first*n+pos.second);
-            }
-            ans.push_back();
-        }
-        return ans;
-    }
-};
-
 // 新的坐标点具有向旧点聚合的趋势，而非相反
 class Solution {
 public:
     vector<int> numIslands2(int m, int n, vector<pair<int, int>>& positions) {
         vector<int> res;
+        //注意：这里是对所有positions进行分类，而非对m*n的棋盘进行分类，不要m*n的矩阵
+        //两者的区别在于前者数目小于后者，是后者的子集
+        //因此不应该设置id[i]=i，而是将无需考虑的位置设置为-1，positions中的位置的id设置为本身
         roots = vector<int>(m*n, -1);
         vector<pair<int, int>> dirs = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
         int island = 0;
