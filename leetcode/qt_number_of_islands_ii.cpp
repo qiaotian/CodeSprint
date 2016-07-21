@@ -83,3 +83,44 @@ public:
         return ans;
     }
 };
+
+// 新的坐标点具有向旧点聚合的趋势，而非相反
+class Solution {
+public:
+    vector<int> numIslands2(int m, int n, vector<pair<int, int>>& positions) {
+        vector<int> res;
+        roots = vector<int>(m*n, -1);
+        vector<pair<int, int>> dirs = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+        int island = 0;
+        for (auto pos : positions) {
+            int x = pos.first, y = pos.second;
+            int idx = x * n + y;
+            roots[idx] = idx; // 初始化idx的root为idx
+            ++island;
+            for (auto dir : dirs) {
+                int r = x + dir.first, c = y + dir.second;
+                int idx_new = r * n + c;
+                if (r >= 0 && r < m && c >= 0 && c < n && roots[idx_new] != -1) {
+                    int rootPos = find(idx); // 虽然pos的root初始化为idx, 但是有可以在union过程中改变
+                    int rootNew = find(idx_new);
+                    if(rootPos != rootNew) {
+                        roots[rootPos] = rootNew; // union operation
+                        --island;
+                    }
+                }
+            }
+            res.push_back(island);
+        }
+        return res;
+    }
+
+private:
+    vector<int> roots;
+    int find(int idx) {
+        while(idx != roots[idx]) {
+            roots[idx] = roots[roots[idx]] = roots[roots[roots[idx]]]; // path compression makes algo faster
+            idx = roots[roots[idx]];
+        }
+        return idx;
+    }
+};
