@@ -73,6 +73,7 @@ public:
 
 
 // use hashtable
+// https://discuss.leetcode.com/topic/10153/how-about-this-recursive-call-track-visited-node-with-hashtable
 class Solution {
 public:
     RandomListNode *copyRandomList(RandomListNode *head) {
