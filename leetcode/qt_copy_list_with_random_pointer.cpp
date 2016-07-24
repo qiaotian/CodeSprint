@@ -23,36 +23,70 @@ Return a deep copy of the list.
  *     RandomListNode(int x) : label(x), next(NULL), random(NULL) {}
  * };
  */
+
+// 与CloneGraph那道题不同之处在于
+// Node的label在本题中可以相同，所以不能用label来区分节点，只能用节点地址（node指针）
+
+
+// https://discuss.leetcode.com/topic/5831/2-clean-c-algorithms-without-using-extra-array-hash-table-algorithms-are-explained-step-by-step
+// Here's how the 1st algorithm goes.
+// Consider l1 as a node on the 1st list and l2 as the corresponding node on 2nd list.
+// Step 1:
+// Build the 2nd list by creating a new node for each node in 1st list.
+// While doing so, insert each new node after it's corresponding node in the 1st list.
+// Step 2:
+// The new head is the 2nd node as that was the first inserted node.
+// Step 3:
+// Fix the random pointers in the 2nd list: (Remember that l1->next is actually l2)
+// l2->random will be the node in 2nd list that corresponds l1->random,
+// which is next node of l1->random.
+// Step 4:
+// Separate the combined list into 2: Splice out nodes that are part of second list.
+// Return the new head that we saved in step 2.
+//
 class Solution {
 public:
     RandomListNode *copyRandomList(RandomListNode *head) {
-        RandomListNode *hh = NULL;
-        if(!head) return hh;
+        if (!head) return NULL;
 
-        int index = 0;
-        //unordered_map<int, RandomListNode*> dict; // map index to its random node
-        unordered_map<RandomListNode*, RandomListNode*> dict；
-        chead = new RandomListNode(head->label);
-        dict[head] = chead;
-
-        RandomListNode *pre = chead; //新链表的pre节点
-        RandomListNode *cur = head->next; //旧链表的当前节点
-        while(cur) {
-            RandomListNode *tmp = new RandomListNode(cur->label);
-            dict[cur] = tmp;
-            pre->next = tmp;
-            pre = pre->next;
-            cur = cur->next;
+        for(RandomListNode* l1 = head; l1; l1=l1->next->next) {
+            RandomListNode* tmp = new RandomListNode(l1->label);
+            tmp->next = l1->next;
+            l1->next = tmp;
         }
 
-        RandomListNode* fly1 = head;
-        RandomListNode* fly2 = chead;
-        while(fly1) {
-            fly2->random = dict[fly1->ramdom];
-            fly1 = fly1->next;
-            fly2 = fly2->next;
+        for(RandomListNode* l1 = head; l1; l1=l1->next->next) {
+            if(!l1->random) l1->next->random = NULL;
+            else l1->next->random = l1->random->next;
         }
 
-        return chead;
+        RandomListNode *newHead = head->next;
+        for(RandomListNode* l1 = head, *l2 = newHead; l1 && l2; l1 = l1->next, l2 = l2->next) {
+            if(!l2->next) { l1->next = NULL; break; }
+            l1->next = l1->next->next;
+            l2->next = l1->next->next;
+        }
+
+        return newHead;
+    }
+};
+
+
+// use hashtable
+class Solution {
+public:
+    RandomListNode *copyRandomList(RandomListNode *head) {
+        unordered_map<RandomListNode*, RandomListNode*> visitTable;//
+        return copyRandomList(head, visitTable);
+    }
+private:
+    RandomListNode *copyRandomList(RandomListNode *head, unordered_map<RandomListNode *, RandomListNode*> &visitTable) {
+        if (!head) return head;
+        if (visitTable.count(head)) return visitTable[head];
+        RandomListNode *dup = new RandomListNode(head->label);
+        visitTable[head] = dup;
+        dup->next = copyRandomList(head->next, visitTable);
+        dup->random = copyRandomList(head->random, visitTable);
+        return dup;
     }
 };
