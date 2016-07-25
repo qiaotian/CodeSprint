@@ -66,6 +66,7 @@ public:
     }
 };
 
+// 双指针
 // https://discuss.leetcode.com/topic/18731/7-lines-c-c/2
 class Solution {
 public:
