@@ -53,7 +53,7 @@ public:
         for(auto i:ngbs) {
             if(i==curr) {
                 //自己指向自己
-                curr.neighbors.push_back(cur);
+                curr.neighbors.push_back(curr);
             } else {
                 UndirectedGraphNode* tmp = cloneGraph(i);
                 curr.neighbors.push_back(tmp);
