@@ -27,7 +27,7 @@ The point (1,2) is an ideal empty land to build a house, as the total travel dis
 // 300ms beats 21%, bad
 class Solution {
 private:
-    vector<vector<int>> dist;
+    vector<vector<int>> dist; // dist[i][j]当前节点到所有已访问房屋的最小距离和的矩阵
     vector<vector<int>> home; // grid[i][j]被dfs的次数
     vector<pair<int, int>> dirs = {{-1,0},{1,0},{0,1},{0,-1}};
 
@@ -71,8 +71,8 @@ public:
         int m = grid.size();
         int n = m==0?0:grid[0].size();
 
-        dist.resize(m, vector<int>(n, 0));
-        home.resize(m, vector<int>(n, 0));
+        dist.resize(m, vector<int>(n, 0)); // 最小距离矩阵
+        home.resize(m, vector<int>(n, 0)); //
 
         // 统计房子数
         int ones = 0;
