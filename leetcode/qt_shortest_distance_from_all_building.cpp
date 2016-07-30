@@ -104,6 +104,9 @@ public:
 // 2.留意特殊情况,eg [[1]], [[1,2,0]]
 // 3.要保证[i,j]元素到所有1均可达，就要统计每个0被1访问的次数
 
+
+
+// 38ms beats 52% good
 // https://discuss.leetcode.com/topic/31702/36-ms-c-solution
 // DFS用于矩阵中，往往需要标记是否已经访问（树结构中则不需要，因为树的层次结构可以避免重复访问）
 // 本方法针对此做了优化，不用另外开辟空间存储是否以经访问，并不断更新
@@ -117,6 +120,7 @@ public:
         int walk = 0, mindist, delta[] = {0, 1, 0, -1, 0};
         for (int i=0; i<m; ++i) {
             for (int j=0; j<n; ++j) {
+                // BFS
                 if (grid[i][j] == 1) {
                     mindist = -1;
                     auto dist = grid;
@@ -138,7 +142,7 @@ public:
                             }
                         }
                     }
-                    walk--;
+                    walk--; // 每次BFS后walk减一
                 }
             }
         }
