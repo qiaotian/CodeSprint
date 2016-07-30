@@ -116,7 +116,7 @@ class Solution {
 public:
     int shortestDistance(vector<vector<int>> grid) {
         int m = grid.size(), n = grid[0].size();
-        auto total = grid;
+        auto total = grid; // 拷贝grid矩阵
         int walk = 0, mindist, delta[] = {0, 1, 0, -1, 0};
         for (int i=0; i<m; ++i) {
             for (int j=0; j<n; ++j) {
