@@ -28,20 +28,20 @@ public:
     int jump(vector<int>& nums) {
         if(nums.size() < 2) return 0;
         int level = 0;              //
-        int currentMax = 0;         // 当前层的最大下标
+        int curmax = 0;         // 当前层的最大下标
         int i = 0;                  // nums的游标
-        int nextMax = 0;            // 下一层的最大下标
+        int nexmax = 0;            // 下一层的最大下标
 
-        while(currentMax-i+1 > 0) {
+        while(curmax-i+1 > 0) {
             // nodes count of current level
             level++;
-            for(; i <= currentMax; i++) {
-                nextMax = max(nextMax, nums[i]+i);
+            for(; i <= curmax; i++) {
+                nexmax = max(nexmax, nums[i]+i);
                 // if last element is in level+1
                 // then the min jump=level
-                if(nextMax >= nums.size()-1) return level; // 最后节点可达
+                if(nexmax >= nums.size()-1) return level; // 最后节点可达
             }
-            currentMax = nextMax;
+            curmax = nexmax;
         }
         return 0;
     }
