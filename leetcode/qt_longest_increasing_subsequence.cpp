@@ -1,3 +1,27 @@
+/**
+* @Author: Tian Qiao
+* @Date:   2016-07-10T19:18:26+08:00
+* @Email:  qiaotian@me.com
+* @Last modified by:   Tian Qiao
+* @Last modified time: 2016-08-01T08:20:32+08:00
+* @Inc: Microsoft
+* @Difficulty: Medium
+*/
+
+
+/*
+Given an unsorted array of integers, find the length of longest increasing subsequence.
+
+For example,
+Given [10, 9, 2, 5, 3, 7, 101, 18],
+The longest increasing subsequence is [2, 3, 7, 101], therefore the length is 4. Note that there may be more than one LIS combination, it is only necessary for you to return the length.
+
+Your algorithm should run in O(n2) complexity.
+
+Follow up: Could you improve it to O(n log n) time complexity?
+*/
+
+
 // 1st solution (Time: O(N^2) Space: O(N))
 /*
 class Solution {
@@ -38,7 +62,7 @@ class Solution {
 public:
     int lengthOfLIS(vector<int>& nums) {
         if (nums.empty()) return 0;
-        vector<int> ends{nums[0]}; //ends始终递增有序
+        vector<int> ends{nums[0]}; //ends始终递增有序，子序列长度为i的序列最后一个值，保证最小
         for (int num : nums) {
             if (num > ends.back()) ends.push_back(num);
             else {
