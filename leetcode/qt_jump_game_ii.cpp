@@ -28,9 +28,9 @@ public:
     int jump(vector<int>& nums) {
         if(nums.size() < 2) return 0;
         int level = 0;              //
-        int curmax = 0;         // 当前层的最大下标
+        int curmax = 0;             // 当前层的最大下标
         int i = 0;                  // nums的游标
-        int nexmax = 0;            // 下一层的最大下标
+        int nexmax = 0;             // 下一层的最大下标
 
         while(curmax-i+1 > 0) {
             // nodes count of current level
@@ -43,6 +43,6 @@ public:
             }
             curmax = nexmax;
         }
-        return 0;
+        return 0; // 基本无用, 只是为了编译能过
     }
 };
