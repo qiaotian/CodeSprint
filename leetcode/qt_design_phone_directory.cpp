@@ -41,8 +41,9 @@ directory.check(2);
 */
 
 
-// 使用unordered_set超时
-// 需要使用整数数组
+// Use array instead of unordered_set
+// the former part of array is used to store the unavailable numbers, while the
+// the later part to store the available numbers, where 'index' seperate both. 
 class PhoneDirectory {
 public:
     /** Initialize your data structure here
