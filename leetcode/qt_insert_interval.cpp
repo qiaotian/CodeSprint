@@ -5,6 +5,7 @@
 * @Last modified by:   Tian Qiao
 * @Last modified time: 2016-07-16T15:07:14+08:00
 * @Google, Facebook, LinkedIn
+* @Difficulty: Hard
 */
 
 
@@ -32,8 +33,23 @@ This is because the new interval [4,9] overlaps with [3,5],[6,7],[8,10].
 class Solution {
 public:
     vector<Interval> insert(vector<Interval>& intervals, Interval newInterval) {
+        vector<Interval> ans;
         for(auto i:intervals) {
-
+            if(min(i.end, newInterval.end)>=max(i.start, newInterval.start)) {
+                    //Interval cur(min(i.start, newInterval.start), max(i.end, newInterval,end));
+                    //ans.push_back(cur);
+                    newInterval.start = min(i.start, newInterval.start);
+                    newInterval.end = max(i.end, newInterval.end);
+            } else {
+                if(newInterval.start > i.start) {
+                    ans.push_bakc(i);
+                } else {
+                    ans.push_back(newInterval);
+                    newInterval.start = i.start;
+                    newInterval.end = i.end;
+                }
+            }
         }
+        ans.push_back(newInterval);
     }
 };
