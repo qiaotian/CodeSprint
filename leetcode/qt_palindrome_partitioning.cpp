@@ -1,3 +1,23 @@
+/**
+* @Author: Tian Qiao
+* @Date:   2016-07-10T19:18:26+08:00
+* @Email:  qiaotian@me.com
+* @Last modified by:   Tian Qiao
+* @Last modified time: 2016-08-01T22:41:46+08:00
+*/
+
+/*
+Given a string s, partition s such that every substring of the partition is a palindrome.
+Return all possible palindrome partitioning of s.
+For example, given s = "aab",
+Return
+[
+  ["aa","b"],
+  ["a","a","b"]
+]
+*/
+
+
 // Backtracking (12ms, beats 78%)
 class Solution {
 public:
@@ -7,7 +27,7 @@ public:
         getPartition(s, 0, tmp, res);
         return res;
     }
-private: 
+private:
     void getPartition(string& s, int idx, vector<string>& tmp, vector<vector<string>>& res) {
         // idx: 当前全文搜索的起始位置
         // tmp: 回文容器
