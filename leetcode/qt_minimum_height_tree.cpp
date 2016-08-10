@@ -56,7 +56,7 @@ public:
 // 2nd solution (1224ms, beats 25%)
 class Solution {
 public: 
-    vector<int> findMinHeightTrees(int n, vector<pair<int, int>>& edges) {
+    vector<int> findMinHeightTrees(int n, vector<pair<int, int> >& edges) {
         vector<unordered_set<int>> graph(n);
         for(auto e: edges){
             graph[e.first].insert(e.second);
