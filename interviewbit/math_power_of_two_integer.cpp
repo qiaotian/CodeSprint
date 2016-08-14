@@ -53,17 +53,18 @@ bool Solution::isPower(int A) {
         if(numExp[i]==1) return false;
         max_common_divsor = gcd(max_common_divsor, numExp[i]);
     }
-    
+
     return max_common_divsor>1;
 }
 
 // solution two
-// 
+//
 //
 bool Solution::isPower(int A) {
     // 考虑到A是32位正整数
     // 小于等于A的a^b的形式pair [a, b]数目是有限的
     // 遍历求出所有的a^b的值然后和A比对即可
+    if(A==1) return true;
     int maxbase = sqrt(A);
     for(int i=2; i<=maxbase; i++) {
         for(int j=2; ;j++){
@@ -75,3 +76,18 @@ bool Solution::isPower(int A) {
     return false;
 }
 
+// 参考答案
+class Solution {
+    public:
+        bool isPower(int x) {
+            if (x <= 1) return true;
+            for (int base = 2; base < x && base < INT_MAX / base; base++) {
+                int temp = base; 
+                while (temp <= x && temp < INT_MAX / base) {
+                    temp *= base;
+                    if (temp == x) return true;
+                }
+            }
+            return false;
+        }
+};
