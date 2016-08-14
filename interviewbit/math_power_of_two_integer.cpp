@@ -9,6 +9,9 @@ as 2^2 = 4.
 #include <cmath>
 #include <iostream>
 
+// solution one: 内存使用异常MLE
+//
+// for test case "1024000000"
 int gcd(int a, int b) {
     if(a<b) return gcd(b, a);
     if(b==0) return a;
@@ -54,4 +57,21 @@ bool Solution::isPower(int A) {
     return max_common_divsor>1;
 }
 
+// solution two
+// 
+//
+bool Solution::isPower(int A) {
+    // 考虑到A是32位正整数
+    // 小于等于A的a^b的形式pair [a, b]数目是有限的
+    // 遍历求出所有的a^b的值然后和A比对即可
+    int maxbase = sqrt(A);
+    for(int i=2; i<=maxbase; i++) {
+        for(int j=2; ;j++){
+            long long tmp = pow(i, j);
+            if(tmp>A) break;
+            if(tmp==A) return true;
+        }
+    }
+    return false;
+}
 
