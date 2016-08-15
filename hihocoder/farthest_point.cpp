@@ -26,7 +26,7 @@ Sample Output
 
 #include <iostream>
 #include <cmath> // pow会用到
-#include <unordered_set>
+#include <unordered_map>
 #include <vector>
 #include <queue>
 
@@ -77,11 +77,11 @@ pair<int, int> farthest_point(float x, float y, float r) {
     pair<float, float> center = {x, y};
 
     queue<pair<int, int>> q;
-    unordered_set<long long> visited;
+    unordered_map<long long, pair<int, int>> visited;
     pair<int, int> start = {(int)(x+r), (int)y};
     q.push(start);
     long long pos = start.first*100000 + start.second;
-    visited.insert(pos);
+    visited.insert({pos, start});
     while(!q.empty()) {
         pair<int, int> cur = q.front();
         q.pop();
@@ -95,14 +95,15 @@ pair<int, int> farthest_point(float x, float y, float r) {
             if(distance>r || distance<r-1) continue;
             if(visited.find(nhx*100000+nhy)!=visited.end()) continue;
             else {
-                visited.insert(nhx*100000+nhy);
+                visited.insert({nhx*100000+nhy, {nhx, nhy}});
                 q.push(make_pair(nhx, nhy));
             }
         }
     }
-    for(auto num:visited) {
-        int x = num/100000;
-        int y = num%100000;
+    for(auto mem:visited) {
+        int x = mem.second.first;
+        int y = mem.second.second;
+        //cout << x << " "  << y << endl;
         float distance = dist(make_pair(x, y), center);
         if(abs(distance-farthest_dist)<1E-10 && x>ans.first) {
             ans = {x, y};
