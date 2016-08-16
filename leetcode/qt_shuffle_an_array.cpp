@@ -19,23 +19,37 @@ Example:
 //
 */
 
+// 本题的测试案例要求相同的操作序列得到相同的结果，
+// 因此无需srand(time(0))
 class Solution {
 private:
-	vector<int> bak;
-	vector<int> ans;
+    vector<int> bkp;
+    vector<int> ans;
 public:
     Solution(vector<int> nums) {
-        bak = nums;
+        bkp = nums;
+        ans = nums;
     }
     
     /** Resets the array to its original configuration and return it. */
     vector<int> reset() {
-        
+        ans = bkp;
+        return ans;
     }
     
     /** Returns a random shuffling of the array. */
     vector<int> shuffle() {
+        // 1st solution: build-in function
+        // random_shuffle(ans.begin(), ans.end());
         
+        // 2nd solution: fisher-yates shuffle
+        ans = reset();
+        for(int i=ans.size()-1; i>0; i--) {
+            //srand(time(0)); ////use current time as seed for random generator, should include <ctime> <cstdlib>
+            int rd = rand();
+            swap(ans[i], ans[rd%(i+1)]);
+        }
+        return ans;
     }
 };
 
