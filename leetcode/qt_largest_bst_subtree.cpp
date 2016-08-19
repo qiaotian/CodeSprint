@@ -31,36 +31,40 @@ The return value is the subtree's size, which is 3.
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
+
 class Solution {
 public:
-    // return -1 if root is not bstTree
-    // return n if root is bstTree and n is the number of nodes
-    int bstTree(TreeNode* root) {
-        if(!root) return 0;
-        if(!root->left && !root->right) return 1;
-
-        int ll = bstTree(root->left);
-        int rr = bstTree(root->right);
-
-        if(ll>0 && rr==0) {
-            if(root->val > root->left->val) return ll+1;
-        }
-        if(ll==0 && rr>0) {
-            if(root->val < root->right->val) return rr+1;
-        }
-        if(ll>0 && rr>0) {
-            if(root->val>root->left->val && root->val<root->right->val) return ll+rr+1;
-        }
-
-        return -1;
-    }
     int largestBSTSubtree(TreeNode* root) {
-        int ans = 0;
-        if(!root) return 0;
-        if(!root->left && !root->right) return 1;
+        int res = 0;
+        // 以root为根的树的最大值和最小值
+        int mini, maxi;
+        isBST(root, res, mini, maxi);
+        return res;
+    }
+    
+    // BST要求Root大于左子树的所有节点值，并且小于右子树的所有节点值
+    bool isBST(TreeNode* root, int& count, int& mini, int& maxi) {
+        // count: 以root为根节点的子树中最大bst子树的节点数
+        // mini:  最大bst的最小值
+        // maxi:  最大bst的最大值
+        if (!root) return true;
+        
+        int lsize = 0, rsize = 0; // 左右子树的最大bst尺寸
+        int lmin, lmax, rmin, rmax; // 左右子树的最大bst的最小最大值
+        
+        bool ll = isBST(root->left, lsize, lmin, lmax);
+        bool rr = isBST(root->right, rsize, rmin, rmax);
 
-        helper(root);
-
-        return ans;
+        if (ll && rr && (!root->left || root->val>=lmax) && (!root->right || root->val<=rmin) ) {
+            // 以node为根的树为bst（左右子树都是bst，切满足bst的大小关系）
+            count  = lsize+rsize+1;
+            mini = root->left?lmin:root->val;
+            maxi = root->right?rmax:root->val;
+            return true;
+        } else {
+            // 以node为根的树并非节点树，因此最终的最大节点数为左子树或者右子树的最大节点数
+            count = max(lsize, rsize);
+            return false;
+        }
     }
 };
