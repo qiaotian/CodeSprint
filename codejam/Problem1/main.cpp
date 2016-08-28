@@ -13,31 +13,12 @@
 
 using namespace std;
 
-
-int countStr(string str) {
-    unordered_set<char> s;
-    for(auto i:str) {
-        if(i!=' ') {
-            s.insert(i);
-        }
-    }
-    return s.size();
-}
-
-bool cmp(pair<string, int>a, pair<string, int>b) {
-    if( a.second > b.second ) return true;
-    if( a.second == b.second) {
-        return a.first < b.first;
-    }
-    return false;
-}
-
 int main(int argc, const char* argv[]) {
     //string inpath = argv[1];
     //string outpath = argv[2];
 
-    string inpath  = "/Users/qiaotian/Downloads/A-large.in.txt";
-    string outpath = "/Users/qiaotian/Desktop/Problem1/A-large.out.txt";
+    string inpath  = "/Users/qiaotian/Downloads/A-small-attempt0.in.txt";
+    string outpath = "/Users/qiaotian/Downloads/A-small-attempt0.out.txt";
 
     ifstream infile(inpath);
     ofstream outfile(outpath);
@@ -58,31 +39,17 @@ int main(int argc, const char* argv[]) {
 
 
     for(int i=0; i<num_cases; i++) {
-        //
+        int ll, rr;
+        getline(infile, currline);
+        istringstream iss(currline);
+        iss >> ll >> rr;
 
         //vector<string> names;
         vector<pair<string, int>> count; // name to count
 
-        int N; // lines
-        getline(infile, currline);
-        istringstream iss(currline);
-        iss>>N;
+        int ans = (min(ll, rr)+1)*min(ll, rr)/2;
 
-        for(int i=0; i<N; i++) {
-            getline(infile, currline);
-            //names.push_back(currline);
-            string name = currline;
-            int num = countStr(name);
-            count.push_back({name, num});
-        }
-
-        sort(count.begin(), count.end(), cmp);
-
-        //return count[0].first;
-
-
-        // output the result
-        outfile << "Case #" << i+1 <<": " << count[0].first << endl;
+        outfile << "Case #" << i+1 <<": " << ans << endl;
     }
 
     infile.close();
