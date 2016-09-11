@@ -39,20 +39,20 @@ public:
     int firstUniqChar(string s) {
 		int one = 0, two = 0;
         for(auto c:s) {
-            bit = 1 << ord(char) - 97
-            if not one & bit:
-                if not two & bit:
-                    one |= bit
-                continue
+            int bit = 1 << c - 97;
+            if(!(one & bit))
+                if(two & bit)
+                    one |= bit;
+                continue;
 
-            one &= ~bit
-            two |= bit
+            one &= ~bit;
+            two |= bit;
 		}
-        for i, char in enumerate(s):
-            bit = 1 << ord(char) - 97
+        for(auto c:s){
+            bit = 1 << c - 97;
             if one & bit:
-                return i
-
-        return -1
+                return i;
+        }
+        return -1;
 	}
 }
