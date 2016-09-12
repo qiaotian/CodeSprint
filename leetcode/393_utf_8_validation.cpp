@@ -37,39 +37,48 @@ But the second continuation byte does not start with 10, so it is invalid.
 class Solution {
 public:
     bool validUtf8(vector<int>& data) {
+        if(data.empty()) return true;
 		int start = 0;
         for(int i=0; i<data.size();) {
             int bytes_flag = data[start] & 0x11111000;
-			if(data[start] & 0x10000000 == 0) {
+			if(data[start] & 0x10000000 == 0){
                 // check the next data
                 start = i+1;
                 i = i+1;
             }
             else if(data[start] & 0x11000000 == 128) {
-                if(data[start+1] & 0x11000000 != 128) return false;
-                start = i+2;
-                i = i+2;
+                if(start+1 < data.size() ||
+                   data[start+1] & 0x11000000 == 128){
+                    start = i+2;
+                    i = i+2;
+                }
             }
             else if(data[start] & 0x11100000 == 192) {
-                if(data[start+1] & 0x11000000 != 128 ||
-                   data[start+2] & 0x11000000 != 128) return false;
-                start = i+3;
-                i = i+3;
+                if(start+2 < data.size() ||
+                   data[start+1] & 0x11000000 == 128 ||
+                   data[start+2] & 0x11000000 == 128){
+                    start = i+3;
+                    i = i+3;
+                }
             }
             else if(data[start] & 0x11110000 == 224) {
-                if(data[start+1] & 0x11000000 != 128 ||
-                   data[start+2] & 0x11000000 != 128 ||
-                   data[start+3] & 0x11000000 != 128) return false;
-                start = i+4;
-                i = i+4;
+                if(start+3 < data.size() ||
+                   data[start+1] & 0x11000000 == 128 ||
+                   data[start+2] & 0x11000000 == 128 ||
+                   data[start+3] & 0x11000000 == 128){
+                    start = i+4;
+                    i = i+4;
+                }
             }
             else if(data[start] & 0x11111000 == 240) {
-                if(data[start+1] & 0x11000000 != 128 ||
-                   data[start+2] & 0x11000000 != 128 ||
-                   data[start+3] & 0x11000000 != 128 ||
-                   data[start+4] & 0x11000000 != 128) return false;
-                start = i+5;
-                i = i+5;
+                if(start+4 < data.size() ||
+                   data[start+1] & 0x11000000 == 128 ||
+                   data[start+2] & 0x11000000 == 128 ||
+                   data[start+3] & 0x11000000 == 128 ||
+                   data[start+4] & 0x11000000 == 128) {
+                    start = i+5;
+                    i = i+5;
+                }
             } else {
                 return false;
             }
