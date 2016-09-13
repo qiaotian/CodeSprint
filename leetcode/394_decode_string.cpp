@@ -14,6 +14,8 @@ s = "3[a2[c]]", return "accaccacc".
 s = "2[abc]3[cd]ef", return "abcabccdcdcdef".
 */
 
+
+// Recursion
 class Solution {
 public:
     string decodeString(string s) {
@@ -69,5 +71,40 @@ public:
         /// 4. 处理嵌套外的字符串
         ans += decodeString(s);
         return ans;
+    }
+};
+
+
+// Official Method: Stack
+// More Concise!!!
+class Solution {
+public:
+    string decodeString(string s, int& i) {
+        string res;
+        
+		// 出栈条件
+        while (i < s.length() && s[i] != ']') {
+            if (!isdigit(s[i]))
+                res += s[i++];
+            else {
+                int n = 0;
+                while (i < s.length() && isdigit(s[i]))
+                    n = n * 10 + s[i++] - '0';
+                    
+                i++; // '['
+                string t = decodeString(s, i);
+                i++; // ']'
+                
+                while (n-- > 0)
+                    res += t;
+            }
+        }
+        
+        return res;
+    }
+
+    string decodeString(string s) {
+        int i = 0;
+        return decodeString(s, i);
     }
 };
