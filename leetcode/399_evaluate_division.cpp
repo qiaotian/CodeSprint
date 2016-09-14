@@ -12,24 +12,26 @@ According to the example above:
 
 equations = [ ["a", "b"], ["b", "c"] ],
 values = [2.0, 3.0],
-queries = [ ["a", "c"], ["b", "a"], ["a", "e"], ["a", "a"], ["x", "x"] ]. 
+queries = [ ["a", "c"], ["b", "a"], ["a", "e"], ["a", "a"], ["x", "x"] ].
 The input is always valid. You may assume that evaluating the queries will result in no division by zero and there is no contradiction.
 */
 
+
+// Hash + DFS
 class Solution {
 public:
-    vector<double> calcEquation(vector<pair<string, string>> equations, 
-                                vector<double>& values, 
+    vector<double> calcEquation(vector<pair<string, string>> equations,
+                                vector<double>& values,
                                 vector<pair<string, string>> queries) {
         vector<double> ans;
         unordered_map<string, unordered_map<string, double>> mmap;
-        
+
         for(int i=0; i<equations.size(); i++) {
             mmap[equations[i].first].insert(make_pair(equations[i].second, values[i]));
             if(values[i]) mmap[equations[i].second].insert(make_pair(equations[i].first, 1.0/values[i]));
         }
         for(auto q:queries) {
-            unordered_set<string> s;
+            unordered_set<string> s; // used for storing the visited node
             double tmp = util(mmap, s, q);
             if(tmp) ans.push_back(tmp);
             else ans.push_back(-1.0);
