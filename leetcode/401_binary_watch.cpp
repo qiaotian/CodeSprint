@@ -63,7 +63,7 @@ public:
 
         initHoursMinites();
         
-        for(int l=0, r=num; l<=num; l++, r--) {
+        for(int l=0, r=num; l<=num && i<= 11; l++, r--) {
             if(l>3 || r>5) continue;
             for(int i=0; i<hours[l].size(); i++) {
                 for(int j=0; j<minites[r].size(); j++) {
@@ -87,3 +87,47 @@ int bitCount(int n) {
 	}
 	return cnt;:w
 }
+
+
+
+// Solution 2
+// https://discuss.leetcode.com/topic/59585/only-0ms-c-solution-easy-understand
+class Solution {
+public:
+    int bitCount(int c)
+    {
+        int count=0;
+        while (c)
+        {
+            c=c&(c-1);
+            count++;
+        }
+        return count;
+    }
+    
+    vector<string> readBinaryWatch(int num) {
+        int bottom;
+        vector<string> result;
+            for (int i=0;i<=11;++i)
+            {
+                bottom=num-bitCount(i);
+                if (bottom<0)   continue;
+                for (int j=0;j<60;++j)
+                {
+                    if (bitCount(j)==bottom)
+                    {
+                        string s=to_string(i);
+                        s=s+':';
+                        if (j<10)   
+                        {
+                            s=s+'0';
+                            s=s+to_string(j);
+                        }
+                        else    s+=to_string(j);
+                        result.push_back(s);
+                    }
+                }
+            }
+        return result;
+    }
+};
