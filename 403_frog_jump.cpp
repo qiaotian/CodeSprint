@@ -97,22 +97,23 @@ public:
 };
 
 // AC
-// 将3个参数还原为原先的1个参数
-// 删除key仍然可以ac
+// 某个节点p可达终点的等价条件
+// p可达终点 <==> exist 中间节点q，使得p通过q可达终点
+//
 class Solution {
 public:
-    unordered_map<int, bool> dp;
+    unordered_map<int, bool> dp; //
 
     bool util(vector<int>& stones, int pos, int k) {
-        //int key = pos | k << 11;
-        if (dp.count(pos) > 0) return dp[pos];
+        int key = pos | k << 20; // 将key和k进行编码得到唯一的编码code
+        if (dp.count(key) > 0) return dp[key]; // 如果
         for (int i = pos + 1; i < stones.size(); i++) {
             int gap = stones[i] - stones[pos];
-            if (gap < pos - 1) continue;
-            if (gap > pos + 1) return dp[pos] = false; 
-            if (util(stones, i, gap)) return dp[pos] = true;
+            if (gap < k - 1) continue;
+            if (gap > k + 1) return dp[key] = false; 
+            if (util(stones, i, gap)) return dp[key] = true;
         }
-        return dp[pos] = (pos == stones.size() - 1);
+        return dp[key] = (pos == stones.size() - 1);
     }
     bool canCross(vector<int>& stones) {
         return util(stones, 0, 0);
