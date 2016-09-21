@@ -19,15 +19,15 @@ The first stone at the 0th unit, second stone at the 1st unit,
 third stone at the 3rd unit, and so on...
 The last stone at the 17th unit.
 
-Return true. The frog can jump to the last stone by jumping 
-1 unit to the 2nd stone, then 2 units to the 3rd stone, then 
-2 units to the 4th stone, then 3 units to the 6th stone, 
+Return true. The frog can jump to the last stone by jumping
+1 unit to the 2nd stone, then 2 units to the 3rd stone, then
+2 units to the 4th stone, then 3 units to the 6th stone,
 4 units to the 7th stone, and 5 units to the 8th stone.
 Example 2:
 
 [0,1,2,3,4,8,9,11]
 
-Return false. There is no way to jump to the last stone as 
+Return false. There is no way to jump to the last stone as
 the gap between the 5th and 6th stone is too large.
 */
 
@@ -40,7 +40,7 @@ class Solution {
 public:
     bool util(vector<int>& stones, int pos, int k) {
         if(pos==stones.size()-1) return true;
-        
+
         auto search = hashmap.find(stones[pos]+k+1);
         if(  1 && search!=hashmap.end() && util(stones, search->second, k+1)) return true;
         search = hashmap.find(stones[pos]+k);
@@ -63,7 +63,7 @@ class Solution {
             if (stones[i]-stones[start]<k-1) continue;
             if (stones[i]-stones[start]>k+1) return false;
             if (help(stones,i,stones[i]-stones[start])) return true;
-        }   
+        }
         return false;
     }
 
@@ -74,7 +74,26 @@ class Solution {
     }
 }
 
+// AC (DP)
+// 某个节点p可达终点的等价条件
+// p可达终点 <==> exist 中间节点q，使得p通过q可达终点
+//
+class Solution {
+public:
+    unordered_map<int, bool> dp; //
 
-// DP
-
-
+    bool util(vector<int>& stones, int pos, int k) {
+        int key = pos | k << 20; // 将key和k进行编码得到唯一的编码code
+        if (dp.count(key) > 0) return dp[key]; // 如果
+        for (int i = pos + 1; i < stones.size(); i++) {
+            int gap = stones[i] - stones[pos];
+            if (gap < k - 1) continue;
+            if (gap > k + 1) return dp[key] = false;
+            if (util(stones, i, gap)) return dp[key] = true;
+        }
+        return dp[key] = (pos == stones.size() - 1);
+    }
+    bool canCross(vector<int>& stones) {
+        return util(stones, 0, 0);
+    }
+};
