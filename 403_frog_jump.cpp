@@ -80,7 +80,7 @@ class Solution {
 public:
     unordered_map<int, bool> dp;
 
-    bool util(vector<int>& stones, int pos, int k) {
+	bool util(vector<int>& stones, int pos=0, int k=0) {
         int key = pos | k << 11;
         if (dp.count(key) > 0) return dp[key];
         for (int i = pos + 1; i < stones.size(); i++) {
@@ -96,7 +96,9 @@ public:
     }
 };
 
-// AC:删除key仍然可以ac
+// AC
+// 将3个参数还原为原先的1个参数
+// 删除key仍然可以ac
 class Solution {
 public:
     unordered_map<int, bool> dp;
