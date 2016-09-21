@@ -21,7 +21,7 @@ Output: "0"
 Explanation: Remove all the digits from the number and it is left with nothing which is 0.
 */
 
-
+// 核心思想：先生成一个最小递增序列，然后删除多余字母，即可得到解
 class Solution {
 public:
     string removeKdigits(string num, int k) {
