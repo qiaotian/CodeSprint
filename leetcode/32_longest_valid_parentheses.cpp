@@ -53,6 +53,24 @@ For example, input "()(())", at i = 5, longest array is [0,2,0,0,2,0], longest[5
 class Solution {
 public:
     int longestValidParentheses(string s) {
-        
+        int ans = 0;
+        int n = s.size();
+        if(n<2) return ans;
+
+        vector<int> longest(n, 0);
+        for(int i=1; i<n; i++) {
+            if(s[i]==')') {
+                if(s[i-1]=='(') {
+                    longest[i]=(i>1?longest[i-2]:0)+2;
+                    ans = max(ans, longest[i]);
+                } else {
+                    if(i-longest[i-1]-1>=0 && s[i-longest[i-1]-1]=='('){
+                        longest[i] = longest[i-1]+2+(i-longest[i]-2>=0?longest[i-2-longest[i-1]]:0);
+                        ans = max(ans, longest[i]);
+                    }
+                }
+            }
+        }
+        return ans;
     }
 };
