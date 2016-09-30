@@ -1,3 +1,11 @@
+/*
+Magic cube is cube(M*M*M) which contains a integer number (0 <= number <= P) in each cell(So you know there are M^3 numbers).
+
+Alice have one big cube and N smaller cubes(each cube is unique).
+The cube is magic since when you put a small cube in bigger one, the number in the same position will add up and mod P.
+Your job is to determine the location of each small cube, so that we can make every number in big cube equal 0 after putting all the small cubes.
+*/
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
