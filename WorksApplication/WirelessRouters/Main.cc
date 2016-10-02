@@ -1,3 +1,15 @@
+/*
+Input
+The first line is two integers N(2<=N<=1000), M(1<=M<=N, M<=100) Then are N lines, each shows the satisfation S[i](1<=S[i]<=10) point of room i. Then are N-1 lines, each contains two integers x, y, which represents a door is between room x and y.
+
+Output
+Just output the maximum point of satisfation.
+
+Limits
+ Memory limit per test: 256 megabytes
+ Time limit per test: The faster the better
+*/
+
 #include <iostream>
 #include <string>
 #include <vector>
