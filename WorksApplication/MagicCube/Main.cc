@@ -30,16 +30,25 @@ int main() {
             }
         }
         //
-        for(int i=0; i<m; i++) {
-            for(int j=0; j<m; j++) {
-                for(int k=0; k<m; k++) {
-                    for(int i=0; i<len; i++) {
-                        for(int j=0; j<len; j++) {
-                            for(int k=0; k<len; k++) {
+        for(int i=0; i<m-len+1; i++) {
+            for(int j=0; j<m-len+1; j++) {
+                for(int k=0; k<m-len+1; k++) {
+                    bool ismatch = true;
+                    for(int x=0; x<len; x++) {
+                        for(int y=0; y<len; y++) {
+                            for(int z=0; z<len; z++) {
                                 // smallcube[i][j][k];
+                                if(bigcube[i][j][k]!=smallcube[x][y][z]) {
+                                    ismatch = false;
+                                    break;
+                                }
                             }
+                            if(!ismatch) break;
                         }
+                        if(!ismatch) break;
                     }
+                    // output the result
+                    if(ismatch) cout << i << " " << j << " " << k << endl;
                 }
             }
         }
