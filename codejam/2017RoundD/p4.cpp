@@ -13,7 +13,7 @@ using namespace std;
 #define FOR(i,l,r)   for(int i=l; i<=r; i++)
 #define ROF(i,l,r)   for(int i=r; i>=l; i--)
 
-#define RI(x)        cin>>x
+#define RI(x)        ifile>>x
 #define RII(x,y)     RI(x),RI(y)
 #define RIII(x,y,z)  RI(x),RI(y),RI(z)
 
@@ -21,23 +21,15 @@ int main() {
     string ipath = "";
     string opath = "";
 
-    ifstream infile(ipath);
-    ofstream outfile(opath);
+    ifstream ifile(ipath);
+    ofstream ofile(opath);
 
-    if(!infile || !outfile) {
+    if(!ifile || !ofile) {
         cout << "----> open files failed" << endl;
         return EXIT_FAILURE;
     }
 
-    // Preprocess
-
-    // Preprocess
-
-    // Output
-
-
-
-    infile.close();
-    outfile.close();
+    ifile.close();
+    ofile.close();
     return 0;
 }
