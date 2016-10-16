@@ -19,7 +19,7 @@ using namespace std;
 
 int main() {
     // double a[2000][2000];段错误，内存超标 (8B*2000*2000 = 32MB > 1M)
-    string ipath = "/Users/qiaotian/Downloads/CodeSprint/codejam/2017RoundD/A-large.in.txt";
+    string ipath = "/Users/qiaotian/Downloads/CodeSprint/codejam/2017RoundD/A-large-practice.in.txt";
     string opath = "/Users/qiaotian/Downloads/CodeSprint/codejam/2017RoundD/outtest.txt";
 
     ifstream ifile(ipath);
