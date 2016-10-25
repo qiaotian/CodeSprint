@@ -28,6 +28,8 @@ using namespace std;
 #define RIII(x,y,z)  RI(x),RI(y),RI(z)
 
 int minPrice(vector<vector<int>>& info, int M, int L) {
+    // M is the money you have
+    // L is the target length you need to achieve
     int N = info.size();
 
     long long dp[L+1];
@@ -58,6 +60,32 @@ int minPrice(vector<vector<int>>& info, int M, int L) {
     else return -1;
 }
 
+// can not pass large practice
+int minPrice2(vector<vector<int>>& info, int M, int L) {
+    // L is the target length you need to achieve
+    int N = info.size();
+
+    int dp[L+1];
+    for (int i = 1; i < L+1; i++) dp[i] = INT32_MAX;
+    dp[0] = 0;
+
+    for(auto e:info) {
+        int A = e[0];
+        int B = e[1];
+        int P = e[2];
+
+        for(int i=L; i>=1; i--) {
+            for(int j=A; j<=B; j++) {
+                if(i-j>=0 && dp[i-j]!=INT32_MAX) {
+                    dp[i] = min(dp[i], dp[i-j]+P);
+                }
+            }
+        }
+    }
+    if (dp[L] <= M) return dp[L];
+    else return -1;
+}
+
 int main() {
     //string ipath = "./test.txt";
     //string opath = "./D-small-practice.out.txt";
@@ -67,11 +95,11 @@ int main() {
 
     int T;
     RI(T);
-    for(int t=0; t<T; t++) {
+    FOR(t, 0, T-1) {
         int N, M, L;
         RIII(N, M, L);
         vector<vector<int>> info;
-        for(int i=0; i<N; i++) {
+        FOR(i, 0, N-1) {
             vector<int> tmp;
             int A, B, P;
             RIII(A, B, P);
@@ -79,6 +107,7 @@ int main() {
             info.PB(tmp);
         }
 
+        // int ans = minPrice2(info, M, L);
         int ans = minPrice(info, M, L);
         string res = ans==-1?"IMPOSSIBLE":to_string(ans);
         PRINT(res, t);
