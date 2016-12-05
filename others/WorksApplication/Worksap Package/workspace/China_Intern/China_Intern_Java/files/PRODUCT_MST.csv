@@ -1,0 +1,799 @@
+product_mst_id,product_type,product_name,price,price_unit
+1,Diapers,"Huggies Little Snugglers Diapers, Size 1",37.49,USD
+2,Diapers,"Huggies Snug & Dry Diapers, Size 2",37.49,USD
+3,Diapers,"Huggies Snug & Dry Diapers, Size 3",42.99,USD
+4,Diapers,"Huggies Little Movers, Size 4",42.99,USD
+5,Diapers,"Huggies Little Movers, Size 5",42.99,USD
+6,Diapers,"Huggies Little Movers, Size 6",42.99,USD
+7,Diapers,"Kirkland Supreme Diapers, Size 1",29.99,USD
+8,Diapers,"Kirkland Supreme Diapers, Size 2",29.99,USD
+9,Diapers,"Kirkland Supreme Diapers, Size 3",38.99,USD
+10,Diapers,"Kirkland Supreme Diapers, Size 4",38.99,USD
+11,Diapers,"Kirkland Supreme Diapers, Size 5",38.99,USD
+12,Diapers,"Kirkland Supreme Diapers, Size 6",38.99,USD
+13,Formula,Enfamil Infant Formula Twin Pack,49.99,USD
+14,Formula,Kirkland Formula,17.99,USD
+15,Formula,Pedia-Sure (Vanilla),36.99,USD
+16,Formula,Similac Advance Early Shield Formula Non-GMO,33.99,USD
+17,Formula,Similac Sensitive Infant Formula,33.99,USD
+18,Formula,Enfagrow Toddler Formula,27.49,USD
+19,Formula,Enfagrow Toddler Formula Next Step,23.99,USD
+20,Misc Baby,Desitin Creamy Ointment (2 pk),9.39,USD
+21,Misc Baby,Honest Baby Shampoo & Body Wash (2 pk),14.99,USD
+22,Misc Baby,Playtex Diaper Genie Refills (4 pk),19.99,USD
+23,Pull-Ups,"Huggies Pull-Ups, 2T/3T",29.99,USD
+24,Pull-Ups,"Huggies Pull-Ups, 3T/4T",29.99,USD
+25,Pull-Ups,"Huggies Pull-Ups, 4T/5T",29.99,USD
+26,Wipes,Huggies Natural Care Plus Wipes,24.99,USD
+27,Wipes,Kirkland Flushable Wipes,14.99,USD
+28,Wipes,Kirkland Wipes,19.99,USD
+29,Wipes,Kleenex Cottonelle Flushable Wipes,15.49,USD
+30,BATTERIES,Duracell Alkaline AAA Batteries,14.99,USD
+31,BATTERIES,Duracell Alkaline C Batteries,14.89,USD
+32,BATTERIES,Duracell Alkaline D Batteries,14.89,USD
+33,BATTERIES,Duracell Coppertop 9 Volt Batteries,15.89,USD
+34,BATTERIES,Duracell Coppertop Alkaline AA 40 Pack Batteries,14.99,USD
+35,BATTERIES,Kirkland AA Alkaline Batteries,18.99,USD
+36,BATTERIES,Kirkland AAA Alkaline Batteries,19.99,USD
+37,BATTERIES,Panasonic Eneloop Rechargeable Batteries + Charger,29.99,USD
+38,Coffee/Tea/Hot Chocolate,Cacafe Instant Coconut Coffee,9.69,USD
+39,Coffee/Tea/Hot Chocolate,Caffe D'Amore Mocha Frappe Freeze,9.89,USD
+40,Coffee/Tea/Hot Chocolate,Carnation Breakfast Essentials,12.59,USD
+41,Coffee/Tea/Hot Chocolate,Chai Tea Latte Concentrate Organic,7.89,USD
+42,Coffee/Tea/Hot Chocolate,Folgers Classic Roast Ground Coffee,9.99,USD
+43,Coffee/Tea/Hot Chocolate,Folgers Instant Coffee,8.99,USD
+44,Coffee/Tea/Hot Chocolate,Hershey's Chocolate Syrup,7.79,USD
+45,Coffee/Tea/Hot Chocolate,Hershey's Chocolate Syrup,6.59,USD
+46,Coffee/Tea/Hot Chocolate,International Delight French Vanilla Creamer,8.79,USD
+47,Coffee/Tea/Hot Chocolate,Kirkland Signature 2% Organic Chocolate Milk,15.99,USD
+48,Coffee/Tea/Hot Chocolate,Kirkland Signature Starbucks Certified Fair Trade De-Caf Whole Bean Coffee,11.49,USD
+49,Coffee/Tea/Hot Chocolate,Kirkland Signature 100% Colombian Ground Coffee,8.99,USD
+50,Coffee/Tea/Hot Chocolate,Kirkland Signature 100% Colombian Whole Bean Coffee,14.99,USD
+51,Coffee/Tea/Hot Chocolate,Kirkland Signature Breakfast Blend Fair Trade Pods,43.99,USD
+52,Coffee/Tea/Hot Chocolate,Kirkland Signature Breakfast Blend K-Cups,36.99,USD
+53,Coffee/Tea/Hot Chocolate,Kirkland Signature De-Caf Arabica Ground Coffee,11.99,USD
+54,Coffee/Tea/Hot Chocolate,Kirkland Signature Fair Trade Espresso Whole Bean,10.59,USD
+55,Coffee/Tea/Hot Chocolate,Kirkland Signature Japanese Green Tea,11.99,USD
+56,Coffee/Tea/Hot Chocolate,Kirkland Signature Pacific Bold K-Cups,36.99,USD
+57,Coffee/Tea/Hot Chocolate,Kirkland Signature Rwanda Whole Bean Coffee,14.99,USD
+58,Coffee/Tea/Hot Chocolate,Kirkland Signature Starbucks House Blend Whole Bean Coffee,9.99,USD
+59,Coffee/Tea/Hot Chocolate,Maxwell House International Cafe French Vanilla,5.89,USD
+60,Coffee/Tea/Hot Chocolate,N'Joy Non Dairy Creamer Canisters,8.99,USD
+61,Coffee/Tea/Hot Chocolate,Nescafe Taster's Choice House Blend Instant Coffee,10.99,USD
+62,Coffee/Tea/Hot Chocolate,Nesquick Chocolate,6.99,USD
+63,Coffee/Tea/Hot Chocolate,Nestle Coffee Mate Powder,5.99,USD
+64,Coffee/Tea/Hot Chocolate,Pleasant Hill Farms Restaurant Ground Coffee,23.99,USD
+65,Coffee/Tea/Hot Chocolate,San Francisco Bay 100% Organic Coffee Whole Bean,17.49,USD
+66,Coffee/Tea/Hot Chocolate,San Francisco Bay French Roast Coffee Whole Beans,15.59,USD
+67,Coffee/Tea/Hot Chocolate,San Francisco Bay Single Serve Coffee French Roast K-Cups,29.99,USD
+68,Coffee/Tea/Hot Chocolate,Splenda Packets No Calorie Sweetener,17.99,USD
+69,Coffee/Tea/Hot Chocolate,Starbucks French Roast Coffee Whole Bean,19.99,USD
+70,Coffee/Tea/Hot Chocolate,Starbucks House Blend K-Cups,42.99,USD
+71,Coffee/Tea/Hot Chocolate,Starbucks Via Ready Brew Colombian,14.99,USD
+72,Coffee/Tea/Hot Chocolate,Truvia Sweeteneer Naturally Calorie Free,14.99,USD
+73,Coffee/Tea/Hot Chocolate,Yuban Gold 100% Arabica Ground Coffee,8.99,USD
+74,Juices,Apple & Eve Organic Fruit Punch,6.49,USD
+75,Juices,Apple & Even Organic 100% Juice Variety 6.75 oz.,10.89,USD
+76,Juices,Campbell's V8 100% Vegetable Juice 11.5 oz,13.99,USD
+77,Juices,Capri Sun 10 % Juice Variety Pack 6 oz.,7.49,USD
+78,Juices,Capri Sun 100% Juice Variety Pack,9.99,USD
+79,Juices,Grown Right Organic Orange Mango Juice,9.39,USD
+80,Juices,Izze Sparkling Juice Variety Pack 12 oz.,10.99,USD
+81,Juices,Izze Sparkling Juice Variety Pack 8.4 oz.,14.79,USD
+82,Juices,Kern's Nectar Variety Pack 11.5 oz,13.59,USD
+83,Juices,Kirkland Signature 100% Juice Boxes Organic,12.79,USD
+84,Juices,Kirkland Signature Cranberry Juice,5.79,USD
+85,Juices,Kirkland Signature Cranberry Raspberry Juice,5.99,USD
+86,Juices,Kirkland Signature Fresh Pressed Apple Juice,7.89,USD
+87,Juices,Kirkland Signature Newman's Grape Juice,6.69,USD
+88,Juices,Kirkland Signature Organic Coconut Water,9.99,USD
+89,Juices,Kirkland Signature Organic Lemonade,6.79,USD
+90,Juices,Langers Mango Nectar Juice,5.89,USD
+91,Juices,Martinelli Sparkling Apple Cider 250 ml.,9.99,USD
+92,Juices,Old Orchard Oranic Watermelon Lemonade,7.99,USD
+93,Juices,Sunny Delight Big D Sports 11.3 oz.,9.99,USD
+94,Juices,Talking Rain Sparkling Ice 17 oz.,10.69,USD
+95,Juices,TreeTop Apple Juice,6.48,USD
+96,Juices,Tropicana Orange Juice 10 oz.,12.69,USD
+97,Juices,Vita Coco 100 % Coconut Water,13.99,USD
+98,Juices,Welch's Niagra White Grape Juice,4.99,USD
+99,Non Dairy Milk,Blue Diamond Vanilla Almond Breeze,9.69,USD
+100,Non Dairy Milk,Kirkland Signature Organic GF Vanilla Soy,13.99,USD
+101,Non Dairy Milk,Kirkland Signature Organic Rice Milk,13.99,USD
+102,Non Dairy Milk,Kirkland Signature Organic Soy Milk Plain,13.99,USD
+103,Non Dairy Milk,So Delicious Organic Coconut Milk,10.99,USD
+104,Powdered Drinks,Country Time Lemonade,6.49,USD
+105,Powdered Drinks,Crystal Light On the Go Variety Pack,7.79,USD
+106,Powdered Drinks,Gatorade Powder Glacier Freeze,8.99,USD
+107,Ready Coffee Drinks and Energy Drinks,Monster Energy Drink 16 oz. Original,32.99,USD
+108,Ready Coffee Drinks and Energy Drinks,Monster Energy Drink 16 oz. Ultra Black,32.99,USD
+109,Ready Coffee Drinks and Energy Drinks,Monster Energy Zero Ultra Variety Pack 16 oz.,31.99,USD
+110,Ready Coffee Drinks and Energy Drinks,Red Bull Energy Drink 8.4 oz.,34.49,USD
+111,Ready Coffee Drinks and Energy Drinks,Red Bull Sugar Free 8.4 oz.,35.99,USD
+112,Ready Coffee Drinks and Energy Drinks,Starbucks Mocha Frappucino 9.5 oz.,13.99,USD
+113,Ready Coffee Drinks and Energy Drinks,Starbucks Vanilla Frappucino,16.99,USD
+114,Refrigerated Juices,GT's Enlightened Organic Raw Kombucha Gingerade,14.99,USD
+115,Refrigerated Juices,Naked Juice Cold Pressed Variety,15.99,USD
+116,Refrigerated Juices,Naked Juice Green Machine,5.99,USD
+117,Refrigerated Juices,Naked Juice Organic Orange Mango,6.99,USD
+118,Refrigerated Juices,Naked Juice Variety Pack Smoothies,14.49,USD
+119,Refrigerated Juices,Pom Wonderful 100% Pomegranate Juice,8.99,USD
+120,Refrigerated Juices,Sambazon Organic Acai Juice,7.99,USD
+121,Refrigerated Juices,Suja Organic Essentials Might Greens,8.99,USD
+122,Refrigerated Juices,Sunshine Frozen Concentrate OJ,9.89,USD
+123,Refrigerated Juices,Sun Tropics Organic Coconut Water,13.99,USD
+124,Refrigerated Juices,Tropicana Pure Premium Orange Juice w Calcium,10.99,USD
+125,Sports Drinks and Vitamin Water,Glaceau Vitamin Water 20 oz.,15.99,USD
+126,Sports Drinks and Vitamin Water,Glaceau Vitamin Water Zero Variety 20 oz.,15.99,USD
+127,Sports Drinks and Vitamin Water,Gatorade All Stars 12 oz.,12.99,USD
+128,Sports Drinks and Vitamin Water,Gatorade Fierce Variety Pack 16.9 oz.,15.89,USD
+129,Sports Drinks and Vitamin Water,Gatorade Frost Variety Flavors,15.89,USD
+130,Sports Drinks and Vitamin Water,Gatorade G2 Variety Pack,15.89,USD
+131,Sports Drinks and Vitamin Water,"Gatorade Red, White, Blue Pack 16.9 oz",15.89,USD
+132,Sports Drinks and Vitamin Water,Gatorade Variety Flavors Limited Edition,12.99,USD
+133,Sports Drinks and Vitamin Water,Gatorade Variety Original Flavors 16.9 oz,15.89,USD
+134,Sports Drinks and Vitamin Water,Kirkland Signature Vita Rain Zero Vitamin Water,9.99,USD
+135,Sports Drinks and Vitamin Water,Propel Zero Fitness Water Variety,9.99,USD
+136,Soda Pop,Caffeine Free Diet coke,9.39,USD
+137,Soda Pop,Coca Cola,9.39,USD
+138,Soda Pop,"Coca Cola Fiesta Variety Pack in Glass Bottles 355 mil, Coke, Sprite, Fanta",18.99,USD
+139,Soda Pop,Coca Cola of Mexico with Pure Cane Sugar in Glass Bottles 16.9 oz,20.99,USD
+140,Soda Pop,Coke Zero,9.39,USD
+141,Soda Pop,Diet Coke,9.39,USD
+142,Soda Pop,Diet Dr. Pepper,9.99,USD
+143,Soda Pop,Diet Mt. Dew,9.99,USD
+144,Soda Pop,Diet Pepsi Cola 12 oz.,9.99,USD
+145,Soda Pop,Dr. Pepper,9.99,USD
+146,Soda Pop,Mountain Dew,9.99,USD
+147,Soda Pop,Pepsi Cola 12 oz.,9.99,USD
+148,Soda Pop,Sprite 12 oz.,9.39,USD
+149,Water,Arrowhead Spring Water 16.9 oz,4.99,USD
+150,Water,Arrowhead Spring Water Sport Top,4.89,USD
+151,Water,Glaceau Smart Water Electrolyte Enhanced,11.99,USD
+152,Water,Kirkland Signature Drinking Water 8 oz.,7.49,USD
+153,Water,Kirkland Signature Premium Drinking Water 16.9 oz.,4.59,USD
+154,Water,Kirkland Signature Premium Drinking Water 1 ltr. bottles,3.49,USD
+155,Water,Kirkland Signature Sparkling Flavored Water,9.49,USD
+156,Water,Perrier Sparkling Mineral Water,16.99,USD
+157,Water,S. Pellegrino Sparkling Fruit Beverage Variety,15.99,USD
+158,Water,S. Pellegrino Sparkling Water 25.3 oz.,14.49,USD
+159,Water,Talking Rain Sparkling Ice Variety Purple Pack,10.69,USD
+160,Water,Zico Coconut Water 9/ 1 liter,19.99,USD
+161,BREADS,Dave's Organic 21 Whole Grain Bread,6.99,USD
+162,BREADS,Dave's Organic Sprouted Whole Grain Bread,6.99,USD
+163,BREADS,Dave's Organic Good Seed Bread,6.99,USD
+164,BREADS,Dave's Organic Power Seed Bread,6.99,USD
+165,BREADS,Essential Baking Co Organic Sourdough Artisan Bread,7.99,USD
+166,BREADS,Essential Baking Co. Organic Baguettes,9.69,USD
+167,BREADS,Franz Bakery Organic Simply White Bread,5.99,USD
+168,BREADS,Franz Brioche Hamburger Buns 12 ct,3.59,USD
+169,BREADS,Franz Gluten Free 7 Grain Bread,8.99,USD
+170,BREADS,Franz Gluten Free Mountain White Bread,8.99,USD
+171,BREADS,"Franz Hamburger Buns 4""",2.99,USD
+172,BREADS,"Franz Hot Dog Buns 6""",3.29,USD
+173,BREADS,Franz San Juan 9 Grain Bread,5.49,USD
+174,BREADS,"Franz Sesame Seed Hamburger Buns 4.5""",3.39,USD
+175,BREADS,Franz Whole Giant White Bread,3.99,USD
+176,BREADS,Innkeeper's Apple Struedel,5.49,USD
+177,BREADS,King's Hawaiian Rolls,4.99,USD
+178,BREADS,Kirkland Signature Multigrain Bread,4.39,USD
+179,BREADS,Kirkland Signature Raisin Bread,6.59,USD
+180,BREADS,Kirkland Signature Sandwich Rolls,3.49,USD
+181,BREADS,Kirkland Signature Split Top Wheat Bread,3.99,USD
+182,BREADS,Milton's Multigrain Muffins,3.99,USD
+183,BREADS,Molinaro's Organic Pizza Kit with Sauce,9.99,USD
+184,BREADS,Oroweat All Natural Buttermilk Bread,5.79,USD
+185,BREADS,Oroweat Sandwich Thins 24 ct.,5.99,USD
+186,BREADS,Oroweat 100% Whole Wheat Bread,5.79,USD
+187,BREADS,Oroweat Oatnut Bread,5.79,USD
+188,BREADS,Papa Pita Bakery Greek Pita Flat Bread,2.99,USD
+189,BREADS,Svenhard's Danish Variety Pack 30 ct,12.47,USD
+190,BREADS,Thomas English Muffins 24 ct,6.79,USD
+191,BREADS,"Tortilla Factory 8.4"" Whole Wheat Tortillas 20 ct.",5.39,USD
+192,Cereals,General Mills Cheerios Twin Pack,5.79,USD
+193,Cereals,General Mills Cinnamon Toast Crunch Cereal,6.79,USD
+194,Cereals,General Mills Honey Nut Cheerios,7.49,USD
+195,Cereals,General Mills Multigrain Cheerios,6.99,USD
+196,Cereals,General Mills Trix/Cocoa Puffs,6.99,USD
+197,Cereals,Kashi Heart to Heart Cereal,7.99,USD
+198,Cereals,Kellogg's Frosted Flakes,7.59,USD
+199,Cereals,Kellogg's Frosted Mini Wheats Cereal,8.89,USD
+200,Cereals,Kellogg's Raisin Bran,8.49,USD
+201,Cereals,Kellogg's Special K Red Berries,8.99,USD
+202,Cereals,Kirkland Signature Ancient Grains Granola with Almonds,6.99,USD
+203,Cereals,Nature's Path Organic Flax with Pumpkin Granola Cereal,7.69,USD
+204,Cereals,Post Grape Nuts Cereal,5.99,USD
+205,Cereals,Post Honey Bunches of Oats Cereal w Almonds,6.49,USD
+206,Canned Fruits or Sauces,Dole Pineapple Tidbits,5.69,USD
+207,Canned Fruits or Sauces,Dole Tropical Gold Pineapple Chunks,7.99,USD
+208,Canned Fruits or Sauces,Festival Mandarin Oranges 11 oz.,7.39,USD
+209,Canned Fruits or Sauces,Happy Squeeze Organic Apple Mango Pear Kale,9.99,USD
+210,Canned Fruits or Sauces,Kirkland Signature Mandarin Oranges,7.79,USD
+211,Canned Fruits or Sauces,Kirkland Signature Sliced Peaches,9.99,USD
+212,Canned Fruits or Sauces,Kirkland Signature Apple Sauce Pouches 3.2 oz,9.99,USD
+213,Canned Fruits or Sauces,S&W Fruit Cocktail 15 oz.,9.99,USD
+214,Canned Fruits or Sauces,S&W Pear Halves,9.99,USD
+215,Canned Fruits or Sauces,Tree Top No Sugar Added Applesauce,8.39,USD
+216,Canned Fruits or Sauces,Tree Top Organice No Sugar Added Applesauce,11.99,USD
+217,"Canned Soups, Tuna/Meat, & Beans",Amy's Kitchen Organic Lentil /Lentil Veggie Soup 14.5 oz.,12.79,USD
+218,"Canned Soups, Tuna/Meat, & Beans",Amy's Soups Organic Chunky Tomato,15.69,USD
+219,"Canned Soups, Tuna/Meat, & Beans",Black Pearl X-Large Pitted Olives,8.49,USD
+220,"Canned Soups, Tuna/Meat, & Beans",Bush's Baked Beans 28 oz,9.99,USD
+221,"Canned Soups, Tuna/Meat, & Beans",Campbell's Cream of Mushroom 10.75 oz. Organic,11.99,USD
+222,"Canned Soups, Tuna/Meat, & Beans",Cattle Drive Chili with Beans 15 oz.,10.99,USD
+223,"Canned Soups, Tuna/Meat, & Beans",Chicken of the Sea Chunk Light Tuna 7 oz.,12.99,USD
+224,"Canned Soups, Tuna/Meat, & Beans",Chicken of the Sea Solid White Albacore Tuna 7 oz.,11.99,USD
+225,"Canned Soups, Tuna/Meat, & Beans",Cucina & Amore Quinoa Meal Cups Variety,12.69,USD
+226,"Canned Soups, Tuna/Meat, & Beans",Harvest Creek Pulled Pork in Water,6.99,USD
+227,"Canned Soups, Tuna/Meat, & Beans",Healthy Choice Chicken Noodle and Rice Soup 15 oz.,7.79,USD
+228,"Canned Soups, Tuna/Meat, & Beans",Kam Yen Jan Chinese Style Sausage,10.99,USD
+229,"Canned Soups, Tuna/Meat, & Beans",Kirkland Signature Organic Chicken Stock,11.99,USD
+230,"Canned Soups, Tuna/Meat, & Beans",Kirkland Signature Premium Chicken Breast 12.5 oz.,10.99,USD
+231,"Canned Soups, Tuna/Meat, & Beans",Kirkland Signature Premium Roast Beef,14.99,USD
+232,"Canned Soups, Tuna/Meat, & Beans",Kirkland Signature Skipjack Chunk Light Tuna in Water,13.49,USD
+233,"Canned Soups, Tuna/Meat, & Beans",Kirkland Signature White Albacore Loin Tuna 7 oz.,12.99,USD
+234,"Canned Soups, Tuna/Meat, & Beans",Kirkland Signature Wild Alaskan Salmon,12.99,USD
+235,"Canned Soups, Tuna/Meat, & Beans",Klement's GF Beef Summer Sausage,10.99,USD
+236,"Canned Soups, Tuna/Meat, & Beans",Klement's Variety Pack,8.97,USD
+237,"Canned Soups, Tuna/Meat, & Beans",Libby's Vienna Sausage,7.99,USD
+238,"Canned Soups, Tuna/Meat, & Beans",Minsley Organic Brown Basmati Rice Bowls,7.49,USD
+239,"Canned Soups, Tuna/Meat, & Beans",Nissin Cup Noodles Beef 2.5 oz.,6.39,USD
+240,"Canned Soups, Tuna/Meat, & Beans",Nissin Cup Noodles Chicken 2.5 oz.,6.39,USD
+241,"Canned Soups, Tuna/Meat, & Beans",Nissin Ramen Beef & Chicken,7.89,USD
+242,"Canned Soups, Tuna/Meat, & Beans",Pacific Soup Organic Red Pepper & Tomato,11.99,USD
+243,"Canned Soups, Tuna/Meat, & Beans",Progresso Chicken Noodle Soup,9.99,USD
+244,"Canned Soups, Tuna/Meat, & Beans",Progresso Clam Chowder 18.5 oz.,9.69,USD
+245,"Canned Soups, Tuna/Meat, & Beans",S& W Organic Black Beans 15 oz cans,6.79,USD
+246,"Canned Soups, Tuna/Meat, & Beans",S&W Kidney Beans 15 oz. Cans Organic,6.79,USD
+247,"Canned Soups, Tuna/Meat, & Beans",Season Sardines Boneless/Skinless in Olive Oil,9.9,USD
+248,"Canned Soups, Tuna/Meat, & Beans",Sea Watch Chopped Sea Clams 51 oz.,17.99,USD
+249,"Canned Soups, Tuna/Meat, & Beans",Spam 25% Less Sodium 12 oz,19.89,USD
+250,"Canned Soups, Tuna/Meat, & Beans",Swanson All Natural Chicken Broth 14.5 oz.,6.59,USD
+251,"Canned Soups, Tuna/Meat, & Beans",Tasty Bite Organic Brown Rice & Lentils,9.89,USD
+252,"Canned Soups, Tuna/Meat, & Beans",Tasty Bite Madras Lentils,9.99,USD
+253,Canned Vegetables,Kirkland Signature Cut Green Beans,7.99,USD
+254,Canned Vegetables,Kirkland Signature Organic Sweet Corn,11.99,USD
+255,Canned Vegetables,Kirkland Signature Whole Kernel Corn,7.49,USD
+256,"Pasta Sauce, Canned Tomatoes & Pasta",Bertolli Organic Pasta Sauce,9.49,USD
+257,"Pasta Sauce, Canned Tomatoes & Pasta",Country Pasta Homemade Style Egg Pasta,7.99,USD
+258,"Pasta Sauce, Canned Tomatoes & Pasta",Explore Asian Organic Edamame Spaghetti,9.89,USD
+259,"Pasta Sauce, Canned Tomatoes & Pasta",Festival Sliced Mushrooms,9.59,USD
+260,"Pasta Sauce, Canned Tomatoes & Pasta",Kirkland Signature Organic Tomato Paste,6.69,USD
+261,"Pasta Sauce, Canned Tomatoes & Pasta",Kirkland Signature Organic Stewed Tomatoes,5.99,USD
+262,"Pasta Sauce, Canned Tomatoes & Pasta",Kirkland Signature Organic Tomato Sauce,7.99,USD
+263,"Pasta Sauce, Canned Tomatoes & Pasta",Kirkland Signature Organic Diced Tomatoes,6.49,USD
+264,"Pasta Sauce, Canned Tomatoes & Pasta","Classico Pasta Sauce Organic Tomato, Herbs & Spices",8.89,USD
+265,"Pasta Sauce, Canned Tomatoes & Pasta",Prego Heart Smart Traditional Pasta Sauce,7.89,USD
+266,"Pasta Sauce, Canned Tomatoes & Pasta",Kraft Parmesan Cheese,12.99,USD
+267,"Pasta Sauce, Canned Tomatoes & Pasta",Garofalo Organic Variety,8.99,USD
+268,"Pasta Sauce, Canned Tomatoes & Pasta",Garofalo Spaghetti Organic,9.99,USD
+269,CONDIMENTS,A-1 Steak Sauce,9.79,USD
+270,CONDIMENTS,Best Foods Mayonnaise Squeeze 3 pk.,7.99,USD
+271,CONDIMENTS,Best Foods Mayonnaise Tub,6.56,USD
+272,CONDIMENTS,Chohula Hot Sauce 2 pk.,7.99,USD
+273,CONDIMENTS,Culinary Treasures Roasted Garlic Aioli Sauce 2 pk.,6.99,USD
+274,CONDIMENTS,Feast from the East Sesame Dressing,5.49,USD
+275,CONDIMENTS,French's Squeeze Mustard 2 pk.,4.89,USD
+276,CONDIMENTS,Grey Poupon Gourmet Mustard,6.99,USD
+277,CONDIMENTS,Heinz Ketchup 3 pk.,6.49,USD
+278,CONDIMENTS,Heinz Picnic Pack 4 pk.,8.59,USD
+279,CONDIMENTS,Hidden Valley Ranch Homestyle Dressing,9.39,USD
+280,CONDIMENTS,Kikkoman Soy Sauce,4.99,USD
+281,CONDIMENTS,Kinder's BBQ Sauce Organic Mild,6.99,USD
+282,CONDIMENTS,Kirkland Signature Bacon Crumbles,10.99,USD
+283,CONDIMENTS,Kirkland Signature Mayonnaise Tub,4.99,USD
+284,CONDIMENTS,Kirkland Signature Roasted Seaweed,7.99,USD
+285,CONDIMENTS,Kraft Miracle Whip Dressing,5.99,USD
+286,CONDIMENTS,Lea & Perrins Worcestire Sauce 2 pk.,6.89,USD
+287,CONDIMENTS,Olive Garden Italian Dressing,7.49,USD
+288,CONDIMENTS,Paisley Farm Organic Ketchup,7.99,USD
+289,CONDIMENTS,Sweet Baby Ray's BBQ Sauce,5.59,USD
+290,CONDIMENTS,Sweet Baby Ray's Honey Mustard,7.59,USD
+291,CONDIMENTS,Tabasco Pepper Sauce,4.6,USD
+292,CONDIMENTS,Tabasco Sriracha Thai Chili,6.79,USD
+293,CONDIMENTS,Yoshida's Gourmet Sauce,6.69,USD
+294,Butter,I Can't Believe It's Not Butter,8.99,USD
+295,Butter,Kirkland Signature Butter Quarters,9.49,USD
+296,Butter,Kirkland Signature Salted Butter Quarters Organic,7.99,USD
+297,Butter,Kirkland Signature Salted Butter Solids,9.29,USD
+298,Butter,Kirkland Signature Unsalted Butter Quarters,9.49,USD
+299,Cheese,Babybel Kaukana Mini,10.99,USD
+300,Cheese,Babybel Kaukana Mini Lite,10.99,USD
+301,Cheese,Bandon Medium Cheddar Cheese,7.89,USD
+302,Cheese,Belgioso Sliced Mild Provolone,7.69,USD
+303,Cheese,Belgioso Sliced Mozzarella Logs,7.49,USD
+304,Cheese,Dolfino Havarti Deli Slices,7.99,USD
+305,Cheese,Finlandia 4 Cheese Slice Pack,7.79,USD
+306,Cheese,Frigo Mozzarella Loaf,4.19,USD
+307,Cheese,Frigo String Cheese,8.99,USD
+308,Cheese,Galbani Shredded Paremesean,10.99,USD
+309,Cheese,Kirkland Signature American Slices,9.99,USD
+310,Cheese,Kirkland Signature Cheddar / Monterey Jack,11.79,USD
+311,Cheese,Kirkland Signature Mexican Blended Shredded Cheese,7.49,USD
+312,Cheese,Kirkland Signature Mild Cheddar Cheese,11.79,USD
+313,Cheese,Kirkland Signature Mild Cheddar Loaf,4.49,USD
+314,Cheese,Kirkland Signature Mild Cheddar Loaf,10.99,USD
+315,Cheese,Kirkland Signature Sharp Cheddar Loaf,12.99,USD
+316,Cheese,Kirkland Signature Shredded Mozzarella Cheese,9.99,USD
+317,Cheese,Kraft American Cheese Singles,9.99,USD
+318,Cheese,Organic Valley Stringles,10.99,USD
+319,Cheese,Philadelphia Cream Cheese Single Serving Packets 1 oz. each,10.69,USD
+320,Cheese,Philadelphia Cream Cheese Tub,7.99,USD
+321,Cheese,Raska's Cream Cheese Block,5.99,USD
+322,Cheese,Tillamook Colby Jack Cheese/Monterey Jack Sliced,7.99,USD
+323,Cheese,Tillamook Colby Jack Loaf,7.79,USD
+324,Cheese,Tillamook Extra Sharp Cheddar Cheese Sliced,8.99,USD
+325,Cheese,Tillamook Extra Sharp White Cheddar Loaf,10.39,USD
+326,Cheese,Tillamook Extra Sharp Cheddar Loaf,8.99,USD
+327,Cheese,Tillamook Medium Cheddar Cheese,9.69,USD
+328,Cheese,Tillamook Pepperjack,7.79,USD
+329,Cheese,Tillamook Sharp Cheddar Loaf,8.69,USD
+330,Cheese,Tillamook Shredded Cheddar Cheese,15.99,USD
+331,Cheese,TIllamook Sliced Swiss Cheese,8.99,USD
+332,Eggs,Egg Beaters 100% Egg Whites,8.99,USD
+333,Eggs,Wilcox Brown Eggs Grade A Large,4.29,USD
+334,Eggs,Kirkland Signature Organic Grade AA Brown Eggs,6.99,USD
+335,Eggs,Wilcox Large Grade AA Eggs,8.59,USD
+336,Eggs,Wilcox Extra Large Eggs Grade AA,3.79,USD
+337,Eggs,Wilcox Organic Hard Boild Eggs,9.69,USD
+338,Milk,Coffee-Mate French Vanilla Creamer,7.99,USD
+339,Milk,Darigold 1% Chocolate Milk,9.59,USD
+340,Milk,Darigold Half & Half Ultra Pasteurized,3.49,USD
+341,Milk,Darigold Heavy Whip,8.99,USD
+342,Milk,Kirkland Signature Lowfat 1% Milk Organic,10.99,USD
+343,Milk,Kirkland Signature Nonfat RBST Free Milk,3.39,USD
+344,Milk,Kirkland Signature RBST Free 1% Milk,3.69,USD
+345,Milk,Kirkland Signature RBST Free 2% Milk,3.99,USD
+346,Milk,Kirkland Signature 2% Lactose Free Milk,6.59,USD
+347,Milk,Kirkland Signature 2% Milk Organic,10.99,USD
+348,Milk,Kirkland Signature Whole Milk RBST Free Milk,4.69,USD
+349,Milk,Kirkland Signuature Whole Milk Organic,11.99,USD
+350,Milk,Land O Lakes Whipped Cream,8.99,USD
+351,Milk,Silk Almond Milk Original,7.59,USD
+352,Milk,Silk Organic Vanilla Soy Milk,7.99,USD
+353,Other Dairy,Darigold All Natural Sour Cream,3.99,USD
+354,Other Dairy,Darigold Trim Cottage Cheese,4.69,USD
+355,Yogurt,Chobani Greek Yogurt Variety 6 oz.,14.99,USD
+356,Yogurt,Cool Plus Probiotic Cultured Diary Drink 2.1oz,7.99,USD
+357,Yogurt,Dannon Activia Yogurt 4 oz.,8.99,USD
+358,Yogurt,Dannon Light & Fit Greek Yogurt 5.3 oz.,12.99,USD
+359,Yogurt,Kirkland Signature Greek Nonfat Yogurt,5.99,USD
+360,Yogurt,Kirkland Signature Red Grapefruit Cups 8 oz.,9.99,USD
+361,Yogurt,Skotidakis Organic Greek Yogurt Variety 6 oz,13.99,USD
+362,Yogurt,Yoplait Go Gurt Simple Natural Flavors 2.25 oz.,6.85,USD
+363,Yogurt,Yoplait Yogurt Variety Pack 6 oz.,9.29,USD
+364,Entertainment/ Tickets,24 Hour Fitness 2 Year All Sport Membership,399.99,USD
+365,Entertainment/ Tickets,Auburn Golf Course Gift Cards,44.99,USD
+366,Entertainment/ Tickets,Brown Bear Car Wash,39.99,USD
+367,Entertainment/ Tickets,Cinemark Theaters 2 Single Tickets,16.99,USD
+368,Entertainment/ Tickets,Coldstone Creamery Gift Cards,39.99,USD
+369,Entertainment/ Tickets,Matador Restaurant & Tequila Bar,79.99,USD
+370,Entertainment/ Tickets,MovieTickets.com,79.99,USD
+371,Entertainment/ Tickets,Nurtrisystem 100 Gift Card,79.99,USD
+372,Entertainment/ Tickets,Pacific Grill Gift Cards (Tacoma),74.99,USD
+373,Entertainment/ Tickets,Regal Entertainment Ticket Vouchers (2),17.99,USD
+374,Entertainment/ Tickets,Restaurants Unlimited (2) 50 Gift Cards,79.99,USD
+375,Entertainment/ Tickets,See's Candies Gift Cards,28.99,USD
+376,Entertainment/ Tickets,Taco Time,39.99,USD
+377,Entertainment/ Tickets,Teatro ZinZanni Dinner Show & Theater (multi-course gourmet meal),79.99,USD
+378,Entertainment/ Tickets,Universal Studios Hollywood Annual Pass,109.99,USD
+379,Frozen Desserts,Haagen Dazs Vanilla Almond Bars 3 oz.,11.89,USD
+380,Frozen Desserts,Healthy Choice Premium Fudge Bars 3 oz.,9.79,USD
+381,Frozen Desserts,Imuraya Mochi Ice Cream 18 ct,10.49,USD
+382,Frozen Desserts,Kirkland Signature Supreme Vanilla Ice Cream Half Gallon,10.59,USD
+383,Frozen Desserts,Otis Spunkmeyer Chocolate Chunk Cookie Dough,12.99,USD
+384,Frozen Desserts,Skinny Cow Ice Cream Sandwiches Variety Pack 4 oz.,9.79,USD
+385,Frozen Desserts,Tillamookie's Ice Cream Sandwiches,10.99,USD
+386,Frozen Desserts,Tropicale Foods Helados Ice Cream Bars Variety Pack,9.79,USD
+387,Frozen Desserts,Yasso Frozen Greek Yogurt Mint Chocolate Chip,9.59,USD
+388,Frozen Fruits and Vegetables,Columbia Fruit Organic Mango,9.89,USD
+389,Frozen Fruits and Vegetables,Kirkland Signature 3 Berry Blend,9.99,USD
+390,Frozen Fruits and Vegetables,Kirkland Signature Blueberries,9.39,USD
+391,Frozen Fruits and Vegetables,Kirkland Signature Normandy Vegetables,8.79,USD
+392,Frozen Fruits and Vegetables,Kirkland Signature Pineapple Chunks,6.99,USD
+393,Frozen Fruits and Vegetables,Kirkland Signature Organic Blueberries,10.39,USD
+394,Frozen Fruits and Vegetables,Kirkland Signature Organic Strawberries,9.99,USD
+395,Frozen Fruits and Vegetables,Kirkland Signature Stir Fry Vegetables,7.79,USD
+396,Frozen Fruits and Vegetables,Kirkland Signature Whole Strawberries,10.59,USD
+397,Frozen Fruits and Vegetables,Madame Edamame Organic Edamame,11.49,USD
+398,Frozen Fruits and Vegetables,Moov Organic Dark Sweet Cherries,8.99,USD
+399,Frozen Fruits and Vegetables,Organic By Nature Baby Peas,5.99,USD
+400,Frozen Fruits and Vegetables,Organic By Nature Super Sweet White Corn,5.89,USD
+401,Frozen Fruits and Vegetables,Organic By Nature Green Beans,5.99,USD
+402,Frozen Fruits and Vegetables,Purely Frozen Organic Broccoli,7.59,USD
+403,Frozen Fruits and Vegetables,Townsend Organic Triple Berry Blend,9.99,USD
+404,Frozen Fruits and Vegetables,Rader Farms Organic Fresh Start Smoothie Blend,11.99,USD
+405,Frozen Fruits and Vegetables,Sunshine Growers Organic Antioxident Fruit Blend,9.99,USD
+406,Frozen Fruits and Vegetables,Wawana Festival of Fruit,10.99,USD
+407,Frozen Meats and Seafood,All Natural Dino Buddies Chicken Nuggets,11.99,USD
+408,Frozen Meats and Seafood,Antibiotic Free Grilled Chicken Patty 3.5 oz,14.99,USD
+409,Frozen Meats and Seafood,Basil Pesto Tilapia,13.49,USD
+410,Frozen Meats and Seafood,Don Lee Chipotle Black Bean Burger Organic 4 oz,13.99,USD
+411,Frozen Meats and Seafood,Copper River Marinated Wild Alaskan Salmon,14.79,USD
+412,Frozen Meats and Seafood,Foster Farms Buffalo Style Breast Fillets,11.99,USD
+413,Frozen Meats and Seafood,Foster Farms Chicken Breast Boneless Skinless,21.49,USD
+414,Frozen Meats and Seafood,"Foster Farms Chicken Breast Nuggets ""All Natural""",12.99,USD
+415,Frozen Meats and Seafood,"Foster Farms Grilled Breast Strips ""All Natural""",13.99,USD
+416,Frozen Meats and Seafood,"Foster Farms Grilled Chicken Patties ""All Natural""",13.79,USD
+417,Frozen Meats and Seafood,Foster Farms Honey BBQ'd Wings,15.49,USD
+418,Frozen Meats and Seafood,Foster Farms Hot 'n Spicy Wings,15.49,USD
+419,Frozen Meats and Seafood,Highliner Roasted Lemon Pepper Cod,15.99,USD
+420,Frozen Meats and Seafood,Kirkland Signature 91% Lean Ground Beef Frozen Chub,16.49,USD
+421,Frozen Meats and Seafood,Kirkland Signature Boneless Skinless Thighs,13.59,USD
+422,Frozen Meats and Seafood,Kirkland Signature Chicken Breast Boneles Skinless Individually Wrapped,16.99,USD
+423,Frozen Meats and Seafood,Kirkland Signature Chicken Tenders,15.89,USD
+424,Frozen Meats and Seafood,Kirkland Signature Chicken Wings,20.99,USD
+425,Frozen Meats and Seafood,Kirkland Signature Cooked Shrimp farm Raised 31/40 ct.,16.99,USD
+426,Frozen Meats and Seafood,Kirkland Signature Cooked Shrimp Farm Raised 50/70 ct.,14.89,USD
+427,Frozen Meats and Seafood,Kirkland Signature Cooked Shrimp Farm Raised 21/25,19.99,USD
+428,Frozen Meats and Seafood,Kirkland Signature Cooked Shrimp Farm Raised 100/150,12.99,USD
+429,Frozen Meats and Seafood,Kirkland Signature Farmed Atlantic Salmon Individually Wrapped,19.99,USD
+430,Frozen Meats and Seafood,Kirkland Signature Ground Beef Patties 1/4 lb. 78/22,16.49,USD
+431,Frozen Meats and Seafood,Kirkland Signature Ground Beef Patties 78/22 - 10 lbs.,25.99,USD
+432,Frozen Meats and Seafood,Kirkland Signature Italian Style Meatballs,16.99,USD
+433,Frozen Meats and Seafood,Kirkland SIgnature Panko Breaded Shrimp,19.99,USD
+434,Frozen Meats and Seafood,Kirkland Signature Raw Shrimp Farm Raised 21/25 ct.,17.99,USD
+435,Frozen Meats and Seafood,Kirkland Signature Raw Shrimp Farm Raised 31/40 ct.,13.99,USD
+436,Frozen Meats and Seafood,Kirkland Signature Salmon Individually Wrapped,27.99,USD
+437,Frozen Meats and Seafood,Kirkland Signature Sirloin Beef Patties 85/15 6 lbs.,18.99,USD
+438,Frozen Meats and Seafood,Kirkland Signature Tilapia Loins Individually Wrapped,14.99,USD
+439,Frozen Meats and Seafood,Kirkland Signature Turkey Burgers 12 ct,10.99,USD
+440,Frozen Meats and Seafood,Kirkland Signature Wild Alaskan Cod,15.69,USD
+441,Frozen Meats and Seafood,Kirkland SIgnature Wild Alaskan Halibut,43.99,USD
+442,Frozen Meats and Seafood,Kirkland Signature Wild Chilean Sea Bass,39.99,USD
+443,Frozen Meats and Seafood,Kirkland Signature Wild Mahi Mahi Individually Wrapped,19.99,USD
+444,Frozen Meats and Seafood,Kirkland Signature Wild Sea Scalllops,29.99,USD
+445,Frozen Meats and Seafood,Quick N Eat Angus Burger Patties,15.99,USD
+446,Frozen Meats and Seafood,Royal Asia Coconut Shrimp w Sweet Chili Dip,15.49,USD
+447,Frozen Meats and Seafood,Tiger Shrimp U-15 Farmed Black,49.99,USD
+448,Frozen Meats and Seafood,Trident Beer Battered Cod,12.99,USD
+449,Frozen Meats and Seafood,Trident Panko Breaded Tilapia,14.49,USD
+450,Frozen Meats and Seafood,Trident salmon Burger 3 lbs.,14.99,USD
+451,Frozen Meats and Seafood,"Trident Seafood Breaded Fish Sticks ""All Natural""",11.99,USD
+452,Frozen Meats and Seafood,Tyson All Natural Sausage Patties,12.99,USD
+453,Frozen Meats and Seafood,Tyson Crispy Chicken Strips,11.99,USD
+454,Frozen Meats and Seafood,Tyson Panko Breaded Chicken Tenders,13.99,USD
+455,Frozen Meats and Seafood,Tyson Teriyaki Grills,10.99,USD
+456,Frozen Meats and Seafood,Wild Cold Water Lobster Tail,104.99,USD
+457,Frozen Meats and Seafood,Wild Langostino,26.99,USD
+458,Frozen Meats and Seafood,Wild Cooked Red King Crab Legs and Claws,16.99,USD
+459,Frozen Meats and Seafood,Wild U-15 Scallop USDC Grade A Previously Frozen,38.99,USD
+460,Frozen Packaged Meals,Antibiotic Free Sandwich Bros Chicken Melt,10.99,USD
+461,Frozen Packaged Meals,Asian Crispy Chicken w Ponzu Sauce,13.99,USD
+462,Frozen Packaged Meals,Beecher's World's Best Mac & Cheese,12.99,USD
+463,Frozen Packaged Meals,Bibigo Organic Vegetable Potstickers,8.99,USD
+464,Frozen Packaged Meals,Bird's Eye Garlic Chicken Meal,8.79,USD
+465,Frozen Packaged Meals,Brazil Bites Brazilian Cheese Bread,12.99,USD
+466,Frozen Packaged Meals,Crazy Cuizine General Tsao's Chicken,8.99,USD
+467,Frozen Packaged Meals,Crazy Cuizine Mandarin Orange Chicken,14.79,USD
+468,Frozen Packaged Meals,Crazy Cuizine Teriyaki Chicken,9.99,USD
+469,Frozen Packaged Meals,Cuisine Adventures French Onion Soup All Natural,10.69,USD
+470,Frozen Packaged Meals,Deli Mex Beef Taquitos 1.2 oz. each,12.39,USD
+471,Frozen Packaged Meals,Don Miguel Mini Chicken Tacos 50.4 oz.,9.99,USD
+472,Frozen Packaged Meals,Don Miguel All Natural Chicken & Cheese Burrito,11.99,USD
+473,Frozen Packaged Meals,El Monterey All Natural Chicken Chimichangas,12.99,USD
+474,Frozen Packaged Meals,El Monterey Variety Burritos 5 oz. each,14.49,USD
+475,Frozen Packaged Meals,El Monterey Chicken Breast Taquitos 1.7 oz.,10.99,USD
+476,Frozen Packaged Meals,Good Grains Organic Chicken Quinoa & Kale,15.99,USD
+477,Frozen Packaged Meals,Good Grains Organic Gluten Free Quinoa & Kale,12.99,USD
+478,Frozen Packaged Meals,Hot Pockets Ham and Cheese 4.5 oz,11.99,USD
+479,Frozen Packaged Meals,Hot Pockets Pepperoni & Cheese Pizza 4.5 oz. each,10.59,USD
+480,Frozen Packaged Meals,Jimmy Dean Breakfast Crossiants 4.5 oz.,9.99,USD
+481,Frozen Packaged Meals,Jimmy Dean D-Lights Breakfast Turkey Sausage,11.89,USD
+482,Frozen Packaged Meals,Jimmy Dean D-Lights Canadian Bacon Muffin,11.99,USD
+483,Frozen Packaged Meals,Jimmy Dean Pancakes and Sausage,8.79,USD
+484,Frozen Packaged Meals,Kellogg's Homestyle Eggo Waffles,9.99,USD
+485,Frozen Packaged Meals,Kirkland Signature Beef Lasagna,13.39,USD
+486,Frozen Packaged Meals,Kirkland Signature Cheese Pizza 16.95 oz.,9.99,USD
+487,Frozen Packaged Meals,Kirkland Signature Chicken Bakes 8 oz.,10.99,USD
+488,Frozen Packaged Meals,Kirkland Signature Pepperoni Pizza 19.5 oz.,12.49,USD
+489,Frozen Packaged Meals,Kirkland Signature Sausage & Beef Lasagna,13.39,USD
+490,Frozen Packaged Meals,Ling Ling All Natural Poststickers Chicken,10.59,USD
+491,Frozen Packaged Meals,Ling Ling All Natural Poststickers Pork,10.59,USD
+492,Frozen Packaged Meals,Marie Callender's Chicken Pot Pie 10 oz. each,11.29,USD
+493,Frozen Packaged Meals,Milton's Creamy Chicken & Rice 38 oz.,13.99,USD
+494,Frozen Packaged Meals,Minh Pork Egg Rolls 3 oz. each,7.89,USD
+495,Frozen Packaged Meals,Ore-Ida Bagel Bites,9.59,USD
+496,Frozen Packaged Meals,Oven Roasted Chicken Teriyaki Bowl,10.99,USD
+497,Frozen Packaged Meals,Pasta Prima Ravioli Spinach Mozzarella,9.99,USD
+498,Frozen Packaged Meals,Petite Cuisine Mozzarella Sticks,13.99,USD
+499,Frozen Packaged Meals,Pierre Foods Chicken Sandwich 4 oz,9.99,USD
+500,Frozen Packaged Meals,Pierre Signatures Angus Cheeseburger,13.79,USD
+501,Frozen Packaged Meals,Pillsbury Grands Crescent Rolls,7.89,USD
+502,Frozen Packaged Meals,Posada Steak Chimichangas 5 oz. each,13.89,USD
+503,Frozen Packaged Meals,Quick N Eat Angus Cheeseburger Sliders,12.49,USD
+504,Frozen Packaged Meals,Raybern's Roast Beef and Swiss on Pretzel Bread,12.89,USD
+505,Frozen Packaged Meals,Royal Asia Vegetable Spring Rolls,9.99,USD
+506,Frozen Packaged Meals,Sabatasso's Deep Dish Singles Variety Pack 6 oz. each,10.69,USD
+507,Frozen Packaged Meals,Sabatasso's Gluten Free Pizza,11.79,USD
+508,Frozen Packaged Meals,Smucker's Uncrustables Peanut Butter & Grape Jelly 2.8 oz. each,10.99,USD
+509,Frozen Packaged Meals,Steak-eze Philly Style USDA Choice Beef Steak,10.49,USD
+510,Frozen Packaged Meals,Sonoma Gluten Free Chicken Fajita Pizza,13.99,USD
+511,Frozen Packaged Meals,Tasty Wok Steamed Pork Buns,10.99,USD
+512,Frozen Packaged Meals,Udi's Gluten Free Whole Grain Bread,7.99,USD
+513,Frozen Packaged Meals,Yakisoba Stir Fry Noodles with Vegtables,11.59,USD
+514,Frozen Packaged Meals,Yakitori Chicken Fried Rice,11.99,USD
+515,EYE CARE,Alcon Systane Ultra Lubricant Eye Drops,19.79,USD
+516,EYE CARE,Allergen Refresh Tears,20.49,USD
+517,EYE CARE,Bausch & Lomb Biotrue Multi-Purpose Solution,19.99,USD
+518,EYE CARE,Bausch & Lomb Preservision Areds2,36.79,USD
+519,EYE CARE,Bausch & Lomb Renu Fresh + Travel,17.69,USD
+520,EYE CARE,Blink Revitalens Multi Purpose Solution,15.99,USD
+521,EYE CARE,Boston Advance Multi Pack,21.49,USD
+522,EYE CARE,Clear Care Disinfecting Solution,17.79,USD
+523,EYE CARE,Kirkland Signature Multi Purpose Solution,9.99,USD
+524,EYE CARE,Opti-Free Pure Moist Multi Purpose Solution,19.99,USD
+525,EYE CARE,Opti-Free Replenish Multi Purpose Solution,18.59,USD
+526,EYE CARE,Zaditor 12 hr Eye Itch Relief,19.99,USD
+527,VITAMINS,Airborne Chewable Berry or Cirtus,16.49,USD
+528,VITAMINS,Applied Nutrition Liquid Collagen 400 mg,15.99,USD
+529,VITAMINS,Barlean's OMega Fish Oil Lemon Zest,21.89,USD
+530,VITAMINS,Caltrate + D Calcium Supplement 600 mg.,16.99,USD
+531,VITAMINS,Centrum Multivitamin Tablets,18.99,USD
+532,VITAMINS,Centrum Silver Men 50 Plus,16.99,USD
+533,VITAMINS,Centrum Silver Multivitamin,17.69,USD
+534,VITAMINS,Centrum Silver Women's 50 Plus,16.89,USD
+535,VITAMINS,Citracal Maximum Calcium Citrate + D,15.79,USD
+536,VITAMINS,Emergen-C Orange Blast Chewables,17.49,USD
+537,VITAMINS,Emergen-C Vitamin C 1000 mg.,18.89,USD
+538,VITAMINS,Emergen-C Immune Plus Cirtus/Raspberry,16.99,USD
+539,VITAMINS,Ester C 500 mg.,14.79,USD
+540,VITAMINS,Joint Juice Glucosamine / Chondroitn Drinks,16.59,USD
+541,VITAMINS,Kirland Signature Adult Multi Gummies,10.79,USD
+542,VITAMINS,Kirkland Signature B-12 5000 mg.,18.99,USD
+543,VITAMINS,Kirkland Signature Calcium + D3 600 mg.,6.59,USD
+544,VITAMINS,Kirkland Signature Calcium Chew Sugar Free,11.99,USD
+545,VITAMINS,Kirkland Signature Calcium Citrate 500 mg.,9.99,USD
+546,VITAMINS,Kirkland Signature Children's Chewable Multi Vitamin,9.99,USD
+547,VITAMINS,Kirkland Signature Chewable Vitamin C 500 mg.,11.99,USD
+548,VITAMINS,Kirkland Signature Daily Multivitamin,12.69,USD
+549,VITAMINS,Kirkland Signature Enteric Coated Fish Oil Soft Gels,15.99,USD
+550,VITAMINS,Kirkland Signature Fish Oil 1000 mg,9.49,USD
+551,VITAMINS,Kirkland Signature Glucosamine 1500 / Chondroitn 1200,21.49,USD
+552,VITAMINS,Kirkland Signature Glucosamine with MSM,16.49,USD
+553,VITAMINS,Kirkland Signature Ibuprofen 200 mg,10.49,USD
+554,VITAMINS,Kirkland Signature Krill Oil,22.99,USD
+555,VITAMINS,Kirkland Signature Mature Adult Multivitamin,11.49,USD
+556,VITAMINS,Kirkland Signature Omeprazole,13.99,USD
+557,VITAMINS,Kirland Signature Super B Complex w Electrolytes,11.99,USD
+558,VITAMINS,Kirkland Signture Ubiquinol COQ10 200 mg,34.99,USD
+559,VITAMINS,Kirkland Signature Vitamin C 1000 mg. with Rose Hips,13.99,USD
+560,VITAMINS,Kirkland Signature Vitamin D3 2000 IU,10.49,USD
+561,VITAMINS,Kirkland Signature Vitamin E 400 IU,10.39,USD
+562,VITAMINS,Kirkland Signature Wild Alaskan Fish Oil 1400 mg,19.99,USD
+563,VITAMINS,L'il Critters Calcium Gummy Bears,9.99,USD
+564,VITAMINS,L'il Critters Gummy Vites,11.99,USD
+565,VITAMINS,Nature Made B12 Energy Gummies 1000 mg,13.89,USD
+566,VITAMINS,Nature Made Cholest-off Plus Soft Gels,23.49,USD
+567,VITAMINS,Nature Made Coenzyme Q10 200 mg.,34.99,USD
+568,VITAMINS,Nature Made Fish Oil 1200 mg.,16.49,USD
+569,VITAMINS,Nature Made Iron 65 mg.,8.99,USD
+570,VITAMINS,Nature Made Magnesum Soft Gel 400 mg.,12.99,USD
+571,VITAMINS,Nature Made Organic Flax Seed Oil 1400 mg.,15.49,USD
+572,VITAMINS,Nature Made Prenatal + DHA,18.49,USD
+573,VITAMINS,Nature Made Sam-e Complete,38.99,USD
+574,VITAMINS,Nature Made Super B Complex,14.99,USD
+575,VITAMINS,Nature Made Triple Omega Soft Gels,18.99,USD
+576,VITAMINS,Nature Made Vitamin B-12 1000 MCG,19.99,USD
+577,VITAMINS,Nature Made Vitamin C 500 mg. Liquid Gels,15.69,USD
+578,VITAMINS,Nature Made Vitamin D3 1000IU,14.49,USD
+579,VITAMINS,Nature Made Vitamin E 400 IU,15.99,USD
+580,VITAMINS,"Nature's Bounty Hair, Skin and Nails",14.79,USD
+581,VITAMINS,"Nature's Bounty Hair, Skin and Nails Gummy",13.69,USD
+582,VITAMINS,Nature's Bounty Maximum Strength Fish Oil 1400 mg.,19.99,USD
+583,VITAMINS,Nature's Bounty Sublingual Vitamin B 12,16.49,USD
+584,VITAMINS,Nature's Bounty Vitamin D3 5000 IU,16.89,USD
+585,VITAMINS,Ocuvite Adult 50+,28.59,USD
+586,VITAMINS,One A Day Men's 50 Plus Advantage Multivitamin,17.99,USD
+587,VITAMINS,One A Day Men's Health Formula,16.49,USD
+588,VITAMINS,One A Day Prenatal,29.99,USD
+589,VITAMINS,One A Day Women's 50 Plus Advantage Multivitamin,17.99,USD
+590,VITAMINS,One A Day Women's Health Formula,16.49,USD
+591,VITAMINS,Prilosec OTC 20.6 mg Tablet,22.99,USD
+592,VITAMINS,Pure Alaska Omega 100% WIld Alaska Salmon Oil,16.99,USD
+593,VITAMINS,Schiff MegaRed High Concentration 750 mg,26.99,USD
+594,VITAMINS,Schiff Mega Red Krill Oil 300 mg.,22.99,USD
+595,VITAMINS,Slo-Niacin 500 mg.,14.89,USD
+596,VITAMINS,Smarty Pants Kids Complete Multivitamin,16.99,USD
+597,VITAMINS,Trunature Coenzyme Q10 100 mg.,10.69,USD
+598,VITAMINS,Vitafusion Calcium Gummy Chews,13.99,USD
+599,VITAMINS,Vitafusion Fiber Well Gummies,16.79,USD
+600,VITAMINS,Vitafusion Multivite Gummy,11.99,USD
+601,VITAMINS,Vitafusion Power Gummy Vitamin,13.99,USD
+602,VITAMINS,Vitafusion Women's Multivite Gummy,11.99,USD
+603,VITAMINS,Weider Red Yeast Rice Plus 600 mg,13.99,USD
+604,VITAMINS,Youtheory Advanced Formula Collagen,18.49,USD
+605,VITAMINS,Youtheory Advanced Formula Tumeric,19.49,USD
+606,Cleaning Products,3M Jumbo Lint Roller,10.69,USD
+607,Cleaning Products,Airwick Scented Oil Warmer + Refills,14.69,USD
+608,Cleaning Products,Bona Concentrate Hardwood Floor Cleaner,19.99,USD
+609,Cleaning Products,Cascade Complete Action Pacs,15.99,USD
+610,Cleaning Products,Cascade Advanced Power Dishwasher Gel,9.49,USD
+611,Cleaning Products,Clorox Clean Up Trigger with Refill,10.89,USD
+612,Cleaning Products,Clorox Disinfecting Wipes,13.49,USD
+613,Cleaning Products,Clorox Performance Bleach 3 pk,9.39,USD
+614,Cleaning Products,Clorox Toilet Bowl Tablets,10.69,USD
+615,Cleaning Products,Dawn Platinum Advanced Powder,9.69,USD
+616,Cleaning Products,Drano Ultra,10.49,USD
+617,Cleaning Products,Febreze Air Effects Variety 3 pk.,8.49,USD
+618,Cleaning Products,Finish All-in-1 Plus Tabs,14.89,USD
+619,Cleaning Products,Finish Jet Dry Rinse Agent,9.99,USD
+620,Cleaning Products,Formula 409 All Purpose Cleaner,10.99,USD
+621,Cleaning Products,Kirkland Signature Dishwasher Pacs,9.99,USD
+622,Cleaning Products,Kirkland Signature Disinfecting Wipes,11.69,USD
+623,Cleaning Products,"Kirkland Signature Liquid Dish Soap ""Enviroment Friendly""",8.89,USD
+624,Cleaning Products,Libman 2 Brooms & Dust Pan,11.99,USD
+625,Cleaning Products,Lysol Advanced Toilet Bowl Cleaner,8.49,USD
+626,Cleaning Products,Lysol All Purpose Cleaner Lemon Breeze,6.79,USD
+627,Cleaning Products,Lysol Disinfecting,10.99,USD
+628,Cleaning Products,Mr. Clean Magic Eraser Variety Pack,9.99,USD
+629,Cleaning Products,"O-Cedar Easy Wring Mop/Bucket, 2 refills",33.99,USD
+630,Cleaning Products,Pine-Sol Cleaner,10.89,USD
+631,Cleaning Products,Pledge Furniture Polish,10.39,USD
+632,Cleaning Products,Scotch Brite Heavy Duty Kitchen Sponges,12.99,USD
+633,Cleaning Products,Scotch Brite Non Scratch Sponges,12.49,USD
+634,Cleaning Products,Scrubbing Bubbles Bathroom Cleaner 25 oz.,11.89,USD
+635,Cleaning Products,Simple Green,9.69,USD
+636,Cleaning Products,Sprayway Glass Cleaner 19 oz.,7.89,USD
+637,Cleaning Products,Swiffer Dry mop Cloth Refills,15.79,USD
+638,Cleaning Products,Swiffer Dusters Kit,14.79,USD
+639,Cleaning Products,Swiffer Starter Kit,12.79,USD
+640,Cleaning Products,Swiffer Wet Cloths,15.79,USD
+641,Cleaning Products,Windex Glass Cleaner,12.69,USD
+642,Laundry,All Free and Clear Plus Liquid Detergent - 158 loads,15.89,USD
+643,Laundry,All Stainlifter Plus Liquid Detergent - 158 loads,15.89,USD
+644,Laundry,Arm & Hammer Plus Oxiclean Max Laundry Detergent,10.99,USD
+645,Laundry,Bounce Dryer Sheets,9.99,USD
+646,Laundry,Clorox 2 HE Stain Fighter and Color Booster,14.59,USD
+647,Laundry,Downy Unstopables Fresh,14.99,USD
+648,Laundry,Ecos 2X Ultra Liquid Laundry Detergent HE 210 Loads,12.59,USD
+649,Laundry,Kirkland Signature Fabric Softener Sheets,8.79,USD
+650,Laundry,Kirkland Signature Fabric Softener Ultra Concentrated - 220 Loads,9.89,USD
+651,Laundry,Kirkland Signature Enviro Responsible 126 loads,10.99,USD
+652,Laundry,Kirkland Signature Laundry Detergent Powder,14.99,USD
+653,Laundry,Kirkland Signature Ultra Free & Clear 2x He Laundry Detergent 126 loads,13.99,USD
+654,Laundry,Kirkland Signature Ultra 2x He Laundry Detergent 126 loads,14.69,USD
+655,Laundry,Kirkland Signature Ultra Clean Laundry Pacs,17.99,USD
+656,Laundry,Oxi Clean Versatile Stain Remover - 290 loads,17.99,USD
+657,Laundry,Tide Advanced Power HE,21.99,USD
+658,Laundry,TIde Liquid HE with a Touch of Downy - 88 loads,19.99,USD
+659,Laundry,Tide High Efficiency Liquid Laundry Detergent,23.99,USD
+660,Laundry,Tide Pods Spring Meadow Scent,29.99,USD
+661,Laundry,Tide Powder HE Laundry Detergent,29.99,USD
+662,Laundry,Ultra downy April Fresh Scent - 197 Loads,11.59,USD
+663,Laundry,Woolite Complete HE Formula Care 75 loads,15.99,USD
+664,Laundry,Woolite Dark Complete HE Formula Care 75 loads,15.99,USD
+665,Beef/Lamb/Pork/Sausage,Breakfast Link Sausage Saddle Pack,13.99,USD
+666,Beef/Lamb/Pork/Sausage,"Ground Bison, 90% Lean",19.99,USD
+667,Beef/Lamb/Pork/Sausage,Mild Italian Sausage Saddle Pack,13.99,USD
+668,Chicken,Chicken Breast Sausage Saddle Pack,9.99,USD
+669,Chicken,Rotisserie Chicken,4.99,USD
+670,Chicken,Rotisserie Chicken Breast Meat,11.99,USD
+671,Organic Meat,Organic Ground Beef,19.99,USD
+672,Baking,Argo Baking Powder,4.94,USD
+673,Baking,Arm & Hammer Baking Soda,6.59,USD
+674,Baking,Bel'Olio Olive Oil Extra Light Tasting,18.99,USD
+675,Baking,Bellucci Mylopotamos Extra Virgin Olive Oil,9.49,USD
+676,Baking,Bisquick Pancake & Baking Mix (Zero Trans Fat),5.49,USD
+677,Baking,C&H Brown Cane Sugar,4.79,USD
+678,Baking,C&H Brown Sugar,14.99,USD
+679,Baking,C&H Pure Cane Sugar Granulated White,4.99,USD
+680,Baking,C&H Pure Cane Sugar Granulated White,11.89,USD
+681,Baking,C&H Powdered Cane Sugar,27.59,USD
+682,Baking,C&H Powered Cane Sugar,4.79,USD
+683,Baking,Chosen Foods 100% Pure Avocado Oil,8.99,USD
+684,Baking,Conagra All Purpose Flour,6.79,USD
+685,Baking,Crisco Shortening Tub,7.49,USD
+686,Baking,Four Monks Distilled White Vingear,4.29,USD
+687,Baking,Ghiradelli Triple Chocolate Brownie Mix,9.99,USD
+688,Baking,Gregg's Creamy Canola Fry Shortening,23.99,USD
+689,Baking,Honeyville Blanced Almond Flour Gluten Free,19.89,USD
+690,Baking,Kirkland Chocolate Chips (51% Cacao),9.99,USD
+691,Baking,Kirkland Minced Garlic,4.49,USD
+692,Baking,Kirkland Pure Vanilla,15.99,USD
+693,Baking,Kirkland Signature Balsamic Vinegar,10.99,USD
+694,Baking,Kirkland Signature Canola Oil,7.89,USD
+695,Baking,Kirkland Signature Cooking Spray,4.99,USD
+696,Baking,Kirkland Signature Extra Virgin Olive Oil,12.39,USD
+697,Baking,Kirkland Signature Organic Cane Sugar,8.39,USD
+698,Baking,Kirkland Signature Organic Extra Virgin Olive Oil,13.99,USD
+699,Baking,Kirkland Signature Organic Pine Nuts,23.99,USD
+700,Baking,Kirkland Signature Pecans,13.89,USD
+701,Baking,Kirkland Signature Pecan Halves,13.89,USD
+702,Baking,Kirkland Signature Pure Olive Oil,27.99,USD
+703,Baking,Kirkland Signature Soybean Salad Oil,19.59,USD
+704,Baking,Kirkland Signature Tuscan Extra Virgin Olive Oil,10.99,USD
+705,Baking,Kirkland Signature Walnuts,9.99,USD
+706,Baking,Kirkland Signature Vegetable Oil,7.99,USD
+707,Baking,Kirkland Signature Virgin Coconut Oil,18.99,USD
+708,Baking,Kodiak Power Cakes Flapjack & Waffle Mix,11.99,USD
+709,Baking,Krusteaz Buttermilk Pancake Mix,6.45,USD
+710,Baking,Manitoba Harvest Foods Raw Shelled Hemp Seeds,12.49,USD
+711,Baking,Marianai Sliced Premium Almonds,11.99,USD
+712,Baking,Mazola Corn Oil 100%,17.99,USD
+713,Baking,Montolivo Extra Light Olive Oil,16.99,USD
+714,Baking,Morton Non-Iodized Table Salt,5.69,USD
+715,Baking,Namaste Gluten Free Organic Perfect Flour Blend,11.99,USD
+716,Baking,Nature's Path Chia Seeds Gluten Free,7.49,USD
+717,Baking,Nestle Carnation Evaporated Milk,11.89,USD
+718,Baking,Nestle La Lechera Sweetened Condensed Milk,8.99,USD
+719,Baking,Nestle Toll House Chocolate Chips,8.99,USD
+720,Baking,Nutiva Organic Refined Coconut Oil,19.99,USD
+721,Baking,Real Lemon 100% Lemon Juice,5.09,USD
+722,Baking,Red Star Active Yeast,4.49,USD
+723,"Grains, Rice and Beans",Amira Basmati Rice,14.99,USD
+724,"Grains, Rice and Beans",Annie's Homegrown Organic Mac n Cheese Variety 6 oz.,11.99,USD
+725,"Grains, Rice and Beans",Blue Ribbon Long Grain rice,8.79,USD
+726,"Grains, Rice and Beans",C&F Pinto Beans,12.49,USD
+727,"Grains, Rice and Beans",Cucina & Amore Qunioa Meal Cups Variety 7.9 oz,12.69,USD
+728,"Grains, Rice and Beans",Golden Grill Russet Hash Browns 4.2 oz.,6.89,USD
+729,"Grains, Rice and Beans",Homai Fancy Calrose Rice,13.79,USD
+730,"Grains, Rice and Beans",Honest Earth Creamy Mashed Potatoes 6.4 oz.,9.99,USD
+731,"Grains, Rice and Beans",Kirkland Signature Thailtom Mali Jasmine Rice,14.99,USD
+732,"Grains, Rice and Beans",Kirkland Signature Traditional Basmati Rice,9.99,USD
+733,"Grains, Rice and Beans",Kraft Easy Mac Cups 2.05 oz.,8.99,USD
+734,"Grains, Rice and Beans",Kraft Mac & Cheese 7.25 oz.,14.59,USD
+735,"Grains, Rice and Beans",Libby's Vienna Sausage 4.6 oz,7.99,USD
+736,"Grains, Rice and Beans",Lunberg Organic Short Grain Brown Rice,13.99,USD
+737,"Grains, Rice and Beans",Minsley Organic Brown Basmati Rice Bowls 5.3 oz,7.49,USD
+738,"Grains, Rice and Beans",Seeds of Change Organic Quinoa / Brown Rice Pouches 8.5 oz. each,10.99,USD
+739,"Grains, Rice and Beans",Spam Luncheon Meat 12 oz.,19.89,USD
+740,"Grains, Rice and Beans",Tasty Bite Organic Brown Rice & Lentils 8.8 oz.,9.89,USD
+741,"Grains, Rice and Beans",Tru Roots Organic Quinoa,11.49,USD
+742,Honey/Syrups,Kirkland Signature Organic Maple Syrup Grade A,10.99,USD
+743,Honey/Syrups,Kirkland Signature Citadelle Dark Maple Syrup,9.89,USD
+744,Honey/Syrups,Kirkland Signature Honey Bear Clover Honey Organic,13.69,USD
+745,Honey/Syrups,Kirkland Signature Clover Honey,13.99,USD
+746,Honey/Syrups,LR Raw and Unfilted Local WA Honey,12.79,USD
+747,Honey/Syrups,Log Cabin Syrup,6.99,USD
+748,Honey/Syrups,Wholesome Organic Blue Agave Nectar,10.99,USD
+749,Jams,Colombia Empire Farms Marionberry Fruit Spread,6.99,USD
+750,Jams,"Ed Smith Peach, Mango & Orange Spread",4.99,USD
+751,Jams,Kirkland Signature Strawberry Spread,5.99,USD
+752,Misc Pantry Items,"Guerrero Corn Tortillas 6""",3.49,USD
+753,Misc Pantry Items,Kirkland Signature Organic Salsa,7.89,USD
+754,Misc Pantry Items,Kraft Velveeta,11.59,USD
+755,Misc Pantry Items,"Mission Flour Tortillas 10""",5.49,USD
+756,Misc Pantry Items,"Mission Flour Tortillas 8""",4.99,USD
+757,Misc Pantry Items,Rosarita Traditional No Fat Refried Beans,5.99,USD
+758,Nut Butters,Adams 100% Natural Crunchy Peanut Butter,8.49,USD
+759,Nut Butters,Jiffy Creamy Peanut Butter,9.99,USD
+760,Nut Butters,Jiffy Crunchy Peanut Butter,9.99,USD
+761,Nut Butters,Kirkland Signature Almond Butter,12.49,USD
+762,Nut Butters,Kirkland Signature Peanut Butter Organic,9.99,USD
+763,Nut Butters,Nutella Hazelnut Spread,11.99,USD
+764,Spices,Better than Bouillon Organic Beef Base Reduced Sodium,6.39,USD
+765,Spices,Better than Bouillon Organic Chicken Base,5.99,USD
+766,Spices,Better than Bouillon Organic Vegetable Base,6.39,USD
+767,Spices,Hidden Valley Ranch Dry Dressing Mix,7.69,USD
+768,Spices,Kirkland Chopped Onion,3.59,USD
+769,Spices,Kirkland Fine Ground Malaber Pepper,6.99,USD
+770,Spices,Kirkland Himalayan Pink Salt Grinder,3.99,USD
+771,Spices,Kirkland Malabar Black Pepper Coarse Pepper Grind,6.99,USD
+772,Spices,Kirkland Mediterranean Sea Salt Grinder,3.49,USD
+773,Spices,Kirkland Organic No-Salt Seasoning,7.99,USD
+774,Spices,Kirkland Pure Sea Salt,2.79,USD
+775,Spices,Kirkland Saigon Cinnamon,2.59,USD
+776,Spices,Kirkland Sweet Mesquite Shaker,6.39,USD
+777,Spices,Kirkland Tellicherry Black Pepper Grinder,5.69,USD
+778,Spices,Kirkland Tellicherry Whole Peppercorn,7.79,USD
+779,Spices,Lawry's Garlic Salt,5.99,USD
+780,Spices,McCormick's Brown Gravy,3.89,USD
+781,Spices,McCormick's Dark Chili Powder No MSG,5.49,USD
+782,Spices,McCormick's Grill Mates Smokehouse Maple Seasoning,5.69,USD
+783,Spices,McCormick's Gourmet Sriracha Blend Pepper,5.79,USD
+784,Spices,McCormick Pumpkin Spice,6.89,USD
+785,Spices,McCormick's Smoked Paprika,3.79,USD
+786,Spices,McCormick's Spaghetti Sauce Mix No MSG,4.99,USD
+787,Spices,McCormick's Taco Seasoning,4.19,USD
+788,Spices,Mrs Dash Original Salt Free Seasoning,9.99,USD
+789,Spices,Rodelle Toasted Sesame Seed,4.89,USD
+790,Spices,Tom Douglas Salmon Rub with Love,9.89,USD
+791,Bags,Kirkland Signature Yard & Leaf Bags 45 Gallon,18.89,USD
+792,Bags,Kirkland Signature Clear Trash Bags 33 Gallon,19.79,USD
+793,Bags,Kirkland Signature Kitchen Bags 13 Gallon,12.79,USD
+794,Bags,Ziploc Sandwich Bags,9.99,USD
+795,Bags,Ziploc Quart Double Zip Freezer Bags,12.39,USD
+796,Bags,Ziploc Gallon Double Zip Freezer Bags,13.49,USD
+797,Bags,Ziploc Slider Bags Gallon & Storage Mix,9.99,USD
+798,Bags,"Ziploc Storage Bags Variety Pack, Gallon, Quart, Sandwich, Snack",13.49,USD

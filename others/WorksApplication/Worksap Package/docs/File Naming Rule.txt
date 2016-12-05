@@ -1,0 +1,19 @@
+ID Number:S555
+Name:Yangzhuanling
+
+e.g.
+
+Day1 submission
+
+S555_Yangzhuanling_WhatIs_Day1
+S555_Yangzhuanling_ReleaseNote_Day1
+S555_Yangzhuanling_ReadMe_Day1
+S555_Yangzhuanling_DailyReport_Day1
+
+Day2 submission
+
+Day1 submission
+S555_Yangzhuanling_WhatIs_Day2
+S555_Yangzhuanling_ReleaseNote_Day2
+S555_Yangzhuanling_ReadMe_Day2
+S555_Yangzhuanling_DailyReport_Day2

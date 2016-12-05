@@ -1,0 +1,400 @@
+staff_id,name,gender,rank,position,supermarket_id
+1,Aaron Alkins,Male,officer,region manager,1
+2,Abbott All,Male,expert,manager,1
+3,Abel Allam,Male,expert,staff,1
+4,Abner Allan,Male,senior,staff,1
+5,Abraham Allanson,Male,senior,staff,1
+6,Ada Abbe,Female,senior,staff,1
+7,Adah Abbett,Female,senior,manager,1
+8,Adam Allard,Male,senior,staff,1
+9,Addison Allcock,Male,senior,staff,1
+10,Addyson Abbey,Female,senior,staff,1
+11,Adela Abbitt,Female,senior,staff,2
+12,Adele Abbot,Female,assistant,staff,2
+13,Adelina Abbott,Female,assistant,staff,2
+14,Adeline Abbs,Female,assistant,staff,2
+15,Adelle Abby,Female,assistant,staff,2
+16,Adilene Abdon,Female,assistant,staff,2
+17,Adler Allcorn,Male,assistant,staff,2
+18,Adley Allday,Male,officer,region manager,2
+19,Adria Able,Female,expert,staff,2
+20,"Adrian, Adrien Allee",Male,expert,manager,3
+21,Adriane Abner,Female,expert,staff,3
+22,Adrianne Abney,Female,senior,staff,3
+23,Adrien Aborn,Female,senior,staff,3
+24,Adriene Abrahams,Female,senior,staff,3
+25,Adrina Abram,Female,senior,staff,3
+26,Adyson Abrams,Female,assistant,staff,3
+27,"Aedan, Aiden Allen",Male,officer,region manager,3
+28,Afton Abramson,Female,expert,manager,3
+29,Agate Ace,Female,expert,staff,3
+30,Aida Acey,Female,senior,staff,3
+31,Aiken Allender,Male,senior,staff,3
+32,Airiana Acker,Female,senior,staff,3
+33,"Alan, Allan Allenson",Male,senior,staff,3
+34,Alastair Allerton,Male,senior,manager,3
+35,Albern Alles,Male,senior,staff,3
+36,Albert Alley,Male,senior,staff,3
+37,Alberta Ackerley,Female,senior,staff,3
+38,Albion Alleyne,Male,assistant,staff,3
+39,Alden Allford,Male,assistant,staff,3
+40,Aldis Allgood,Male,assistant,staff,4
+41,Aldora Ackerly,Female,assistant,staff,4
+42,Aldrich Allie,Male,assistant,staff,4
+43,Alexander Alligood,Male,assistant,staff,4
+44,Alfie Allin,Male,officer,region manager,4
+45,Alfred Alling,Male,expert,staff,4
+46,Alfreda Ackerman,Female,expert,manager,4
+47,Algernon Allingham,Male,expert,staff,4
+48,Alice Ackers,Female,senior,staff,4
+49,Alicen Ackert,Female,senior,manager,4
+50,Alicia Ackland,Female,senior,staff,4
+51,Alicja Ackley,Female,senior,staff,4
+52,Alicyn Acklin,Female,assistant,staff,4
+53,Alina Ackroyd,Female,officer,region manager,4
+54,Alisha Acock,Female,expert,manager,4
+55,Alishia Acomb,Female,expert,manager,4
+56,Alisia Acors,Female,senior,staff,4
+57,Alison Acre,Female,senior,staff,4
+58,Alisyn Acreman,Female,senior,staff,4
+59,Allicia Acres,Female,senior,staff,4
+60,Allisha Acton,Female,senior,staff,4
+61,Allison Acuff,Female,senior,staff,4
+62,Allisyn Acy,Female,senior,staff,4
+63,Allysen Adams,Female,senior,staff,5
+64,Allyson Adcock,Female,assistant,staff,5
+65,Alodie Adcox,Female,assistant,staff,5
+66,Alonsa Addams,Female,assistant,staff,5
+67,Alonza Adderley,Female,assistant,staff,5
+68,Alston Allington,Male,assistant,staff,5
+69,Alton Allinson,Male,assistant,staff,5
+70,Alvin Allis,Male,officer,region manager,5
+71,Alvina Adderly,Female,expert,staff,5
+72,Alyna Addicott,Female,expert,manager,5
+73,Alyshia Addington,Female,expert,staff,5
+74,Alyson Addis,Female,senior,staff,5
+75,Ambrose Allison,Male,senior,staff,5
+76,Amery Alliston,Male,senior,staff,5
+77,Amos Allman,Male,senior,staff,5
+78,Amy Addison,Female,assistant,staff,5
+79,Anabel Addy,Female,officer,region manager,5
+80,Anabelle Ade,Female,expert,staff,5
+81,Andrew Allmand,Male,expert,manager,5
+82,Angus Allmond,Male,senior,staff,5
+83,Ansel Allnutt,Male,senior,staff,5
+84,Anthony Alloway,Male,senior,staff,6
+85,Archer Allport,Male,senior,staff,6
+86,Archibald Allread,Male,senior,staff,6
+87,Arlen Allred,Male,senior,staff,6
+88,Arnold Alls,Male,senior,staff,6
+89,"Arthur, Art Allsbrook",Male,senior,staff,6
+90,Arvel Allsop,Male,assistant,staff,6
+91,Atwater Allsopp,Male,assistant,staff,6
+92,Atwood Allston,Male,assistant,staff,6
+93,Aubrey Allsup,Male,assistant,staff,6
+94,Audey Adee,Female,assistant,staff,6
+95,Audreanne Ades,Female,assistant,staff,6
+96,Audree Adey,Female,officer,region manager,6
+97,Audrey Adgate,Female,expert,staff,6
+98,Audrey Ann Adkins,Female,expert,staff,6
+99,Audrey Anne Adkinson,Female,expert,staff,6
+100,Audrey Maud Adley,Female,senior,staff,6
+101,Audrey Maude Adney,Female,senior,staff,6
+102,Audriana Adrian,Female,senior,staff,6
+103,Audrianna Aduddell,Female,senior,staff,6
+104,Audrie Adwell,Female,assistant,staff,6
+105,Audrina Ady,Female,assistant,staff,6
+106,Audry Afton,Female,officer,region manager,6
+107,Austin Allton,Male,expert,manager,6
+108,Avaline Agar,Female,expert,staff,6
+109,Averi Agard,Female,expert,manager,6
+110,Averie Agate,Female,senior,staff,6
+111,Avery Alltop,Male,senior,staff,6
+112,Axel Allum,Male,senior,staff,6
+113,Aysia Age,Female,senior,staff,6
+114,Bailee Ager,Female,assistant,staff,6
+115,Baileigh Agers,Female,officer,region manager,6
+116,Bailey Aguillard,Female,expert,staff,6
+117,Baili Ailes,Female,expert,staff,6
+118,Baily Ainley,Female,senior,manager,6
+119,Baird Allums,Male,senior,staff,6
+120,Baldwin Allwood,Male,senior,staff,6
+121,Baleigh Ainsley,Female,senior,staff,7
+122,Barclay Ally,Male,senior,manager,7
+123,Barnaby Allyn,Male,senior,staff,7
+124,Baron Alman,Male,assistant,staff,7
+125,Barrett Almond,Male,assistant,staff,7
+126,Barry Almy,Male,assistant,staff,7
+127,Bartholomew Alred,Male,assistant,staff,7
+128,Basil Alridge,Male,assistant,staff,7
+129,Benedict Alsbrook,Male,assistant,staff,7
+130,Benjamin Alsbury,Male,officer,region manager,7
+131,Benton Alsip,Male,expert,staff,7
+132,Bernard Alsobrook,Male,expert,manager,7
+133,Bert Alsop,Male,expert,staff,7
+134,Bevis Alston,Male,senior,staff,7
+135,Blaine Alsup,Male,senior,staff,7
+136,Blair Alton,Male,senior,staff,7
+137,Blake Alvey,Male,senior,staff,7
+138,Bond Alvin,Male,assistant,staff,7
+139,Boris Alvis,Male,officer,region manager,7
+140,Bowen Alvord,Male,expert,manager,7
+141,Braden Alward,Male,expert,staff,7
+142,Bradley Alway,Male,senior,manager,7
+143,"Brandan, Brendan, Brendon Alwin",Male,senior,staff,7
+144,Brent Alwood,Male,senior,staff,8
+145,"Bret, Brett Alworth",Male,senior,staff,8
+146,Brian Amason,Male,senior,staff,8
+147,Brice Amber,Male,senior,staff,8
+148,Brigham Amberson,Male,senior,staff,8
+149,Brock Ambler,Male,senior,staff,8
+150,Broderick Ambrose,Male,assistant,staff,8
+151,Brooke Ament,Male,assistant,staff,8
+152,Bruce Amerson,Male,assistant,staff,8
+153,Bruno Ames,Male,assistant,staff,8
+154,Bryant Amesbury,Male,assistant,staff,8
+155,Buck Amey,Male,assistant,staff,8
+156,Bud Amis,Male,officer,region manager,8
+157,Burgess Amison,Male,expert,manager,8
+158,Burton Ammon,Male,expert,staff,8
+159,Byron Amond,Male,expert,staff,8
+160,Cadman Amor,Male,senior,staff,8
+161,Caldwell Amos,Male,senior,staff,8
+162,Caleb Amsden,Male,senior,staff,8
+163,Calvert Amory,Male,senior,staff,8
+164,Calvin Anable,Male,assistant,staff,8
+165,Carl Anchors,Male,officer,region manager,8
+166,Carlton Anctil,Male,expert,manager,8
+167,Carney Anderson,Male,expert,staff,8
+168,Carrick Ancell,Male,senior,staff,8
+169,Carroll Anderton,Male,senior,staff,8
+170,Carter Andrew,Male,senior,staff,8
+171,Carver Andrews,Male,senior,staff,8
+172,Cary Andros,Male,senior,staff,8
+173,Casey Andrus,Male,senior,staff,8
+174,Casper Andry,Male,senior,staff,8
+175,Cecil Aney,Male,senior,staff,8
+176,Cedric Angel,Male,assistant,staff,8
+177,"Chad, Chadwick Anger",Male,assistant,staff,8
+178,Chalmers Angers,Male,assistant,staff,8
+179,Chandler Angevine,Male,assistant,staff,8
+180,Channing Angier,Male,assistant,staff,9
+181,Chapman Angle,Male,assistant,staff,9
+182,Charles Angleton,Male,officer,region manager,9
+183,Chatwin Angley,Male,expert,manager,9
+184,Chester Anguish,Male,expert,staff,9
+185,Christian Angwin,Male,expert,staff,9
+186,Christopher Anker,Male,senior,staff,9
+187,Clarence Ann,Male,senior,staff,9
+188,Claude Annable,Male,senior,staff,9
+189,"Clayton, Clay Annand",Male,senior,staff,9
+190,"Clifford, Cliff Annas",Male,assistant,staff,9
+191,Clive Anne,Male,officer,region manager,9
+192,Clyde Annear,Male,expert,staff,9
+193,Coleman Anness,Male,expert,manager,9
+194,Colin Annis,Male,senior,staff,9
+195,Collier Ansel,Male,senior,staff,9
+196,Conan Ansell,Male,senior,staff,9
+197,Connell Anselm,Male,senior,manager,9
+198,Connor Ansley,Male,senior,staff,9
+199,Conrad Anslow,Male,senior,staff,9
+200,Conroy Anson,Male,senior,staff,9
+201,Conway Anstead,Male,senior,staff,9
+202,Corwin Ansted,Male,assistant,staff,10
+203,Craig Antley,Male,assistant,staff,10
+204,Crispin Anstey,Male,assistant,staff,10
+205,Crosby Antcliff,Male,assistant,staff,10
+206,Culbert Antell,Male,assistant,staff,10
+207,Culver Anthony,Male,assistant,staff,10
+208,Curt Antil,Male,officer,region manager,10
+209,Curtis Antill,Male,expert,staff,10
+210,Cuthbert Antle,Male,expert,staff,10
+211,Cyril Antrobus,Male,expert,manager,10
+212,Ellie Ainslie,Female,senior,staff,10
+213,Ellisa Ainsworth,Female,senior,staff,10
+214,Ellison Airey,Female,senior,staff,10
+215,Elly Airington,Female,senior,manager,10
+216,Ellyn Aiton,Female,assistant,staff,10
+217,Elmina Ake,Female,officer,region manager,10
+218,Elodie Akehurst,Female,expert,staff,10
+219,Elva Akeley,Female,expert,manager,10
+220,Elvia Akerley,Female,senior,staff,10
+221,Elvie Akers,Female,senior,staff,10
+222,Elvina Akes,Female,senior,staff,10
+223,Elysa Akey,Female,senior,staff,10
+224,Elyse Akin,Female,senior,staff,11
+225,Elyssa Alan,Female,senior,manager,11
+226,Emilee Alban,Female,senior,staff,11
+227,Emileigh Albany,Female,senior,staff,11
+228,Emiley Albert,Female,assistant,staff,11
+229,Emili Alberts,Female,assistant,staff,11
+230,Emilie Albin,Female,assistant,staff,11
+231,Emilly Alborn,Female,officer,region manager,11
+232,Emily Albright,Female,expert,manager,11
+233,Emma Albro,Female,expert,staff,11
+234,Emmily Albury,Female,expert,staff,11
+235,Enchantra Alcock,Female,senior,staff,12
+236,Eppie Alcott,Female,senior,staff,12
+237,Kendal Alday,Female,senior,staff,12
+238,Kendall Alden,Female,senior,staff,12
+239,Kendra Alder,Female,assistant,staff,12
+240,Kendria Alderman,Female,officer,region manager,12
+241,Kendyl Alders,Female,expert,manager,12
+242,Kendyll Alderson,Female,expert,staff,12
+243,Kenenza Alderton,Female,senior,staff,12
+244,Kenise Aldis,Female,senior,staff,12
+245,Khimberly Aldous,Female,senior,staff,12
+246,Kim Aldred,Female,senior,staff,12
+247,Kimbalee Aldredge,Female,senior,staff,12
+248,Kimber Aldrich,Female,senior,staff,12
+249,Kimberlee Aldridge,Female,senior,staff,12
+250,Kimberley Ale,Female,senior,staff,12
+251,Kimberli Aleck,Female,assistant,staff,12
+252,Kimberlie Alewine,Female,assistant,staff,13
+253,Kimberlin Alexander,Female,assistant,staff,13
+254,Kimberly Aley,Female,expert,staff,13
+255,Kimberlyn Alford,Female,expert,manager,13
+256,Kimberlynn Alfred,Female,senior,staff,13
+257,Kimmie Alfrey,Female,senior,staff,13
+258,Kimmy Alger,Female,senior,staff,13
+259,Kindra Algood,Female,senior,staff,13
+260,Kinsey Aliff,Female,senior,staff,13
+261,Kinzie Alison,Female,senior,staff,13
+262,Maddox Apland,Male,senior,staff,13
+263,Magnus Apley,Male,senior,staff,13
+264,Malcolm Aplin,Male,assistant,staff,13
+265,Marcus Apple,Male,assistant,staff,13
+266,"Mark, Marc Applebee",Male,assistant,staff,13
+267,Marlon Appleberry,Male,expert,staff,13
+268,Martin Appleby,Male,expert,staff,13
+269,Marvin Applegarth,Male,senior,staff,13
+270,Matthew Applegate,Male,senior,staff,13
+271,Maurice Appleton,Male,senior,staff,13
+272,"Max, Maxwell Applewhite",Male,senior,staff,13
+273,Medwin Appley,Male,senior,staff,13
+274,Melville Appleyard,Male,senior,staff,14
+275,Melvin Apling,Male,senior,staff,14
+276,Merlin Applin,Male,senior,manager,14
+277,Michael Appling,Male,assistant,staff,14
+278,Milburn Apps,Male,assistant,staff,14
+279,Miles Apsey,Male,assistant,staff,14
+280,Monroe Arber,Male,expert,manager,14
+281,Montague Arbon,Male,expert,staff,14
+282,Montgomery Arch,Male,senior,staff,14
+283,Morgan Archbold,Male,senior,staff,14
+284,Morris Archdeacon,Male,senior,staff,14
+285,Morton Archer,Male,senior,staff,14
+286,Murray Archey,Male,senior,staff,14
+287,"Nathaniel, Nathan Arden",Male,senior,staff,14
+288,Neal Arendale,Male,senior,staff,14
+289,Neville Arendall,Male,senior,staff,14
+290,Nicholas Arey,Male,assistant,staff,14
+291,Nigel Arford,Male,assistant,staff,14
+292,Noel Argent,Male,assistant,staff,15
+293,Norman Arington,Male,senior,staff,15
+294,Norris Arkell,Male,senior,staff,15
+295,Olaf Arkwright,Male,senior,staff,15
+296,Olin Arledge,Male,senior,staff,15
+297,Oliver Arling,Male,senior,staff,15
+298,Orson Arlington,Male,senior,manager,15
+299,Oscar Cobbs,Male,senior,staff,15
+300,Oswald Cobern,Male,senior,staff,15
+301,Otis Cobey,Male,senior,staff,15
+302,Owen Coble,Male,senior,staff,15
+303,Paul Cobleigh,Male,senior,staff,15
+304,Paxton Cobler,Male,senior,staff,15
+305,"Percival, Percy Coburn",Male,senior,staff,15
+306,Perry Coby,Male,senior,staff,15
+307,Peter Cockayne,Male,senior,staff,15
+308,Peyton Cockburn,Male,senior,staff,15
+309,Philbert Cockcroft,Male,senior,staff,16
+310,Philip Cocke,Male,senior,staff,16
+311,Phineas Cocker,Male,senior,staff,16
+312,Pierce Cockerell,Male,senior,staff,16
+313,Quade Cockerham,Male,senior,staff,16
+314,Quenby Cockerill,Male,senior,staff,16
+315,Quentin Cockfield,Male,senior,staff,16
+316,Quillan Cockett,Male,senior,manager,16
+317,Quimby Cockey,Male,senior,staff,16
+318,Quinby Cocking,Male,senior,staff,16
+319,Quincy Cocklin,Male,senior,staff,16
+320,Quinlan Cockman,Male,senior,staff,16
+321,Quinn Cockrell,Male,senior,staff,16
+322,Ralph Cockrill,Male,senior,staff,16
+323,Ramsey Cockroft,Male,officer,region manager,16
+324,Randolph Cocks,Male,senior,staff,16
+325,Raymond Codd,Male,senior,staff,16
+326,Reginald Coddington,Male,senior,staff,16
+327,Renfred Code,Male,senior,staff,16
+328,Rex Codling,Male,senior,staff,16
+329,Rhett Codner,Male,senior,staff,16
+330,Richard Codrington,Male,senior,staff,17
+331,Ridley Coe,Male,senior,staff,17
+332,Riley Coey,Male,senior,staff,17
+333,"Robert, Robin Coffer",Male,assistant,staff,17
+334,Roderick Coffield,Male,expert,staff,17
+335,Rodney Coffin,Male,expert,manager,17
+336,Roger Coffing,Male,senior,staff,17
+337,Roland Cofield,Male,senior,manager,17
+338,Rolf Cogar,Male,senior,staff,17
+339,Ronald Cogbill,Male,senior,staff,17
+340,Rory Cogburn,Male,senior,staff,17
+341,Ross Cogdell,Male,senior,staff,17
+342,Roswell Cogdill,Male,senior,staff,17
+343,Roy Cogger,Male,senior,manager,17
+344,Royce Coggeshall,Male,assistant,staff,17
+345,Rufus Coghill,Male,assistant,staff,17
+346,Rupert Cogswell,Male,officer,manager,17
+347,Russell Coiner,Male,assistant,staff,17
+348,Ryan Coit,Male,assistant,staff,17
+349,Holsey  Vance,Male,senior,manager,17
+350,Holstead  Vaughan,Male,assistant,staff,17
+351,Holston  Vernon,Male,assistant,staff,17
+352,Holsworth  Victor,Male,assistant,staff,18
+353,Holt  Vincent,Male,assistant,staff,18
+354,Holtby  Wallace,Male,senior,manager,18
+355,Holten  Walter,Male,assistant,staff,18
+356,Holter  Walton,Male,assistant,staff,18
+357,Holton  Ward,Male,assistant,staff,18
+358,Holway  Warren,Male,assistant,staff,18
+359,Holyfield  Washington,Male,senior,manager,18
+360,Holyoak  Wayne,Male,assistant,staff,18
+361,Holyoke  Wesley,Male,senior,staff,18
+362,Homan  Wilbur,Male,assistant,staff,18
+363,Homans  Willard,Male,assistant,staff,18
+364,"Home  William,",Male,assistant,manager,18
+365,Homer  Willis,Male,assistant,staff,18
+366,Homes  Winston,Male,expert,staff,18
+367,Homewood  Winthrop,Male,assistant,staff,18
+368,Homsey  Wyatt,Male,assistant,staff,18
+369,Hone  Wylie,Male,assistant,manager,18
+370,Honer  Wyman,Male,assistant,staff,18
+371,Honey  Zachariah,Male,senior,staff,18
+372,Honeycutt  Zachary,Male,assistant,staff,18
+373,Honeyman  Zebadiah,Male,assistant,staff,19
+374,Honeywell  Zane,Male,assistant,manager,19
+375,Honn  Zebediah,Male,assistant,staff,19
+376,Honor  Paul,Male,senior,staff,19
+377,Honour  Paxton,Male,assistant,staff,19
+378,"Hoo  Percival,",Male,assistant,staff,19
+379,Hood  Perry,Male,assistant,manager,19
+380,Hooe  Peter,Male,assistant,staff,19
+381,Hoof  Peyton,Male,expert,staff,19
+382,Hook  Philbert,Male,assistant,staff,19
+383,Hooke  Philip,Male,assistant,staff,19
+384,Hooker  Phineas,Male,assistant,manager,19
+385,Hooks  Pierce,Male,assistant,staff,19
+386,Hoole  Quade,Male,senior,staff,19
+387,Hooley  Quenby,Male,assistant,staff,19
+388,Hooper  Quillan,Male,assistant,staff,20
+389,Hoople  Quimby,Male,assistant,manager,20
+390,Hoose  Quentin,Male,assistant,staff,20
+391,Hoosier  Quinby,Male,senior,staff,20
+392,Hooton  Quincy,Male,assistant,staff,20
+393,Hope  Quinlan,Male,assistant,staff,20
+394,Hopes  Quinn,Male,assistant,manager,20
+395,Hopewell  Ralph,Male,assistant,staff,20
+396,Hopgood  Ramsey,Male,expert,staff,20
+397,Hopkin  Randolph,Male,assistant,staff,20
+398,Hopkins  Raymond,Male,assistant,staff,20
+399,Hopkinson  Reginald,Male,assistant,manager,20
