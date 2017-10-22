@@ -12,7 +12,7 @@ class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
         /*int str_len=0;
-        
+
         int str_size = s.size();
         int substr_len = 1;  // store the length of longest substring
         int start_idx = 1;   // the index of first element to be compared
@@ -20,7 +20,7 @@ public:
         for(int i=0; i<str_size; ++i) {
             start_idx = i+substr_len;
             substr_len = substr_len>1?(substr_len--):1;
-            
+
             // expand the substring
             for(int j=start_idx; j<str_size; ++j) {
                 bool repeat = false;
@@ -35,7 +35,7 @@ public:
                 substr_len++;
             }
             str_len = substr_len>str_len?substr_len:str_len;
-            
+
             // terminate condition
             if(i+str_len == str_size) break;
         }
@@ -68,12 +68,12 @@ public:
         return max;
         */
         /*if(s.size()<2) return s.size();
-    
+
         char counters[130] = {0};
         int len = 0,    // current length
             max = 0,    // longest length
             tail = 0;   // index for latest repective character
-    
+
         for(int i=0; i<s.size(); ++i) {
             len++; // important
             if(counters[s.at(i)]==0) {
@@ -92,24 +92,23 @@ public:
             max=len>max?len:max;
         }
         return max;*/
-        
+
         string subs = "";
         int res = 0;
         for (int i=0; i<s.size(); i++) {
             size_t at = subs.find(s[i]);
             if ( at != string::npos) {
-                subs.erase(0, at+1);
+                subs.erase(0, at+1); // delete substring, that starting from 0, len is at+1. if at+1 is bigger than str len, then, the entire string is erased
             }
             subs += s[i];
-            res = subs.size() > res ? subs.size() : res;
+            res = subs.size() > res ? subs.size() : res; // res = max(res, subs.size())
         }
         return res;
     }
 };
 
 // NOTICE:
-// converting string to char[] does not make it faster, which 
+// converting string to char[] does not make it faster, which
 // could have two commonly used method:
 //   1. string.c_str(); 2. string.data(): only the first one returns content ending with '\0'
 // string could contain any char which is not just "A~Z" or "a~z"
-
