@@ -35,8 +35,8 @@ var lengthOfLongestSubstring = function(s) {
     for (var i = 0; i < s.length; i++) {
         var idx = sub.indexOf(s[i]);
         if (idx != -1) {
-            // s[i] is repeated
-            sub = "";
+            // s[i] is repeated, then remove the repeated char and chars before.
+            sub = sub.slice(idx+1);
         }
         sub = sub.concat(s[i]);
         ans = Math.max(ans, sub.length);
