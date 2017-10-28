@@ -1,3 +1,15 @@
+/**
+ * @Author: qiao
+ * @Date:   2017-08-14T20:53:11+08:00
+ * @Email:  qiaotian@me.com
+ * @Last modified by:   qiao
+ * @Last modified time: 2017-08-15T18:15:26+08:00
+ * @License: MIT
+ * @Copyright: qiaotian
+ */
+
+
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -86,7 +98,6 @@ int main() {
     //string ipath = "./test.txt";
     //string opath = "./D-small-practice.out.txt";
     IFSTREAM("./A-small-attempt0.in.txt");
-    OFSTREAM("./test.out.txt");
     CHECK();
 
     int T;
