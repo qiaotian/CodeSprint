@@ -9,6 +9,8 @@ Output: 7 -> 0 -> 8
 
 /**
  * Definition for singly-linked list.
+ * ## define a function object, and its name is ListNode.
+ * ## function object can instantiate an object.
  * function ListNode(val) {
  *     this.val = val;
  *     this.next = null;
