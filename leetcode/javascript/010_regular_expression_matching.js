@@ -30,7 +30,10 @@ var isMatch = function(s, p) {
     var ans = false;
     if (p.length == 0)
         return s.length == 0
+
     if(p[1] == '*') {
+        // if s[0] != p[0], then try match(s, p[2:])
+        // el try match(s[1:], p[1:]) or match(s, p[1:])
         return isMatch(s, p.slice(2)) ||
     }
 };
