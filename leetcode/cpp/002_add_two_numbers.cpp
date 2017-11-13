@@ -1,0 +1,47 @@
+/*
+
+You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+
+Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+Output: 7 -> 0 -> 8
+
+*/
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+
+ class Solution {
+ public:
+     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+         ListNode *head = NULL;
+         ListNode *curr = head;
+         ListNode *p1 = l1, *p2 = l2;
+         int carry = 0;
+         while ( p1 || p2 ) {
+             int sum = (p1 ? p1->val : 0) + (p2 ? p2->val : 0) + carry; //注意 () 必不可少
+             carry = sum / 10;
+             if (!curr) {
+                 head = new ListNode(sum % 10);
+                 curr = head;
+             } else {
+                 curr->next = new ListNode(sum % 10);
+                 curr = curr->next;
+             }
+             p1 = (p1 && p1->next) ? p1->next : NULL;
+             p2 = (p2 && p2->next) ? p2->next : NULL;
+         }
+         if(carry > 0) {
+             curr->next = new ListNode(carry);
+             curr = curr->next;
+         }
+         return head;
+     }
+ };
