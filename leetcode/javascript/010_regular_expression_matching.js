@@ -34,8 +34,10 @@ var isMatch = function(s, p) {
     if(p[1] == '*') {
         // if s[0] != p[0], then try match(s, p[2:])
         // el try match(s[1:], p[1:]) or match(s, p[1:])
-        return isMatch(s, p.slice(2)) ||
+        return isMatch(s, p.slice(2)) || (s.length != 0 && (s[0]==p[0] || p[0]=='.')) && isMatch(s.slice(1), p);
+    } else {
+        return s.length != 0 && (s[0]==p[0] || p[0]=='.') && isMatch(s.slice(1), p.slice(1));
     }
 };
 
-console.log('Hello World!')
+console.log(isMatch('abc', 'a*'))
